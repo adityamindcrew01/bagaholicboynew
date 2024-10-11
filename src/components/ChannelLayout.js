@@ -32,7 +32,7 @@ const ChannelLayout = () => {
 
             //   setLoading(true)
 
-            const response = await fetch(`http://localhost:1337/api/chanelbannerbig?populate=*`, {
+            const response = await fetch(`https://beneficial-star-c5c2773b54.strapiapp.com/api/chanelbannerbig?populate=*`, {
 
             });
             const data = await response.json();

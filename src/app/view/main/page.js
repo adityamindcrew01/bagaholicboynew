@@ -38,7 +38,7 @@ export default function Main() {
 
             //   setLoading(true)
 
-            const response = await fetch(`http://localhost:1337/api/swipper-images?populate=*`, {
+            const response = await fetch(`https://beneficial-star-c5c2773b54.strapiapp.com/api/swipper-images?populate=*`, {
 
             });
             const data = await response.json();
@@ -99,7 +99,7 @@ export default function Main() {
                         return (
                             <>
                                 <SwiperSlide>
-                                    <img src={`http://localhost:1337/${item?.Image[0]?.url}`} alt="Slide 1" className={styles.imageSlider} />
+                                    <img src={`https://beneficial-star-c5c2773b54.strapiapp.com/${item?.Image[0]?.url}`} alt="Slide 1" className={styles.imageSlider} />
 
 
                                     <button className={styles.buttonTags}>{item?.Tags}</button>
