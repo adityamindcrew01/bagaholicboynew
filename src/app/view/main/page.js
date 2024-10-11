@@ -99,7 +99,7 @@ export default function Main() {
                         return (
                             <>
                                 <SwiperSlide>
-                                    <img src={`https://beneficial-star-c5c2773b54.strapiapp.com/${item?.Image[0]?.url}`} alt="Slide 1" className={styles.imageSlider} />
+                                    <img src={`http://localhost:1337/${item?.Image[0]?.url}`} alt="Slide 1" className={styles.imageSlider} />
 
 
                                     <button className={styles.buttonTags}>{item?.Tags}</button>

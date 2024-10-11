@@ -75,7 +75,7 @@ const ChannelLayout = () => {
 
             <div className=" flex justify-center mt-20">
                 <img alt="ecommerce" className="lg:w-4/6 w-full lg:h-auto h-64 object-cover object-center rounded"
-                    src={`http://localhost:1337/${data?.data?.image?.url}`}
+                    src={data?.data?.image?.url}
                 />
             </div>
 
