@@ -80,4 +80,12 @@
     color: gray;
     text-decoration: none;
   }
+
+  @media only screen and (max-width: 900px) and (min-width: 0px) {
+    .imageBrandName{
+    position: relative ;
+    top:7px ;
   
+   
+    }
+  }

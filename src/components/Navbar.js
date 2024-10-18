@@ -4,7 +4,9 @@ import { useEffect, useState, useLayoutEffect } from 'react';
 import Link from 'next/link'
 import ima from '../app/asset/image/brand.png'
 
-
+import { RxCrossCircled } from "react-icons/rx";
+import { RxCross2 } from "react-icons/rx";
+import styles from './styles.module.css';
 
 
 export default function Navbar() {
@@ -57,7 +59,11 @@ export default function Navbar() {
                         onClick={toggleMenu}
                         className="inline-flex items-center md:hidden text-gray-900 focus:outline-none"
                     >
-                        <svg
+                        {isOpen? (
+
+                            <RxCross2  className="w-6 h-6"/>
+                        ) : (
+                            <svg
                             className="w-6 h-6"
                             fill="none"
                             stroke="currentColor"
@@ -71,6 +77,8 @@ export default function Navbar() {
                                 d="M4 6h16M4 12h16m-7 6h7"
                             ></path>
                         </svg>
+                        )}
+                        
                     </button>
 
                     {/* Menu Links (Desktop and Tablet) */}
@@ -99,12 +107,12 @@ export default function Navbar() {
 
                     <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 justify-center">
                         {/* <span className="ml-3 text-xl">BAGAHOLICBOY</span> */}
-                        <div className="mx-auto py-4 lg:pr-20 md:pr-0 sm:pr-0 flex flex-wrap flex-col sm:flex-row items-center">
+                        <div className={` mx-auto py-4 lg:pr-20 md:pr-0 sm:pr-0 flex flex-wrap flex-col sm:flex-row items-center  `}>
                             <Link href='/'>
                                 <Image
                                     src={ima}
                                     alt="Description of image"
-                                    className="w-full max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[350px] xl:max-w-[400px] h-auto"
+                                    className={`${styles.imageBrandName} w-full max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[350px] xl:max-w-[400px] h-auto`}
                                 />
                             </Link>
                         </div>
@@ -143,15 +151,36 @@ export default function Navbar() {
 
                     {/* Dropdown menu for mobile */}
                     {isOpen && (
-                        <div className="flex flex-col w-full mt-4 md:hidden space-y-2 text-center">
-                            <a className="hover:text-gray-900">BAGS</a>
-                            <a className="hover:text-gray-900">BEAUTY</a>
-                            <a className="hover:text-gray-900">FASHION</a>
-                            <a className="hover:text-gray-900">JEWELLERY</a>
-                            <a className="hover:text-gray-900">WATCHES</a>
-                            <a className="hover:text-gray-900">LIFESTYLE</a>
-                            <a className="hover:text-gray-900 pt-5">INSTAGRAM</a>
-                            <a className="hover:text-gray-900">TIKTOK</a>
+                        <div className="flex flex-col w-full mt-0 pb-3 md:hidden space-y-2 text-center shadow-lg">
+
+                            <Link href='/view/bags'>
+                                <p className="hover:border-b-2 border-black text-black">BAGS</p>
+
+                            </Link>
+                            <Link href='/view/beauty'>
+                                <p className="hover:border-b-2 border-black text-black">BEAUTY</p>
+
+                            </Link>
+                            <Link href='/view/Fashion'>
+                                <p className="hover:border-b-2 border-black text-black">FASHION</p>
+                            </Link>
+                            <Link href='/view/Jewellery'>
+                                <p className="hover:border-b-2 border-black text-black">JEWELLERY</p>
+                            </Link>
+                            <Link href='/view/Watches'>
+                                <p className="hover:border-b-2 border-black text-black">WATCHES</p>
+                            </Link>
+                            <Link href='/view/Lifestyle'>
+                                <p className="hover:border-b-2 border-black text-black">LIFESTYLE</p>
+                            </Link>
+
+                            <Link href='/view/Lifestyle'>
+                                <p className="hover:border-b-2 border-black text-black">INSTAGRAM</p>
+                            </Link>
+
+                            <Link href='/view/Lifestyle'>
+                                <p className="hover:border-b-2 border-black text-black">TIKTOK</p>
+                            </Link>
 
                         </div>
                     )}

@@ -167,14 +167,34 @@ export default function Jewellery() {
                     {/* Dropdown menu for mobile */}
                     {isOpen && (
                         <div className="flex flex-col w-full mt-4 md:hidden space-y-2 text-center">
-                            <a className="hover:text-gray-900">BAGS</a>
-                            <a className="hover:text-gray-900">BEAUTY</a>
-                            <a className="hover:text-gray-900">FASHION</a>
-                            <a className="hover:text-gray-900">JEWELLERY</a>
-                            <a className="hover:text-gray-900">WATCHES</a>
-                            <a className="hover:text-gray-900">LIFESTYLE</a>
-                            <a className="hover:text-gray-900 pt-5">INSTAGRAM</a>
-                            <a className="hover:text-gray-900">TIKTOK</a>
+                             <Link href='/view/bags'>
+                                <p className="hover:border-b-2 border-black text-black">BAGS</p>
+
+                            </Link>
+                            <Link href='/view/beauty'>
+                                <p className="hover:border-b-2 border-black text-black">BEAUTY</p>
+
+                            </Link>
+                            <Link href='/view/Fashion'>
+                                <p className="hover:border-b-2 border-black text-black">FASHION</p>
+                            </Link>
+                            <Link href='/view/Jewellery'>
+                                <p className="hover:border-b-2 border-black text-black">JEWELLERY</p>
+                            </Link>
+                            <Link href='/view/Watches'>
+                                <p className="hover:border-b-2 border-black text-black">WATCHES</p>
+                            </Link>
+                            <Link href='/view/Lifestyle'>
+                                <p className="hover:border-b-2 border-black text-black">LIFESTYLE</p>
+                            </Link>
+
+                            <Link href='/view/Lifestyle'>
+                                <p className="hover:border-b-2 border-black text-black">INSTAGRAM</p>
+                            </Link>
+
+                            <Link href='/view/Lifestyle'>
+                                <p className="hover:border-b-2 border-black text-black">TIKTOK</p>
+                            </Link>
 
                         </div>
                     )}
