@@ -42,6 +42,7 @@ export default function Navbar() {
         };
     }, []);
 
+    const[openSeacrh, setOpenSearch] = useState('')
 
 
 
@@ -191,7 +192,7 @@ export default function Navbar() {
                         <div className="flex flex-col w-full mt-4 md:hidden space-y-2 text-center">
 
 
-                            <a className="hover:text-gray-900">SEARCH</a>
+                            <a className="text-black" >SEAdcdsRCH</a>
                         </div>
                     )}
                 </div>
