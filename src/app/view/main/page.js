@@ -353,6 +353,7 @@ export default function Main() {
                                     <>
                                         <div class="p-0 lg:w-1/2 md:w-1/1 sm:w-1/1">
                                             <Link href={`/view/DetailsCommonproduct?id=${item?.id}`}>
+                                          
                                                 <div className={`flex lg:w-3/8 mx-auto pb-4 mb-4 gap-2  ${styles.flexcommpon}`}>
                                                     <div class="sm:mr-5 inline-flex items-center justify-center rounded-lg flex-shrink-0">
 
