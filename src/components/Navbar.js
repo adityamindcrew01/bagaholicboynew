@@ -27,28 +27,55 @@ export default function Navbar() {
     };
 
 
-    useLayoutEffect(() => {
-        const navbar = document.querySelector('header');
-        const handleScroll = () => {
-            if (window.scrollY > 500) {
-                navbar.classList.add('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-3', 'ease-in-out');
-            } else {
-                navbar.classList.remove('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-3', 'ease-in-out');
-            }
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    // useLayoutEffect(() => {
+    //     const navbar = document.querySelector('header');
+    //     const handleScroll = () => {
+    //         if (window.scrollY > 500) {
+    //             navbar.classList.add('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-3', 'ease-in-out');
+    //         } else {
+    //             navbar.classList.remove('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-3', 'ease-in-out');
+    //         }
+    //     };
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => {
+    //         window.removeEventListener('scroll', handleScroll);
+    //     };
+    // }, []);
 
-    const[openSeacrh, setOpenSearch] = useState('')
+    const [isClient, setIsClient] = useState(false);
+
+    useLayoutEffect(() => {
+        setIsClient(true); // Ensure that the code runs after hydration
+
+        if (isClient) {
+            const navbar = document.querySelector('header');
+            const brandImage = document.querySelector('.brand-image');
+
+            const handleScroll = () => {
+                if (window.scrollY > 500) {
+                    navbar.classList.add('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out');
+                    brandImage.classList.add('xl:max-w-[190px]');
+                } else {
+                    navbar.classList.remove('fixed',  'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out');
+                    brandImage.classList.remove('xl:max-w-[190px]');
+                }
+            };
+
+            window.addEventListener('scroll', handleScroll);
+
+            return () => {
+                window.removeEventListener('scroll', handleScroll);
+            };
+        }
+    }, [isClient]); // Dep
+    
+
 
 
 
 
     return (
-        <div className="mx-5 mt-0">
+        <div className="xl:mx-5 sm:mx-2 mt-0 navbarLAyout">
 
 
             <header className="bg-white z-10 transition-all duration-3">
@@ -106,8 +133,8 @@ export default function Navbar() {
                         </Link>
                     </nav>
 
-                    <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 justify-center">
-                        {/* <span className="ml-3 text-xl">BAGAHOLICBOY</span> */}
+                    {/* <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 justify-center">
+                       
                         <div className={` mx-auto py-4 lg:pr-20 md:pr-0 sm:pr-0 flex flex-wrap flex-col sm:flex-row items-center  `}>
                             <Link href='/'>
                                 <Image
@@ -118,7 +145,20 @@ export default function Navbar() {
                             </Link>
                         </div>
 
-                    </a>
+                    </a> */}
+
+<a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 justify-center">
+                <div className="mx-auto py-4 lg:pr-20 md:pr-0 sm:pr-0 flex flex-wrap flex-col sm:flex-row items-center">
+                    <Link href='/'>
+                        <Image
+                            src={ima}
+                            alt="Description of image"
+                            className="brand-image w-full max-w-[150px] sm:max-w-[200px] md:max-w-[250px]  xl:max-w-[300px] h-auto transition-all duration-300 ease-in-out"
+                        />
+                    </Link>
+                </div>
+            </a>
+
 
 
 

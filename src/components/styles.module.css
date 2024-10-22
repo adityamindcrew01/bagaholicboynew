@@ -89,3 +89,8 @@
    
     }
   }
+
+
+  .smaller-brand {
+    max-width: 150px; /* Adjust the size as needed */
+}

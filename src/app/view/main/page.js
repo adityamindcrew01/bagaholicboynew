@@ -233,7 +233,8 @@ export default function Main() {
                         return (
                             <>
                                 <SwiperSlide>
-                                    <img src={item?.Image[0]?.url} alt="Slide 1" className={styles.imageSlider} />
+                                <Link href={`/view/SwipperImageDetails?id=${item?.id}`}>
+                                    <img src={item?.image?.url} alt="Slide 1" className={styles.imageSlider} />
 
 
                                     <button className={styles.buttonTags}>{item?.Tags}</button>
@@ -245,6 +246,7 @@ export default function Main() {
 
 
                                     </div>
+                                    </Link>
 
 
                                 </SwiperSlide>
@@ -319,6 +321,7 @@ export default function Main() {
                                     <>
 
                                         <div class={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
+                                        <Link href={`/view/latestNewDetails?id=${itrem?.id}`}>
                                             <div class=" px-0 pt-10 pb-0 rounded-lg overflow-hidden relative h-full">
                                                 <img src={itrem?.image?.url} className={styles.imageLayout2} />
                                                 <button className={styles.Layout2Boxbutton}>{itrem?.tag}</button>
@@ -326,6 +329,7 @@ export default function Main() {
 
 
                                             </div>
+                                            </Link>
                                         </div>
                                     </>
                                 )
@@ -446,6 +450,7 @@ export default function Main() {
                                     <>
 
                                         <div class={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
+                                        <Link href={`/view/BagsDetails?id=${itrem?.id}`}>
                                             <div class=" px-0 pt-10 pb-0 rounded-lg overflow-hidden relative h-full">
                                                 <img src={itrem?.image?.url} className={styles.imageLayout2} />
                                                 <button className={styles.Layout2Boxbutton}>{itrem?.tag}</button>
@@ -453,6 +458,7 @@ export default function Main() {
 
 
                                             </div>
+                                            </Link>
                                         </div>
                                     </>
                                 )
@@ -541,7 +547,7 @@ export default function Main() {
                                 return (
                                     <>
                                         <div class="p-0 lg:w-1/2 md:w-1/1 sm:w-1/1">
-                                            <Link href={`/view/DetailsCommonproduct?id=${item?.id}`}>
+                                            <Link href={`/view/fashionDetails?id=${item?.id}`}>
                                                 <div className={`flex lg:w-3/8 mx-auto pb-4 mb-4 gap-2  ${styles.flexcommpon}`}>
                                                     <div class="sm:mr-5 inline-flex items-center justify-center rounded-lg flex-shrink-0">
 
@@ -613,6 +619,7 @@ export default function Main() {
                                     <>
 
                                         <div class={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
+                                        <Link href={`/view/CelebrityDetails?id=${itrem?.id}`}>
                                             <div class=" px-0 pt-0 pb-5 rounded-lg overflow-hidden relative h-full">
                                                 <img src={itrem?.image?.url} className={styles.imageLayout2} />
                                                 <button className={styles.Layout2Boxbutton}>{itrem?.tag}</button>
@@ -620,6 +627,7 @@ export default function Main() {
 
 
                                             </div>
+                                            </Link>
                                         </div>
                                     </>
                                 )
@@ -655,7 +663,7 @@ export default function Main() {
                                 return (
                                     <>
                                         <div class="pt-3 lg:w-1/2 md:w-1/1 sm:w-1/1">
-                                            <Link href={`/view/DetailsCommonproduct?id=${item?.id}`}>
+                                            <Link href={`/view/beautyDetails?id=${item?.id}`}>
                                                 <div className={`flex lg:w-3/8 mx-auto pb-4 mb-4 gap-2  ${styles.flexcommpon}`}>
                                                     <div class="sm:mr-5 inline-flex items-center justify-center rounded-lg flex-shrink-0">
 

@@ -239,6 +239,7 @@ export default function Fashion() {
                                     <>
 
                                         <div class={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
+                                        <Link href={`/view/fashionDetails?id=${itrem?.id}`}>
                                             <div class=" px-0 pt-10 pb-0 rounded-lg overflow-hidden relative h-full">
                                                 <img src={itrem?.image?.url} className={styles.imageLayout2} />
                                                 <button className={styles.Layout2Boxbutton}>{itrem?.tag}</button>
@@ -246,6 +247,7 @@ export default function Fashion() {
 
 
                                             </div>
+                                            </Link>
                                         </div>
                                     </>
                                 )

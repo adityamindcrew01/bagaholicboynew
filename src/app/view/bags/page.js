@@ -2,6 +2,7 @@
 import { useEffect, useState, } from 'react';
 import Navbar from '@/components/Navbar';
 
+import Link from 'next/link';
 import styles from './bags.module.css';
 import { Base_URL } from '@/app/Config';
 import Footer from '@/components/Footer';
@@ -82,6 +83,7 @@ export default function Bags() {
                   <>
 
                     <div class={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
+                    <Link href={`/view/BagsDetails?id=${itrem?.id}`}>
                       <div class=" px-0 pt-10 pb-0 rounded-lg overflow-hidden relative h-full">
                         <img src={itrem?.image?.url} className={styles.imageLayout2} />
                         <button className={styles.Layout2Boxbutton}>{itrem?.tag}</button>
@@ -89,7 +91,9 @@ export default function Bags() {
 
 
                       </div>
+                      </Link>
                     </div>
+                  
                   </>
                 )
               })}
