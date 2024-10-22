@@ -54,10 +54,10 @@ export default function Navbar() {
             const handleScroll = () => {
                 if (window.scrollY > 500) {
                     navbar.classList.add('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out');
-                    brandImage.classList.add('xl:max-w-[190px]');
+                    brandImage.classList.add('xl:max-w-[200px]');
                 } else {
                     navbar.classList.remove('fixed',  'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out');
-                    brandImage.classList.remove('xl:max-w-[190px]');
+                    brandImage.classList.remove('xl:max-w-[200px]');
                 }
             };
 
