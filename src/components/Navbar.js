@@ -54,10 +54,10 @@ export default function Navbar() {
             const handleScroll = () => {
                 if (window.scrollY > 500) {
                     navbar.classList.add('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out');
-                    brandImage.classList.add('xl:max-w-[200px]');
+                    brandImage.classList.add('xl:max-w-[190px]');
                 } else {
-                    navbar.classList.remove('fixed',  'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out');
-                    brandImage.classList.remove('xl:max-w-[200px]');
+                    navbar.classList.remove('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out');
+                    brandImage.classList.remove('xl:max-w-[190px]');
                 }
             };
 
@@ -68,7 +68,7 @@ export default function Navbar() {
             };
         }
     }, [isClient]); // Dep
-    
+
 
 
 
@@ -87,26 +87,26 @@ export default function Navbar() {
                         onClick={toggleMenu}
                         className="inline-flex items-center md:hidden text-gray-900 focus:outline-none"
                     >
-                        {isOpen? (
+                        {isOpen ? (
 
-                            <RxCross2  className="w-6 h-6"/>
+                            <RxCross2 className="w-6 h-6" />
                         ) : (
                             <svg
-                            className="w-6 h-6"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M4 6h16M4 12h16m-7 6h7"
-                            ></path>
-                        </svg>
+                                className="w-6 h-6"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M4 6h16M4 12h16m-7 6h7"
+                                ></path>
+                            </svg>
                         )}
-                        
+
                     </button>
 
                     {/* Menu Links (Desktop and Tablet) */}
@@ -147,17 +147,17 @@ export default function Navbar() {
 
                     </a> */}
 
-<a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 justify-center">
-                <div className="mx-auto py-4 lg:pr-20 md:pr-0 sm:pr-0 flex flex-wrap flex-col sm:flex-row items-center">
-                    <Link href='/'>
-                        <Image
-                            src={ima}
-                            alt="Description of image"
-                            className="brand-image w-full max-w-[150px] sm:max-w-[200px] md:max-w-[250px]  xl:max-w-[300px] h-auto transition-all duration-300 ease-in-out"
-                        />
-                    </Link>
-                </div>
-            </a>
+                    <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 justify-center">
+                        <div className="mx-auto py-4 lg:pr-20 md:pr-0 sm:pr-0 flex flex-wrap flex-col sm:flex-row items-center">
+                            <Link href='/'>
+                                <Image
+                                    src={ima}
+                                    alt="Description of image"
+                                    className="brand-image w-full max-w-[150px] sm:max-w-[200px] md:max-w-[250px]  xl:max-w-[300px] h-auto transition-all duration-300 ease-in-out"
+                                />
+                            </Link>
+                        </div>
+                    </a>
 
 
 
