@@ -42,32 +42,78 @@ export default function Navbar() {
     //     };
     // }, []);
 
+
+    // xl:max-w-[190px]
+
+
+
+
+    // const [isClient, setIsClient] = useState(false);
+
+    // useLayoutEffect(() => {
+    //     setIsClient(true); // Ensure that the code runs after hydration
+
+    //     if (isClient) {
+    //         const navbar = document.querySelector('header');
+    //         const brandImage = document.querySelector('.brand-image');
+
+    //         const handleScroll = () => {
+    //             if (window.scrollY > 500) {
+    //                 navbar.classList.add('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out');
+    //                 brandImage.classList.add('xl:max-w-[180px]');
+    //             } else {
+    //                 navbar.classList.remove('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out');
+    //                 brandImage.classList.remove('xl:max-w-[180px]');
+    //             }
+    //         };
+
+    //         window.addEventListener('scroll', handleScroll);
+
+    //         return () => {
+    //             window.removeEventListener('scroll', handleScroll);
+    //         };
+    //     }
+    // }, [isClient]); // Dep
+
+
+
+
+
+
     const [isClient, setIsClient] = useState(false);
+    const [scrolle, setSrcoll] = useState(false)
 
     useLayoutEffect(() => {
-        setIsClient(true); // Ensure that the code runs after hydration
+        setIsClient(true); // Ensure hydration is completed
 
-        if (isClient) {
-            const navbar = document.querySelector('header');
-            const brandImage = document.querySelector('.brand-image');
+        const navbar = document.querySelector('header');
+        const brandImage = document.querySelector('.brand-image');
 
-            const handleScroll = () => {
-                if (window.scrollY > 500) {
-                    navbar.classList.add('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out');
-                    brandImage.classList.add('xl:max-w-[190px]');
-                } else {
-                    navbar.classList.remove('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out');
-                    brandImage.classList.remove('xl:max-w-[190px]');
-                }
-            };
+        const handleScroll = () => {
+            if (window.scrollY > 500) {
+                navbar.classList.add('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out');
+                // brandImage.classList.add('w-[10px]');
+                //brandImage.classList.add(styles.shrink); // Add shrink class
 
-            window.addEventListener('scroll', handleScroll);
+                setSrcoll(true)
+            } else {
+                navbar.classList.remove('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out');
+                // brandImage.classList.remove('w-[10px]');
+                //brandImage.classList.add(styles.brandImage); // Add shrink class
+                setSrcoll(false)
+            }
+        };
 
-            return () => {
-                window.removeEventListener('scroll', handleScroll);
-            };
-        }
-    }, [isClient]); // Dep
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+
+        // Cleanup listener on component unmount
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []); // Empty de
+
+    console.log("scroll sdcs", scrolle)
 
 
 
@@ -147,17 +193,22 @@ export default function Navbar() {
 
                     </a> */}
 
-                    <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 justify-center">
-                        <div className="mx-auto py-4 lg:pr-20 md:pr-0 sm:pr-0 flex flex-wrap flex-col sm:flex-row items-center">
-                            <Link href='/'>
-                                <Image
+                    {/* <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 justify-center"> */}
+                    <div className="mx-auto py-4 lg:pr-20 md:pr-0 sm:pr-0 flex flex-wrap flex-col sm:flex-row items-center">
+                        <Link href='/'>
+                            {/* <Image
                                     src={ima}
                                     alt="Description of image"
                                     className="brand-image w-full max-w-[150px] sm:max-w-[200px] md:max-w-[250px]  xl:max-w-[300px] h-auto transition-all duration-300 ease-in-out"
-                                />
-                            </Link>
-                        </div>
-                    </a>
+                                /> */}
+                            <Image
+                                src={ima}
+                                alt="Description of image"
+                                className={` brand-image ${scrolle ? styles.shrink: styles.brandImage} h-auto transition-all duration-300 ease-in-out`}
+                            />
+                        </Link>
+                    </div>
+                    {/* </a> */}
 
 
 
