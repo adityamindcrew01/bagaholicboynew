@@ -121,7 +121,7 @@ export default function Navbar() {
 
 
     return (
-        <div className="xl:mx-5 sm:mx-2 mt-0 navbarLAyout">
+        <div className="xl:mx-5 sm:mx-2 mt-3 navbarLAyout">
 
 
             <header className="bg-white z-10 transition-all duration-3">
@@ -217,7 +217,9 @@ export default function Navbar() {
                     <nav className="hidden md:flex flex-wrap items-center text-base justify-center space-x-3 text-xs">
                         <a className="hover:text-gray-900 text-gray-900">INSTAGRAM</a>
                         <a className="hover:text-gray-900 text-gray-900">TIKTOK</a>
-                        <a className="hover:text-gray-900 text-gray-900">SEARCH</a>
+                        <Link href='/view/Search'>
+                        <p className="hover:text-gray-900 text-gray-900">SEARCH</p>
+                        </Link>
                     </nav>
 
 
