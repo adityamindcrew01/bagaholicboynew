@@ -7,79 +7,90 @@ import Image from 'next/image';
 import M from './channel1.jpg';
 import { Base_URL } from '@/app/Config';
 
+import client from '@/lib/contentful';
+
 const SmallChannelLayout = () => {
 
 
-    const [data, setData] = useState('')
+    // const [data, setData] = useState('')
+
+
+    const [data, setData] = useState([])
+
+
+
+
+    const fetchProducts = async () => {
+        const product = await client.getEntries(
+            {
+                'content_type': 'smallbanner',
+            }
+        )
+        console.log("pdscds", product.items);
+        setData(product.items)
+
+    }
+
     useEffect(() => {
 
-        const fetchData = async () => {
+        // const fetchData = async () => {
 
-            await displayProfile();
+        //     await displayProfile();
 
 
-        };
+        // };
 
-        fetchData();
+        // fetchData();
+
+        fetchProducts()
 
 
 
     }, []);
 
-    const displayProfile = async () => {
+    // const displayProfile = async () => {
 
 
-        try {
+    //     try {
 
-            //   setLoading(true)
+    //         //   setLoading(true)
 
-            const response = await fetch(`${Base_URL}/api/chanel-smallbanner?populate=*`, {
+    //         const response = await fetch(`${Base_URL}/api/chanel-smallbanner?populate=*`, {
 
-            });
-            const data = await response.json();
-            console.log("published-focus area", data);
+    //         });
+    //         const data = await response.json();
+    //         console.log("published-focus area", data);
 
-            setData(data)
-            //   setLoading(false)
+    //         setData(data)
+    //         //   setLoading(false)
 
-        } catch (error) {
-            console.error('Error fetching buyer data:', error);
-        }
+    //     } catch (error) {
+    //         console.error('Error fetching buyer data:', error);
+    //     }
 
-    };
+    // };
 
 
     return (
         <div>
-            {/* <section className="text-gray-600 body-font overflow-hidden">
-                <div className="container px-5 py-24 mx-auto">
-                    <div className="lg:w-4/5 mx-auto flex flex-wrap">
-                        <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mt-6 lg:mt-0 flex flex-col justify-center items-center"> 
-                            <h2 className="text-sm title-font text-gray-500 tracking-widest text-center"> 
-                                {data?.data?.title}
-                            </h2>
-                            <h1 className="text-gray-900 text-3xl title-font font-medium mb-1 text-center"> 
-                                The Catcher in the Rye
-                            </h1>
-                            <div className="flex mb-4 justify-center">
-                               
-                            </div>
-                        </div>
-                        <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-                         
-                            src={`http://localhost:1337/${data?.data?.image?.url}`}
-                        />
-                    </div>
-                </div>
-            </section> */}
+            
 
-
+            {/* 
             <div className=" flex justify-center mt-20 mb-20 mx-20">
                 <img alt="ecommerce" className="lg:w-4/6 w-full lg:h-auto h-24 object-cover object-center rounded"
-                    // src={data?.data?.image?.url}
+                  
                     src={data?.data?.image?.url}
                 />
-            </div>
+            </div> */}
+            {data?.map((item) => (
+
+                <div className=" flex justify-center mt-20 mb-20 mx-20">
+                    <img alt="ecommerce" className="lg:w-4/6 w-full lg:h-auto h-24 object-cover object-center rounded"
+
+                        src={item?.fields.image.fields?.file?.url}
+                    />
+                </div>
+            ))}
 
 
         </div>

@@ -17,6 +17,8 @@ import SmallChannelLayout from '@/components/SmallChannelLayout';
 import { Base_URL } from '@/app/Config';
 import Footer from '@/components/Footer';
 
+import client from '@/lib/contentful';
+
 
 export default function Page() {
     return (
@@ -34,6 +36,21 @@ const SwipperImageDetails = ({ product }) => {
     const id = searchParams.get('id')
 
 
+    const fetchProductDetails = async () => {
+        try {
+          // Fetch product by sys.id using getEntry
+          const product = await client.getEntry(id);
+    
+          console.log("jsjas", product )
+          setcommonProduct(product?.fields)
+         
+        } catch (error) {
+          console.error('Error fetching product details:', error);
+        }
+      };
+    
+
+
 
 
 
@@ -48,6 +65,7 @@ const SwipperImageDetails = ({ product }) => {
         };
 
         fetchData();
+        fetchProductDetails();
 
 
 
@@ -87,24 +105,24 @@ const SwipperImageDetails = ({ product }) => {
             <div className='mx-4 md:mx-10 mt-10 md:mt-20'>
 
                 <div className='text-center'>
-                    <button className={styles.buttonDetailsText}>{commonproduct?.data?.Tags}</button>
+                    <button className={styles.buttonDetailsText}>{commonproduct?.tag}</button>
                 </div>
 
                 <div className='text-center flex justify-center items-center'>
-                    <h1 className={`${styles.detailsTitle} text-2xl md:text-4xl lg:text-5xl sm:text-xl`}>{commonproduct?.data?.Title}</h1>
+                    <h1 className={`${styles.detailsTitle} text-2xl md:text-4xl lg:text-5xl sm:text-xl`}>{commonproduct?.title}</h1>
                 </div>
 
 
 
                 <div className='text-center flex justify-center items-center'>
-                    <p className={`${styles.dateDetails} text-sm md:text-base lg:text-lg`}>{commonproduct?.data?.date}</p>
+                    <p className={`${styles.dateDetails} text-sm md:text-base lg:text-lg`}>{commonproduct?.date}</p>
                 </div>
 
                 <div className="flex justify-center items-center min-h-[200px] sm:min-h-[400px] md:min-h-screen">
-                    <img src={commonproduct?.data?.image?.url} alt="Product Image" className="lg:w-[50%] sm:w-[100%] md:w-[50%]  rounded-lg" />
+                    <img src={commonproduct?.image?.fields?.file?.url} alt="Product Image" className="lg:w-[50%] sm:w-[100%] md:w-[50%]  rounded-lg" />
                 </div>
 
-                {commonproduct?.data?.description?.split('\n').map((paragraph, index) => (
+                {commonproduct?.description?.split('\n').map((paragraph, index) => (
                     <div className='flex justify-center items-center' key={index}>
                         <p className={`${styles.descriptionTitle} text-sm md:text-base lg:text-lg`}>
                             {paragraph.trim()}
@@ -112,19 +130,20 @@ const SwipperImageDetails = ({ product }) => {
                     </div>
                 ))}
 
-                {commonproduct?.data?.image2?.url && (
+                {commonproduct?.image2?.fields?.file?.url && (
                     <div className="flex justify-center items-center min-h-[300px] sm:min-h-[400px] md:min-h-screen">
-                        <img src={commonproduct?.data?.image2?.url} alt="Product Image" className="lg:w-[50%] sm:w-[100%] md:w-[50%]  rounded-lg " />
+                        <img src={commonproduct?.image2?.fields?.file?.url} alt="Product Image" className="lg:w-[50%] sm:w-[100%] md:w-[50%]  rounded-lg " />
                     </div>
                 )}
 
-                {commonproduct?.data?.description2?.split('\n').map((paragraph, index) => (
+                {commonproduct?.description2?.split('\n').map((paragraph, index) => (
                     <div className='flex justify-center items-center' key={index}>
                         <p className={`${styles.descriptionTitle} text-sm md:text-base lg:text-lg`}>
                             {paragraph.trim()}
                         </p>
                     </div>
                 ))}
+                <br/>
 
                 <div className='flex justify-center items-center'>
                     <i className={`${styles.UnderlineText} text-sm md:text-base lg:text-lg`}>

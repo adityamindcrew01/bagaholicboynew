@@ -6,12 +6,27 @@ import Link from 'next/link';
 import styles from './bags.module.css';
 import { Base_URL } from '@/app/Config';
 import Footer from '@/components/Footer';
+import client from '@/lib/contentful';
 
+import ima from '../../../app/asset/image/brand.png'
+import Image from "next/image";
 export default function Bags() {
 
 
 
   const [products, setProducts] = useState([])
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen2, setIsOpen2] = useState(false);
+
+  const toggleMenu = () => {
+      setIsOpen2(false)
+      setIsOpen(!isOpen);
+  };
+  const toggleMenu2 = () => {
+      setIsOpen(false)
+      setIsOpen2(!isOpen2);
+  };
 
   useEffect(() => {
 
@@ -33,28 +48,178 @@ export default function Bags() {
   const displayProdfuctsBags = async () => {
 
 
+    // try {
+
+    //   //   setLoading(true)
+
+    //   const response = await fetch(`${Base_URL}/api/bags-lists?populate=*`, {
+
+    //   });
+    //   const data = await response.json();
+    //   console.log("published-focus area", data);
+
+    //   setProducts(data)
+    //   //   setLoading(false)
+
+    // } catch (error) {
+    //   console.error('Error fetching buyer data:', error);
+    // }
+
     try {
-
-      //   setLoading(true)
-
-      const response = await fetch(`${Base_URL}/api/bags-lists?populate=*`, {
-
-      });
-      const data = await response.json();
-      console.log("published-focus area", data);
-
-      setProducts(data)
-      //   setLoading(false)
-
+      const product =  await client.getEntries(
+        { 'content_type': 'bagList',
+        }
+      )
+    console.log("displayBagsList", product.items);
+    setProducts(product.items)
+     
     } catch (error) {
-      console.error('Error fetching buyer data:', error);
+      console.error('Error fetching product details:', error);
     }
 
   };
 
   return (
     <>
-      <Navbar />
+         <header className="bg-white sticky top-0 z-10">
+                <div className=" flex flex-wrap px-5 flex-row items-center justify-between">
+
+
+                    {/* Hamburger Icon for smaller screens */}
+                    <button
+                        onClick={toggleMenu}
+                        className="inline-flex items-center md:hidden text-gray-900 focus:outline-none"
+                    >
+                        <svg
+                            className="w-6 h-6"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M4 6h16M4 12h16m-7 6h7"
+                            ></path>
+                        </svg>
+                    </button>
+
+                    {/* Menu Links (Desktop and Tablet) */}
+                    <nav className="hidden md:flex flex-wrap items-center text-base justify-center space-x-3 text-xs">
+                        <Link href='/view/bags'>
+                            <p className="hover:border-b-2 border-black text-black">BAGS</p>
+
+                        </Link>
+                        <Link href='/view/beauty'>
+                            <p className="hover:border-b-2 border-black text-black">BEAUTY</p>
+
+                        </Link>
+                        <Link href='/view/Fashion'>
+                            <p className="hover:border-b-2 border-black text-black">FASHION</p>
+                        </Link>
+                        <Link href='/view/Jewellery'>
+                            <p className="hover:border-b-2 border-black text-black">JEWELLERY</p>
+                        </Link>
+                        <Link href='/view/Watches'>
+                            <p className="hover:border-b-2 border-black text-black">WATCHES</p>
+                        </Link>
+                        <Link href='/view/Lifestyle'>
+                            <p className="hover:border-b-2 border-black text-black">LIFESTYLE</p>
+                        </Link>
+                    </nav>
+
+                    <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 justify-center">
+                        {/* <span className="ml-3 text-xl">BAGAHOLICBOY</span> */}
+                        <div className="mx-auto py-4 lg:pr-20 md:pr-0 sm:pr-0 flex flex-wrap flex-col sm:flex-row items-center">
+                        <Link href='/'>
+                                <Image
+                                    src={ima}
+                                    alt="Description of image"
+                                    className="w-full max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[350px] xl:max-w-[400px] h-auto"
+                                />
+                            </Link>
+                        </div>
+
+                    </a>
+
+
+
+                    {/* Right side Links (Desktop and Tablet) */}
+                    <nav className="hidden md:flex flex-wrap items-center text-base justify-center space-x-3 text-xs">
+                        <a className="hover:text-gray-900 text-gray-900">INSTAGRAM</a>
+                        <a className="hover:text-gray-900 text-gray-900">TIKTOK</a>
+                        <a className="hover:text-gray-900 text-gray-900">SEARCH</a>
+                    </nav>
+
+
+                    <button
+                        onClick={toggleMenu2}
+                        className="inline-flex items-center md:hidden text-gray-900 focus:outline-none"
+                    >
+                        <svg
+                            className="w-6 h-6"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M21 21l-4.35-4.35m0 0a7 7 0 111.415-1.414L21 21z"
+                            ></path>
+                        </svg>
+                    </button>
+
+                    {/* Dropdown menu for mobile */}
+                    {isOpen && (
+                        <div className="flex flex-col w-full mt-4 md:hidden space-y-2 text-center">
+                             <Link href='/view/bags'>
+                                <p className="hover:border-b-2 border-black text-black">BAGS</p>
+
+                            </Link>
+                            <Link href='/view/beauty'>
+                                <p className="hover:border-b-2 border-black text-black">BEAUTY</p>
+
+                            </Link>
+                            <Link href='/view/Fashion'>
+                                <p className="hover:border-b-2 border-black text-black">FASHION</p>
+                            </Link>
+                            <Link href='/view/Jewellery'>
+                                <p className="hover:border-b-2 border-black text-black">JEWELLERY</p>
+                            </Link>
+                            <Link href='/view/Watches'>
+                                <p className="hover:border-b-2 border-black text-black">WATCHES</p>
+                            </Link>
+                            <Link href='/view/Lifestyle'>
+                                <p className="hover:border-b-2 border-black text-black">LIFESTYLE</p>
+                            </Link>
+
+                            <Link href='/view/Lifestyle'>
+                                <p className="hover:border-b-2 border-black text-black">INSTAGRAM</p>
+                            </Link>
+
+                            <Link href='/view/Lifestyle'>
+                                <p className="hover:border-b-2 border-black text-black">TIKTOK</p>
+                            </Link>
+
+                        </div>
+                    )}
+
+
+                    {/* Dropdown menu for mobile */}
+                    {isOpen2 && (
+                        <div className="flex flex-col w-full mt-4 md:hidden space-y-2 text-center">
+
+
+                            <a className="hover:text-gray-900">SEARCH</a>
+                        </div>
+                    )}
+                </div>
+            </header>
 
 
       <div className={styles.Layout2}>
@@ -78,16 +243,16 @@ export default function Bags() {
         <section class="text-gray-600 body-font">
           <div class="">
             <div class="flex flex-wrap">
-              {products?.data?.map((itrem, index) => {
+              {products?.map((item, index) => {
                 return (
                   <>
 
                     <div class={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
-                    <Link href={`/view/BagsDetails?id=${itrem?.id}`}>
+                    <Link href={`/view/BagsDetails?id=${item?.sys?.id}}`}>
                       <div class=" px-0 pt-10 pb-0 rounded-lg overflow-hidden relative h-full">
-                        <img src={itrem?.image?.url} className={styles.imageLayout2} />
-                        <button className={styles.Layout2Boxbutton}>{itrem?.tag}</button>
-                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout2imageText}>{itrem?.title}</h1>
+                        <img src={item?.fields?.image?.fields?.file?.url} className={styles.imageLayout2} />
+                        <button className={styles.Layout2Boxbutton}>{item?.fields?.tag}</button>
+                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout2imageText}>{item?.fields?.title}</h1>
 
 
                       </div>

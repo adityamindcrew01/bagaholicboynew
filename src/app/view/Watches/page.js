@@ -8,6 +8,7 @@ import Footer from '@/components/Footer';
 import ima from '../../../app/asset/image/brand.png'
 import Image from "next/image";
 
+import client from '@/lib/contentful';
 
 export default function Watches() {
 
@@ -49,22 +50,38 @@ export default function Watches() {
     const displayProdfuctsBags = async () => {
 
 
+        // try {
+
+        //     //   setLoading(true)
+
+        //     const response = await fetch(`${Base_URL}/api/watches?populate=*`, {
+
+        //     });
+        //     const data = await response.json();
+        //     console.log("published-focus area", data);
+
+        //     setProducts(data)
+        //     //   setLoading(false)
+
+        // } catch (error) {
+        //     console.error('Error fetching buyer data:', error);
+        // }
+
         try {
-
-            //   setLoading(true)
-
-            const response = await fetch(`${Base_URL}/api/watches?populate=*`, {
-
-            });
-            const data = await response.json();
-            console.log("published-focus area", data);
-
-            setProducts(data)
-            //   setLoading(false)
+            const product = await client.getEntries(
+                {
+                    'content_type': 'watches',
+                }
+            )
+            console.log("displayProdfuctsBags", product.items);
+            setProducts(product.items)
 
         } catch (error) {
-            console.error('Error fetching buyer data:', error);
+            console.error('Error fetching product details:', error);
         }
+
+
+
 
     };
 
@@ -234,16 +251,16 @@ export default function Watches() {
                 <section class="text-gray-600 body-font">
                     <div class="">
                         <div class="flex flex-wrap">
-                            {products?.data?.map((itrem, index) => {
+                            {products?.map((item, index) => {
                                 return (
                                     <>
 
                                         <div class={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
-                                        <Link href={`/view/WatchDetails?id=${itrem?.id}`}>
+                                        <Link href={`/view/WatchDetails?id=${item?.sys?.id}`}>
                                             <div class=" px-0 pt-10 pb-0 rounded-lg overflow-hidden relative h-full">
-                                                <img src={itrem?.image?.url} className={styles.imageLayout2} />
-                                                <button className={styles.Layout2Boxbutton}>{itrem?.path}</button>
-                                                <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout2imageText}>{itrem?.title}</h1>
+                                                <img src={item?.fields?.image?.fields?.file?.url} className={styles.imageLayout2} />
+                                                <button className={styles.Layout2Boxbutton}>{item?.fields?.tag}</button>
+                                                <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout2imageText}>{item?.fields?.title}</h1>
 
 
                                             </div>

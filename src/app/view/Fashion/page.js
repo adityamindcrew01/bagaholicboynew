@@ -7,7 +7,7 @@ import { Base_URL } from '@/app/Config';
 import Footer from '@/components/Footer';
 import ima from '../../../app/asset/image/brand.png'
 import Image from "next/image";
-
+import client from '@/lib/contentful';
 
 export default function Fashion() {
 
@@ -49,29 +49,43 @@ export default function Fashion() {
     const displayProdfuctsBags = async () => {
 
 
+        // try {
+
+        //     //   setLoading(true)
+
+        //     const response = await fetch(`${Base_URL}/api/fashion-lists?populate=*`, {
+
+        //     });
+        //     const data = await response.json();
+        //     console.log("published-focus area", data);
+
+        //     setProducts(data)
+        //     //   setLoading(false)
+
+        // } catch (error) {
+        //     console.error('Error fetching buyer data:', error);
+        // }
+
         try {
-
-            //   setLoading(true)
-
-            const response = await fetch(`${Base_URL}/api/fashion-lists?populate=*`, {
-
-            });
-            const data = await response.json();
-            console.log("published-focus area", data);
-
-            setProducts(data)
-            //   setLoading(false)
+            const product = await client.getEntries(
+                {
+                    'content_type': 'fashionList',
+                }
+            )
+            console.log("displayProdfuctsBags", product.items);
+            setProducts(product.items)
 
         } catch (error) {
-            console.error('Error fetching buyer data:', error);
+            console.error('Error fetching product details:', error);
         }
+
 
     };
 
     return (
         <>
 
-<header className="bg-white sticky top-0 z-10">
+            <header className="bg-white sticky top-0 z-10">
                 <div className=" flex flex-wrap px-5 flex-row items-center justify-between">
 
 
@@ -123,7 +137,7 @@ export default function Fashion() {
                     <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 justify-center">
                         {/* <span className="ml-3 text-xl">BAGAHOLICBOY</span> */}
                         <div className="mx-auto py-4 lg:pr-20 md:pr-0 sm:pr-0 flex flex-wrap flex-col sm:flex-row items-center">
-                        <Link href='/'>
+                            <Link href='/'>
                                 <Image
                                     src={ima}
                                     alt="Description of image"
@@ -167,7 +181,7 @@ export default function Fashion() {
                     {/* Dropdown menu for mobile */}
                     {isOpen && (
                         <div className="flex flex-col w-full mt-4 md:hidden space-y-2 text-center">
-                             <Link href='/view/bags'>
+                            <Link href='/view/bags'>
                                 <p className="hover:border-b-2 border-black text-black">BAGS</p>
 
                             </Link>
@@ -234,19 +248,19 @@ export default function Fashion() {
                 <section class="text-gray-600 body-font">
                     <div class="">
                         <div class="flex flex-wrap">
-                            {products?.data?.map((itrem, index) => {
+                            {products?.map((item, index) => {
                                 return (
                                     <>
 
                                         <div class={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
-                                        <Link href={`/view/fashionDetails?id=${itrem?.id}`}>
-                                            <div class=" px-0 pt-10 pb-0 rounded-lg overflow-hidden relative h-full">
-                                                <img src={itrem?.image?.url} className={styles.imageLayout2} />
-                                                <button className={styles.Layout2Boxbutton}>{itrem?.tag}</button>
-                                                <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout2imageText}>{itrem?.title}</h1>
+                                            <Link href={`/view/fashionDetails?id=${item?.sys?.id}`}>
+                                                <div class=" px-0 pt-10 pb-0 rounded-lg overflow-hidden relative h-full">
+                                                    <img src={item?.fields?.image?.fields?.file?.url} className={styles.imageLayout2} />
+                                                    <button className={styles.Layout2Boxbutton}>{item?.fields?.tag}</button>
+                                                    <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout2imageText}>{item?.fields?.title}</h1>
 
 
-                                            </div>
+                                                </div>
                                             </Link>
                                         </div>
                                     </>

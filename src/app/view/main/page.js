@@ -16,6 +16,8 @@ import Link from 'next/link';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import Footer from '@/components/Footer';
 
+import client from '@/lib/contentful';
+
 
 
 
@@ -31,15 +33,26 @@ export default function Main() {
     const [fashionlist, setFashionlist] = useState([])
     const[Celebrity, setCelebrity] = useState([])
     const[beauties, setBeauties] = useState([])
+    const[swipper, setSwipper] = useState([])
 
     
+
+    const fetchProducts = async () =>{
+        const product =  await client.getEntries(
+          { 'content_type': 'swipperImages',
+          }
+        )
+      console.log("pdscds", product.items);
+      setSwipper(product.items)
+      
+      }
 
     useEffect(() => {
 
         const fetchData = async () => {
 
-            await displayProfile();
-            await displayProdfuctsBags()
+            
+            await displayLatestNews()
             await displayCommonProduct()
             await displayBagsList()
             await displayFashionList()
@@ -51,149 +64,163 @@ export default function Main() {
 
         fetchData();
 
+        fetchProducts();
+
 
 
     }, []);
 
-    const displayProfile = async () => {
+   
+
+    const displayLatestNews = async () => {
 
 
-        try {
-
-            //   setLoading(true)
-
-            const response = await fetch(`https://beneficial-star-c5c2773b54.strapiapp.com/api/swipper-images?populate=*`, {
-
-            });
-            const data = await response.json();
-            console.log("published-focus area", data);
-
-            setData(data)
-            //   setLoading(false)
-
-        } catch (error) {
-            console.error('Error fetching buyer data:', error);
-        }
-
-    };
-
-    const displayProdfuctsBags = async () => {
-
-
-        try {
-
-            //   setLoading(true)
-
-            const response = await fetch(`https://beneficial-star-c5c2773b54.strapiapp.com/api/products?populate=*`, {
-
-            });
-            const data = await response.json();
-            console.log("published-focus area", data);
-
-            setProducts(data)
-            //   setLoading(false)
-
-        } catch (error) {
-            console.error('Error fetching buyer data:', error);
-        }
+        const product =  await client.getEntries(
+            { 'content_type': 'latestnews',
+            }
+          )
+        console.log("displayLatestNews", product.items);
+        setProducts(product.items)
+        
+        
 
     };
 
 
     const displayCommonProduct = async () => {
-        try {
+        // try {
 
-            //   setLoading(true)
+        //     //   setLoading(true)
 
-            const response = await fetch(`${Base_URL}/api/common-products?populate=*`, {
+        //     const response = await fetch(`${Base_URL}/api/common-products?populate=*`, {
 
-            });
-            const data = await response.json();
-            console.log("published-focus area", data);
+        //     });
+        //     const data = await response.json();
+        //     console.log("published-focus area", data);
 
-            setcommonProduct(data)
-            //   setLoading(false)
+        //     setcommonProduct(data)
+        //     //   setLoading(false)
 
-        } catch (error) {
-            console.error('Error fetching buyer data:', error);
-        }
+        // } catch (error) {
+        //     console.error('Error fetching buyer data:', error);
+        // }
+
+
+        const product =  await client.getEntries(
+            { 'content_type': 'commonProduct',
+            }
+          )
+        console.log("displayCommonProduct", product.items);
+        setcommonProduct(product.items)
+        
     }
 
     const displayBagsList = async () => {
-        try {
+        // try {
 
-            //   setLoading(true)
+        //     //   setLoading(true)
 
-            const response = await fetch(`${Base_URL}/api/bags-lists?populate=*`, {
+        //     const response = await fetch(`${Base_URL}/api/bags-lists?populate=*`, {
 
-            });
-            const data = await response.json();
-            console.log("published-focus area", data);
+        //     });
+        //     const data = await response.json();
+        //     console.log("published-focus area", data);
 
-            setbagsList(data)
-            //   setLoading(false)
+        //     setbagsList(data)
+        //     //   setLoading(false)
 
-        } catch (error) {
-            console.error('Error fetching buyer data:', error);
-        }
+        // } catch (error) {
+        //     console.error('Error fetching buyer data:', error);
+        // }
+        const product =  await client.getEntries(
+            { 'content_type': 'bagList',
+            }
+          )
+        console.log("displayBagsList", product.items);
+        setbagsList(product.items)
+        
+        
+
     }
 
     const displayFashionList = async () => {
-        try {
+        // try {
 
-            //   setLoading(true)
+        //     //   setLoading(true)
 
-            const response = await fetch(`${Base_URL}/api/fashion-lists?populate=*`, {
+        //     const response = await fetch(`${Base_URL}/api/fashion-lists?populate=*`, {
 
-            });
-            const data = await response.json();
-            console.log("published-focus area", data);
+        //     });
+        //     const data = await response.json();
+        //     console.log("published-focus area", data);
 
-            setFashionlist(data)
-            //   setLoading(false)
+        //     setFashionlist(data)
+        //     //   setLoading(false)
 
-        } catch (error) {
-            console.error('Error fetching buyer data:', error);
-        }
+        // } catch (error) {
+        //     console.error('Error fetching buyer data:', error);
+        // }
+
+        const product =  await client.getEntries(
+            { 'content_type': 'fashionList',
+            }
+          )
+        console.log("displayCommonProduct", product.items);
+        setFashionlist(product.items)
+        
     }
 
     const displayCelebrity = async () => {
-        try {
+        // try {
 
-            //   setLoading(true)
+        //     //   setLoading(true)
 
-            const response = await fetch(`${Base_URL}/api/celebrities?populate=*`, {
+        //     const response = await fetch(`${Base_URL}/api/celebrities?populate=*`, {
 
-            });
-            const data = await response.json();
-            console.log("published-focus area", data);
+        //     });
+        //     const data = await response.json();
+        //     console.log("published-focus area", data);
 
-            setCelebrity(data)
-            //   setLoading(false)
+        //     setCelebrity(data)
+        //     //   setLoading(false)
 
-        } catch (error) {
-            console.error('Error fetching buyer data:', error);
-        }
+        // } catch (error) {
+        //     console.error('Error fetching buyer data:', error);
+        // }
+
+        const product =  await client.getEntries(
+            { 'content_type': 'celebrity',
+            }
+          )
+        console.log("displayCommonProduct", product.items);
+        setCelebrity(product.items)
     }
 
 
     const displayBeauties = async () => {
-        try {
+        // try {
 
-            //   setLoading(true)
+        //     //   setLoading(true)
 
-            const response = await fetch(`${Base_URL}/api/beauties?populate=*`, {
+        //     const response = await fetch(`${Base_URL}/api/beauties?populate=*`, {
 
-            });
-            const data = await response.json();
-            console.log("published-focus area", data);
+        //     });
+        //     const data = await response.json();
+        //     console.log("published-focus area", data);
 
-            setBeauties(data)
-            //   setLoading(false)
+        //     setBeauties(data)
+        //     //   setLoading(false)
 
-        } catch (error) {
-            console.error('Error fetching buyer data:', error);
-        }
+        // } catch (error) {
+        //     console.error('Error fetching buyer data:', error);
+        // }
+
+        const product =  await client.getEntries(
+            { 'content_type': 'beauty',
+            }
+          )
+        console.log("displayCommonProduct", product.items);
+        setBeauties(product.items)
     }
 
     
@@ -228,20 +255,23 @@ export default function Main() {
                 >
 
 
-                    {data?.data?.map((item, index) => {
+                    {swipper?.map((item, index) => {
 
                         return (
                             <>
                                 <SwiperSlide>
-                                <Link href={`/view/SwipperImageDetails?id=${item?.id}`}>
-                                    <img src={item?.image?.url} alt="Slide 1" className={styles.imageSlider} />
+                                <Link href={`/view/SwipperImageDetails?id=${item?.sys?.id}`}>
+                                    <img 
+                                    // src={item?.image?.url} 
+                                    src={item?.fields.image.fields?.file?.url}
+                                    alt="Slide 1" className={styles.imageSlider} />
 
 
-                                    <button className={styles.buttonTags}>{item?.Tags}</button>
+                                    <button className={styles.buttonTags}>{item?.fields?.tag}</button>
 
 
                                     <div className='text-center flex justify-center items-center'>
-                                        <h1 className={styles.detailsTitle}>{item?.Title}</h1>
+                                        <h1 className={styles.detailsTitle}>{item?.fields?.title}</h1>
 
 
 
@@ -316,16 +346,16 @@ export default function Main() {
                 <section class="text-gray-600 body-font">
                     <div class="">
                         <div class="flex flex-wrap">
-                            {products?.data?.map((itrem, index) => {
+                            {products?.map((item, index) => {
                                 return (
                                     <>
 
                                         <div class={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
-                                        <Link href={`/view/latestNewDetails?id=${itrem?.id}`}>
+                                        <Link href={`/view/latestNewDetails?id=${item?.sys?.id}`}>
                                             <div class=" px-0 pt-10 pb-0 rounded-lg overflow-hidden relative h-full">
-                                                <img src={itrem?.image?.url} className={styles.imageLayout2} />
-                                                <button className={styles.Layout2Boxbutton}>{itrem?.tag}</button>
-                                                <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout2imageText}>{itrem?.title}</h1>
+                                                <img src={item?.fields.image.fields?.file?.url} className={styles.imageLayout2} />
+                                                <button className={styles.Layout2Boxbutton}>{item?.fields?.tag}</button>
+                                                <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout2imageText}>{item?.fields?.title}</h1>
 
 
                                             </div>
@@ -352,11 +382,11 @@ export default function Main() {
                 <div class={`py-2 ${styles.layout4}`}>
                     <div class="flex flex-wrap -m-4 ">
                         {
-                            commonproduct?.data?.map((item, index) => {
+                            commonproduct?.map((item, index) => {
                                 return (
                                     <>
                                         <div class="p-0 lg:w-1/2 md:w-1/1 sm:w-1/1">
-                                            <Link href={`/view/DetailsCommonproduct?id=${item?.id}`}>
+                                            <Link href={`/view/DetailsCommonproduct?id=${item?.sys?.id}`}>
                                           
                                                 <div className={`flex lg:w-3/8 mx-auto pb-4 mb-4 gap-2  ${styles.flexcommpon}`}>
                                                     <div class="sm:mr-5 inline-flex items-center justify-center rounded-lg flex-shrink-0">
@@ -368,7 +398,7 @@ export default function Main() {
                                                         <img
                                                             //  class="sm:w-[152px] sm:h-[152px] w-[100px] h-[100px] rounded-xl"
                                                             className={styles.commonimage}
-                                                            src={item?.image?.url}
+                                                            src={item?.fields.image.fields?.file?.url}
 
                                                         />
 
@@ -377,9 +407,9 @@ export default function Main() {
 
                                                     <div class={`flex-grow sm:text-left  ${styles.layout4box} `}>
 
-                                                        <button className={styles.Layout3Boxbutton}>{item?.tag}</button>
+                                                        <button className={styles.Layout3Boxbutton}>{item?.fields?.tag}</button>
 
-                                                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout3imageText}>{item?.title}</h1>
+                                                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout3imageText}>{item?.fields?.title}</h1>
 
 
 
@@ -445,16 +475,16 @@ export default function Main() {
                 <section class="text-gray-600 body-font">
                     <div class="">
                         <div class="flex flex-wrap">
-                            {bagsList?.data?.slice(0, 4).map((itrem, index) => {
+                            {bagsList?.slice(0, 4).map((item, index) => {
                                 return (
                                     <>
 
                                         <div class={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
-                                        <Link href={`/view/BagsDetails?id=${itrem?.id}`}>
+                                        <Link href={`/view/BagsDetails?id=${item?.sys?.id}`}>
                                             <div class=" px-0 pt-10 pb-0 rounded-lg overflow-hidden relative h-full">
-                                                <img src={itrem?.image?.url} className={styles.imageLayout2} />
-                                                <button className={styles.Layout2Boxbutton}>{itrem?.tag}</button>
-                                                <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout2imageText}>{itrem?.title}</h1>
+                                                <img src={item?.fields?.image?.fields?.file?.url} className={styles.imageLayout2} />
+                                                <button className={styles.Layout2Boxbutton}>{item?.fields?.tag}</button>
+                                                <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout2imageText}>{item?.fields?.title}</h1>
 
 
                                             </div>
@@ -543,11 +573,11 @@ export default function Main() {
                 <div class={` last:py-2 ${styles.layout4}`}>
                     <div class="flex flex-wrap -m-4 ">
                         {
-                            fashionlist?.data?.map((item, index) => {
+                            fashionlist?.map((item, index) => {
                                 return (
                                     <>
                                         <div class="p-0 lg:w-1/2 md:w-1/1 sm:w-1/1">
-                                            <Link href={`/view/fashionDetails?id=${item?.id}`}>
+                                            <Link href={`/view/fashionDetails?id=${item?.sys?.id}`}>
                                                 <div className={`flex lg:w-3/8 mx-auto pb-4 mb-4 gap-2  ${styles.flexcommpon}`}>
                                                     <div class="sm:mr-5 inline-flex items-center justify-center rounded-lg flex-shrink-0">
 
@@ -558,7 +588,7 @@ export default function Main() {
                                                         <img
                                                             //  class="sm:w-[152px] sm:h-[152px] w-[100px] h-[100px] rounded-xl"
                                                             className={styles.commonimage}
-                                                            src={item?.image?.url}
+                                                            src={item?.fields?.image?.fields?.file?.url}
 
                                                         />
 
@@ -567,9 +597,9 @@ export default function Main() {
 
                                                     <div class={`flex-grow sm:text-left  ${styles.layout4box} `}>
 
-                                                        <button className={styles.Layout3Boxbutton}>{item?.tag}</button>
+                                                        <button className={styles.Layout3Boxbutton}>{item?.fields?.tag}</button>
 
-                                                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout3imageText}>{item?.title}</h1>
+                                                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout3imageText}>{item?.fields?.title}</h1>
 
 
 
@@ -614,16 +644,16 @@ export default function Main() {
                 <section class="text-gray-600 body-font">
                     <div class="">
                         <div class="flex flex-wrap">
-                            {Celebrity?.data?.map((itrem, index) => {
+                            {Celebrity?.map((itrem, index) => {
                                 return (
                                     <>
 
                                         <div class={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
-                                        <Link href={`/view/CelebrityDetails?id=${itrem?.id}`}>
+                                        <Link href={`/view/CelebrityDetails?id=${itrem?.sys?.id}`}>
                                             <div class=" px-0 pt-0 pb-5 rounded-lg overflow-hidden relative h-full">
-                                                <img src={itrem?.image?.url} className={styles.imageLayout2} />
-                                                <button className={styles.Layout2Boxbutton}>{itrem?.tag}</button>
-                                                <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout2imageText}>{itrem?.title}</h1>
+                                                <img src={itrem?.fields?.image?.fields?.file?.url} className={styles.imageLayout2} />
+                                                <button className={styles.Layout2Boxbutton}>{itrem?.fields?.tag}</button>
+                                                <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout2imageText}>{itrem?.fields?.title}</h1>
 
 
                                             </div>
@@ -659,11 +689,11 @@ export default function Main() {
                 <div class={`py-2 ${styles.layout4}`}>
                     <div class="flex flex-wrap -m-4 ">
                         {
-                            beauties?.data?.map((item, index) => {
+                            beauties?.map((item, index) => {
                                 return (
                                     <>
                                         <div class="pt-3 lg:w-1/2 md:w-1/1 sm:w-1/1">
-                                            <Link href={`/view/beautyDetails?id=${item?.id}`}>
+                                            <Link href={`/view/beautyDetails?id=${item?.sys?.id}`}>
                                                 <div className={`flex lg:w-3/8 mx-auto pb-4 mb-4 gap-2  ${styles.flexcommpon}`}>
                                                     <div class="sm:mr-5 inline-flex items-center justify-center rounded-lg flex-shrink-0">
 
@@ -674,7 +704,7 @@ export default function Main() {
                                                         <img
                                                             //  class="sm:w-[152px] sm:h-[152px] w-[100px] h-[100px] rounded-xl"
                                                             className={styles.commonimage}
-                                                            src={item?.image?.url}
+                                                            src={item?.fields?.image?.fields?.file?.url}
 
                                                         />
 
@@ -683,9 +713,9 @@ export default function Main() {
 
                                                     <div class={`flex-grow sm:text-left  ${styles.layout4box} `}>
 
-                                                        <button className={styles.Layout3Boxbutton}>{item?.tags}</button>
+                                                        <button className={styles.Layout3Boxbutton}>{item?.fields?.tag}</button>
 
-                                                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout3imageText}>{item?.title}</h1>
+                                                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout3imageText}>{item?.fields?.title}</h1>
 
 
 
