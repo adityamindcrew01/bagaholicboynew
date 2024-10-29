@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useState, } from 'react';
+import { useEffect, useState, useLayoutEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Link from 'next/link'
 import styles from './beauty.module.css';
@@ -68,18 +68,55 @@ export default function Beauty() {
         // }
 
         try {
-            const product =  await client.getEntries(
-              { 'content_type': 'beauty',
-              }
+            const product = await client.getEntries(
+                {
+                    'content_type': 'beauty',
+                }
             )
-          console.log("displayBagsList", product.items);
-          setProducts(product.items)
-           
-          } catch (error) {
+            console.log("displayBagsList", product.items);
+            setProducts(product.items)
+
+        } catch (error) {
             console.error('Error fetching product details:', error);
-          }
+        }
 
     };
+
+
+
+
+
+    const [isClient, setIsClient] = useState(false);
+    const [scrolle, setSrcoll] = useState(false)
+    useLayoutEffect(() => {
+        setIsClient(true); // Ensure hydration is completed
+
+        const navbar = document.querySelector('header');
+        const brandImage = document.querySelector('.brand-image');
+
+        const handleScroll = () => {
+            if (window.scrollY > 300) {
+                // navbar.classList.add('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out');
+                // brandImage.classList.add('w-[10px]');
+                //brandImage.classList.add(styles.shrink); // Add shrink class
+
+                setSrcoll(true)
+            } else {
+                // navbar.classList.remove('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out');
+                // brandImage.classList.remove('w-[10px]');
+                //brandImage.classList.add(styles.brandImage); // Add shrink class
+                setSrcoll(false)
+            }
+        };
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+
+        // Cleanup listener on component unmount
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []); // Empty de
 
     return (
         <>
@@ -133,14 +170,14 @@ export default function Beauty() {
                         </Link>
                     </nav>
 
-                    <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 justify-center">
+                    <a className="flex title-font font-medium items-center text-gray-900 mb-0 md:mb-0 justify-center">
                         {/* <span className="ml-3 text-xl">BAGAHOLICBOY</span> */}
                         <div className="mx-auto py-4 lg:pr-20 md:pr-0 sm:pr-0 flex flex-wrap flex-col sm:flex-row items-center">
-                        <Link href='/'>
+                            <Link href='/'>
                                 <Image
                                     src={ima}
                                     alt="Description of image"
-                                    className="w-full max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[350px] xl:max-w-[400px] h-auto"
+                                    className={` brand-image ${scrolle ? styles.shrink : styles.brandImage} h-auto transition-all duration-300 ease-in-out`}
                                 />
                             </Link>
                         </div>
@@ -149,11 +186,14 @@ export default function Beauty() {
 
 
 
+
                     {/* Right side Links (Desktop and Tablet) */}
                     <nav className="hidden md:flex flex-wrap items-center text-base justify-center space-x-3 text-xs">
                         <a className="hover:text-gray-900 text-gray-900">INSTAGRAM</a>
                         <a className="hover:text-gray-900 text-gray-900">TIKTOK</a>
-                        <a className="hover:text-gray-900 text-gray-900">SEARCH</a>
+                        <Link href='/view/Search'>
+                        <p className="hover:text-gray-900 text-gray-900">SEARCH</p>
+                        </Link>
                     </nav>
 
 
@@ -180,7 +220,7 @@ export default function Beauty() {
                     {/* Dropdown menu for mobile */}
                     {isOpen && (
                         <div className="flex flex-col w-full mt-4 md:hidden space-y-2 text-center">
-                             <Link href='/view/bags'>
+                            <Link href='/view/bags'>
                                 <p className="hover:border-b-2 border-black text-black">BAGS</p>
 
                             </Link>
@@ -219,6 +259,7 @@ export default function Beauty() {
 
 
                             <a className="hover:text-gray-900">SEARCH</a>
+                            
                         </div>
                     )}
                 </div>
@@ -253,15 +294,15 @@ export default function Beauty() {
                                     <>
 
                                         <div class={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
-                                        <Link href={`/view/beautyDetails?id=${item?.sys?.id}`}>
-                                            <div class=" px-0 pt-10 pb-0 rounded-lg overflow-hidden relative h-full">
-                                                <img src={item?.fields?.image?.fields?.file?.url} className={styles.imageLayout2} />
-                                                <button className={styles.Layout2Boxbutton}>{item?.fields?.tag}</button>
-                                                <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout2imageText}>{item?.fields?.title}</h1>
+                                            <Link href={`/view/beautyDetails?id=${item?.sys?.id}`}>
+                                                <div class=" px-0 pt-10 pb-0 rounded-lg overflow-hidden relative h-full">
+                                                    <img src={item?.fields?.image?.fields?.file?.url} className={styles.imageLayout2} />
+                                                    <button className={styles.Layout2Boxbutton}>{item?.fields?.tag}</button>
+                                                    <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout2imageText}>{item?.fields?.title}</h1>
 
 
-                                            </div>
-                                          </Link>
+                                                </div>
+                                            </Link>
                                         </div>
                                     </>
                                 )

@@ -210,3 +210,42 @@
     background-color: #000;
     color: white;
 }
+
+
+.Layout2 {
+    display: flex;
+    margin: 0px 2em;
+    justify-content: space-between;
+    align-items: center;
+  
+  }
+  
+  .Layout2Box {
+    margin: 0px 2em 4em 2em;
+  }
+  
+  @media only screen and (max-width: 900px) and (min-width: 0px) {
+    .Layout2Box {
+      margin: 0px 0.9em;
+    }
+    .Layout2text {
+        /* font-size: 5em; */
+        color: #000 !important;
+    
+        font-family: Rhymes Display;
+        font-size: 2em !important;
+        font-weight: 200;
+        letter-spacing: -.04em;
+    }
+    
+  }
+  
+  .Layout2text {
+    /* font-size: 5em; */
+    color: #000 !important;
+
+    font-family: Rhymes Display;
+    font-size: 4em;
+    font-weight: 200;
+    letter-spacing: -.04em;
+}

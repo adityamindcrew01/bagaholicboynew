@@ -1,6 +1,6 @@
 'use client'
 import { useRouter, useParams } from 'next/navigation'
-
+import Link from 'next/link';
 import { useSearchParams } from 'next/navigation'
 import { Suspense } from 'react';
 import ChannelLayout from '@/components/ChannelLayout';
@@ -17,15 +17,16 @@ import SmallChannelLayout from '@/components/SmallChannelLayout';
 import { Base_URL } from '@/app/Config';
 import Footer from '@/components/Footer';
 import client from '@/lib/contentful';
+import Youmaylike from '../Youmaylike/page';
 
 
 export default function Page() {
     return (
-      <Suspense fallback={<p>Loading...</p>}>
-        <BagsDetails />
-      </Suspense>
+        <Suspense fallback={<p>Loading...</p>}>
+            <BagsDetails />
+        </Suspense>
     );
-  }
+}
 
 
 const BagsDetails = ({ product }) => {
@@ -37,7 +38,7 @@ const BagsDetails = ({ product }) => {
 
 
 
-
+    const [youmaylike, setYoumayLike] = useState([])
 
     useEffect(() => {
 
@@ -49,6 +50,7 @@ const BagsDetails = ({ product }) => {
         };
 
         fetchData();
+        displayYoumaylike();
 
 
 
@@ -75,13 +77,30 @@ const BagsDetails = ({ product }) => {
         try {
             // Fetch product by sys.id using getEntry
             const product = await client.getEntry(id);
-      
+
             console.log("jsjas", product.fields)
             setcommonProduct(product.fields)
-           
-          } catch (error) {
+
+        } catch (error) {
             console.error('Error fetching product details:', error);
-          }
+        }
+    }
+
+    const displayYoumaylike = async () => {
+
+
+        try {
+            const product = await client.getEntries(
+                {
+                    'content_type': 'youmaylike',
+                }
+            )
+            console.log("displayBagsList", product.items);
+            setYoumayLike(product.items)
+
+        } catch (error) {
+            console.error('Error fetching product details:', error);
+        }
     }
 
 
@@ -244,12 +263,12 @@ const BagsDetails = ({ product }) => {
         //     <Footer />
 
         // </div>
-       
+
 
         <div style={{ overflowX: 'hidden' }}>
             <ChannelLayout />
             <Navbar />
-          
+
 
             <div className='mx-4 md:mx-10 mt-10 md:mt-20'>
 
@@ -330,13 +349,26 @@ const BagsDetails = ({ product }) => {
                     </div>
                 </div>
             </div>
-          
+
 
             <SmallChannelLayout />
+
+
+   
+
+            <Youmaylike/>
+
+
+
+
+
+
+
+
             <Footer />
         </div>
-      
-      
+
+
 
 
     )

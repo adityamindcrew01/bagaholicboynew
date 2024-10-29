@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playwrite+HR:wght@100..400&display=swap');
+.SearchText{
+    color: black;
+    font-size: 20px;
+    font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+}
+
+
+/* LAYOUT 2 */
+
+.Layout2 {
+    display: flex;
+    margin: 0px 2em;
+    justify-content: space-between;
+    align-items: center;
+  
+  }
+  
+  .Layout2Box {
+    margin: 0px 2em 4em 2em;
+  }
+  @media only screen and (max-width: 900px) and (min-width: 0px) {
+    .Layout2Box {
+      margin: 0px 0.9em;
+    }
+  }
+  
+  
+  
+  .imageLayout2 {
+    border-radius: 20px;
+  }
+  
+  .viewallbutton {
+    background-color: #000;
+    padding: 15px 20px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-family: ABC Monument Grotesk, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+    font-size: 13px;
+    font-weight: 500;
+  }
+  
+  .viewallbutton:hover {
+    background-color: #fff;
+    border: 1px solid black;
+    color: #000;
+  }
+  
+  .Layout2text {
+    /* font-size: 5em; */
+    color: #000 !important;
+  
+    font-family: Rhymes Display;
+  
+    font-weight: 200;
+    letter-spacing: -.04em;
+  }
+  .layout2con{
+    /* margin: 0px 10px; */
+    padding: 0px 10px;
+  }
+  @media only screen and (max-width: 900px) and (min-width: 0px) {
+    .Layout2 {
+     
+      margin: 0px 1em;
+     
+    
+    }
+    .layout2con{
+      padding: 0px 10px;
+    }
+  }
+  
+  @media (min-width: 240px) {
+    .Layout2text {
+      font-size: 28px;
+      color: green;
+      /* Font size for small screens (640px and up) */
+    }
+  }
+  
+  
+  @media (min-width: 640px) {
+    .Layout2text {
+      font-size: 28px;
+      color: red;
+      /* Font size for small screens (640px and up) */
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .Layout2text {
+      font-size: 42px;
+      color: pink;
+      /* Font size for medium screens (768px and up) */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .Layout2text {
+      font-size: 66px;
+      /* color: blue; */
+  
+    }
+  }
+  
+  .Layout2Boxbutton {
+    margin-top: 18px;
+    border: 1px solid rgb(224, 223, 223);
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 13px;
+    color: #000;
+    text-transform: uppercase;
+  
+  
+  }
+  
+  .Layout2imageText {
+    color: #000 !important;
+    font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-left: 4px;
+  
+  }
+  
+  @media (min-width: 240px) {
+    .Layout2imageText {
+      font-size: 28px;
+      color: green;
+      /* Font size for small screens (640px and up) */
+    }
+  }
+  
+  
+  @media (min-width: 640px) {
+    .Layout2imageText {
+      font-size: 28px;
+      color: red;
+      /* Font size for small screens (640px and up) */
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .Layout2imageText {
+      font-size: 22px;
+      color: pink;
+      /* Font size for medium screens (768px and up) */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .Layout2imageText {
+      font-size: 30px;
+      color: blue;
+  
+    }
+  }
+  
+
+.buttonDetailsText{
+    border: 1px solid rgb(224, 223, 223);
+    border-radius: 20px;
+    padding: 8px 14px;
+    /* font-size: 18px; */
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.buttonDetailsText:hover{
+    background-color: #000;
+    color: white;
+}
+
+@media only screen and (max-width: 3901px) and (min-width: 901px) {
+    .buttonDetailsText{
+        border: 1px solid rgb(224, 223, 223);
+        border-radius: 20px;
+        padding: 5px 14px;
+        font-size: 12px;
+        color: #000;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    .searchInput {
+        font-size: 54px;
+        color: #150808; 
+        text-align: center; 
+        border: none;
+        outline: none;
+        font-family: "Libre Baskerville", serif;
+        font-weight: 400;
+        font-style: normal; 
+    
+    }
+      
+}
+@media only screen and (max-width: 900px) and (min-width: 0px) {
+    .buttonDetailsText{
+        border: 1px solid rgb(224, 223, 223);
+        border-radius: 20px;
+        padding: 8px 14px;
+        font-size: 10px;
+        color: #000;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    .searchInput {
+        font-size: 34px;
+        color: #150808; 
+        text-align: center; 
+        border: none;
+        outline: none;
+        font-family: "Libre Baskerville", serif;
+        font-weight: 400;
+        font-style: normal; 
+        
+    
+    }
+
+    .searchInput{
+    width: 100%;
+    padding: 0px 20px;
+    }
+    .searchInput::placeholder {
+        white-space: pre-wrap !important;  
+      }
+}
+
+
+/* styles.css */
+
+.searchContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+  }
+  
+
+  .searchInput::placeholder {
+    color: #c0c0c0; /* Placeholder color */
+    opacity: 1; /* Ensures full opacity for the placeholder */
+  }
+  
+  .searchInput:focus {
+    outline: none; /* Removes the default focus outline */
+  }
+
+
+
+.fiterbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    /* padding: 0px 25px; */
+    list-style-type: none;
+   
+    align-items: center;
+   
+
+   
+
+
+}
+
+
+.filterbox2 {
+    flex: 0 1 calc(20% - 10px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    margin-bottom: 10px;
+
+    background-color: #d3fac4;
+    border: 2px solid #547149;
+    padding: 12px 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+}
+
+.filterbox2 span {
+    color: #547149;
+}
+
+
+
+
+@media only screen and (max-width: 900px) and (min-width: 0px) {
+  .imageBrandName{
+  position: relative ;
+  top:7px ;
+
+ 
+  }
+}
+
+
+.smaller-brand {
+  max-width: 150px; /* Adjust the size as needed */
+}
+
+.shrink {
+width: 200px; /* Shrinks to 10px on scroll */
+}
+
+.brandImage {
+width: 300px; /* You can adjust the width as needed */
+height: auto;
+
+
+
+}
+
+
+@media only screen and (max-width: 900px) and (min-width: 0px) {
+.brandImage {
+  width: 200px; /* You can adjust the width as needed */
+  height: auto;
+
+} 
+}
+  

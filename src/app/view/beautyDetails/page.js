@@ -17,6 +17,7 @@ import SmallChannelLayout from '@/components/SmallChannelLayout';
 import { Base_URL } from '@/app/Config';
 import Footer from '@/components/Footer';
 import client from '@/lib/contentful';
+import Youmaylike from '../Youmaylike/page';
 
 export default function Page() {
     return (
@@ -173,9 +174,17 @@ const BeautyDetails = ({ product }) => {
                     </div>
                 </div>
             </div>
+
+            
           
 
             <SmallChannelLayout />
+
+
+          
+
+            <Youmaylike/>
+
             <Footer />
         </div>
       

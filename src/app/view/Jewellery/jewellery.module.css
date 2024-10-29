@@ -151,4 +151,47 @@
   
     }
   }
+
+
+
+
+
+@media only screen and (max-width: 900px) and (min-width: 0px) {
+  .imageBrandName {
+    position: relative;
+    top: 7px;
+
+
+  }
+
+
+}
+
+
+.smaller-brand {
+  max-width: 150px;
+  /* Adjust the size as needed */
+}
+
+.shrink {
+  width: 200px;
+  /* Shrinks to 10px on scroll */
+}
+
+.brandImage {
+  width: 300px;
+  /* You can adjust the width as needed */
+  height: auto;
+
+
+
+}
+
+@media only screen and (max-width: 900px) and (min-width: 0px) {
+  .brandImage {
+    width: 200px; /* You can adjust the width as needed */
+    height: auto;
+  
+  } 
+}
   

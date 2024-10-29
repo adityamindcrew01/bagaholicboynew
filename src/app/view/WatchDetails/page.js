@@ -17,6 +17,7 @@ import SmallChannelLayout from '@/components/SmallChannelLayout';
 import { Base_URL } from '@/app/Config';
 import Footer from '@/components/Footer';
 import client from '@/lib/contentful';
+import Youmaylike from '../Youmaylike/page';
 
 
 export default function Page() {
@@ -333,6 +334,9 @@ const WatchDetails = ({ product }) => {
           
 
             <SmallChannelLayout />
+
+
+            <Youmaylike/>
             <Footer />
         </div>
       
