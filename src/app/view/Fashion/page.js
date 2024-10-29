@@ -196,10 +196,12 @@ export default function Fashion() {
                     </nav>
 
 
+                   {/* 
                     <button
                         onClick={toggleMenu2}
                         className="inline-flex items-center md:hidden text-gray-900 focus:outline-none"
-                    >
+                    > */}
+                    <Link href='/view/Search'  className="inline-flex items-center md:hidden text-gray-900 focus:outline-none">
                         <svg
                             className="w-6 h-6"
                             fill="none"
@@ -214,7 +216,8 @@ export default function Fashion() {
                                 d="M21 21l-4.35-4.35m0 0a7 7 0 111.415-1.414L21 21z"
                             ></path>
                         </svg>
-                    </button>
+                        </Link>
+                    {/* </button> */}
 
                     {/* Dropdown menu for mobile */}
                     {isOpen && (

@@ -189,10 +189,12 @@ export default function Bags() {
                     </nav>
 
 
+                   {/* 
                     <button
                         onClick={toggleMenu2}
                         className="inline-flex items-center md:hidden text-gray-900 focus:outline-none"
-                    >
+                    > */}
+                    <Link href='/view/Search'  className="inline-flex items-center md:hidden text-gray-900 focus:outline-none">
                         <svg
                             className="w-6 h-6"
                             fill="none"
@@ -207,7 +209,8 @@ export default function Bags() {
                                 d="M21 21l-4.35-4.35m0 0a7 7 0 111.415-1.414L21 21z"
                             ></path>
                         </svg>
-                    </button>
+                        </Link>
+                    {/* </button> */}
 
                     {/* Dropdown menu for mobile */}
                     {isOpen && (
@@ -250,7 +253,7 @@ export default function Bags() {
                         <div className="flex flex-col w-full mt-4 md:hidden space-y-2 text-center">
 
 <Link href='/view/Search'>
-                            <p className="hover:text-gray-900">SEARCH</p>
+                            <p className="hover:text-gray-900 " >SEARCH</p>
                             </Link>
                         </div>
                     )}
