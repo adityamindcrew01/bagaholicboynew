@@ -334,7 +334,9 @@ export default function Main() {
                 </div>
 
                 <div>
-                    <button className={styles.viewallbutton}>View all</button>
+                <Link href={`/view/Allnews`}>
+                    <button className={styles.viewallbutton} >View all</button>
+                    </Link>
                 </div>
 
 
