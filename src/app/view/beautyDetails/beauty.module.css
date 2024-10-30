@@ -1,35 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playwrite+HR:wght@100..400&display=swap');
 
 
-
-
-.buttonDetailsText{
+/* .buttonDetailsText{
     border: 1px solid rgb(224, 223, 223);
     border-radius: 20px;
     padding: 8px 14px;
-    /* font-size: 18px; */
+    font-size: 18px;
     color: #000;
     text-transform: uppercase;
     font-weight: 500;
 }
-
 .buttonDetailsText:hover{
+   background-color: #000;
+    border-radius: 20px;
+    padding: 8px 14px;
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.detailsTitle{
+    color: #000 !important;
+    font-family: "Kaisei Opti", serif;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-left: 4px;
+    font-size: 4rem;
+    width: 50%;
+    line-height: 1;
+    margin-bottom: 10px;
+
+   
+}
+.dateDetails{
+    color: #000 !important;
+    font-family: "Kaisei Opti", serif;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-left: 4px;
+    margin: 0px 250px;
+}
+.imageDetails{
+    width: 50%;
+    border-radius: 20px;
+}
+.imageName{
+    color: #d2d2d2 !important;
+    font-weight: 500;
+    
+    
+   
+   
+}
+.descriptionTitle{
+    color: #000 !important;
+    font-family: "Kaisei Opti", serif;
+    font-weight: 100;
+    margin-top: 30px;
+    margin-left: 4px;
+    font-size: 1.3em;
+   
+    width: 50%;
+
+   
+
+}
+.UnderlineText{
+    color: #000 !important;
+    font-family: "Kaisei Opti", serif;
+    font-weight: 100;
+    margin-top: 0px;
+    margin-left: 4px;
+    font-size: 1.3em;
+   
+    width: 50%;
+
+    margin-bottom: 25px;
+
+
+    text-decoration: underline;        
+    text-decoration-thickness: 2px;   
+    text-underline-offset: 2px;       
+
+    padding-bottom: 2px;               
+ 
+
+}
+
+.UnderlineText2{
+    color: #2f2e2e !important;
+    font-family: "Kaisei Opti", serif;
+    font-weight: 100;
+    margin-top: 30px;
+    margin-left: 4px;
+    font-size: 1.3em;
+    
+    width: 50%;
+
+    margin-bottom: 10px;
+
+
+    text-decoration: underline;        
+    text-decoration-thickness: 2px;   
+    text-underline-offset: 2px;        
+   
+    padding-bottom: 2px;               
+}
+.shareText{
+    color: #000 !important;
+     font-family: "Kaisei Opti", serif; 
+    font-weight: 100;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 4px;
+    font-size: 1.3em;
+   
+    width: 50%;
+    letter-spacing: -.03em;
+
+}
+.buttonicon{
+    border: 1.3px solid rgb(179, 176, 176);
+    padding: 13px;
+    border-radius: 16px;
+    color: black;
+
+}
+.icon{
+font-size: 20px;
+
+
+}
+.buttonicon:hover{
+    background-color: #000;
+    color: white;
+   
+}
+.buttoncontenet{
+    border: 1.7px solid rgb(12, 12, 12);
+    padding: 5px 13px;
+    border-radius: 20px;
+    color: black;
+    font-size: 12px;
+    font-weight: 500;
+}
+.buttoncontenet:hover{
+    border: 1.7px solid rgb(12, 12, 12);
+   background-color: #000;
+    color: white;
+
+} */
+
+
+
+
+.buttonDetailsText {
+    border: 1px solid rgb(224, 223, 223);
+    border-radius: 20px;
+    padding: 5px 12px;
+    /* font-size: 18px; */
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 500;
+
+}
+
+.buttonDetailsText:hover {
     background-color: #000;
     color: white;
 }
 
 @media only screen and (max-width: 3901px) and (min-width: 901px) {
-    .buttonDetailsText{
+    .buttonDetailsText {
         border: 1px solid rgb(224, 223, 223);
         border-radius: 20px;
-        padding: 8px 14px;
-        font-size: 18px;
+        padding: 5px 12px;
+        font-size: 13px;
         color: #000;
         text-transform: uppercase;
         font-weight: 500;
     }
 }
+
 @media only screen and (max-width: 900px) and (min-width: 0px) {
-    .buttonDetailsText{
+    .buttonDetailsText {
         border: 1px solid rgb(224, 223, 223);
         border-radius: 20px;
         padding: 8px 14px;
@@ -40,105 +194,109 @@
     }
 }
 
-.detailsTitle{
+.detailsTitle {
     color: #000 !important;
-    font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+    font-family: "Kaisei Opti", serif;
     font-weight: 500;
     margin-top: 10px;
-    width: 53%; 
+    width: 53%;
     line-height: 1;
     margin-bottom: 10px;
 
-   
+
 }
 
 @media only screen and (max-width: 900px) and (min-width: 0px) {
-    .detailsTitle{
+    .detailsTitle {
         color: #000 !important;
-        font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+        font-family: "Kaisei Opti", serif;
         font-weight: 500;
         margin-top: 10px;
-        width: 100%; 
+        width: 100%;
         line-height: 1;
         margin-bottom: 10px;
-    
-       
+
+
     }
 }
 
 @media only screen and (max-width: 3901px) and (min-width: 901px) {
-    .detailsTitle{
+    .detailsTitle {
         color: #000 !important;
-        font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+        font-family: "Kaisei Opti", serif;
         font-weight: 500;
         margin-top: 10px;
-        width: 50%; 
+        width: 50%;
         line-height: 1;
         margin-bottom: 10px;
-    
-       
+
+
     }
 }
 
-.shareText{
+.shareText {
     color: #000 !important;
-     font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif; 
+    font-family: "Kaisei Opti", serif;
     font-weight: 100;
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left: 4px;
     font-size: 1.3em;
-   
+
     width: 100%;
     letter-spacing: -.03em;
 
 }
 
 @media only screen and (max-width: 900px) and (min-width: 0px) {
-    .shareText{
+    .shareText {
         color: #000 !important;
-         font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif; 
+        font-family: "Kaisei Opti", serif;
         font-weight: 100;
         margin-top: 15px;
         margin-bottom: 15px;
         margin-left: 4px;
         font-size: 1.3em;
-       
+
         width: 100%;
         letter-spacing: -.03em;
         text-align: center;
-    
+
     }
 }
 
 
 
 
-.dateDetails{
+.dateDetails {
     color: #000 !important;
-    font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
-    font-weight: 500;
+    font-family: "Kaisei Opti", serif;
+    font-weight: 600;
+    font-size: 14px;
+    font-style: normal;
 }
 
-.imageDetails{
-    width: 100%; /* Responsive width for smaller screens */
+.imageDetails {
+    width: 100%;
+    /* Responsive width for smaller screens */
     border-radius: 20px;
 }
 
-.descriptionTitle{
+.descriptionTitle {
     color: #000 !important;
-    font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
-    font-weight: 100;
+    font-family: "Kaisei Opti", serif;
+    font-weight: 500;
     margin-top: 30px;
+    font-style: normal;
     /* width: 100%;  */
-   
+
 }
 
 @media only screen and (max-width: 900px) and (min-width: 0px) {
-    .descriptionTitle{
+    .descriptionTitle {
         color: #000 !important;
-        font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
-        font-weight: 100;
+        font-family: "Kaisei Opti", serif;
+        font-weight: 500;
         margin-top: 30px;
         /* width: 100%;  */
         width: 100%;
@@ -146,58 +304,65 @@
 }
 
 @media only screen and (max-width: 3901px) and (min-width: 901px) {
-    .descriptionTitle{
+    .descriptionTitle {
         color: #000 !important;
-        font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
-        font-weight: 100;
+        font-family: "Kaisei Opti", serif;
+        font-weight: 500;
         margin-top: 30px;
         /* width: 100%;  */
         width: 50%;
+        font-style: normal;
     }
 }
 
 
 
-.UnderlineText, .UnderlineText2{
+.UnderlineText,
+.UnderlineText2 {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 2px;
     color: #000;
     padding-bottom: 20px;
-    font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+    font-family: "Kaisei Opti", serif;
 
 }
+
 @media only screen and (max-width: 3901px) and (min-width: 901px) {
-    .UnderlineText, .UnderlineText2{
+
+    .UnderlineText,
+    .UnderlineText2 {
         font-size: 20px;
         width: 50%;
     }
 }
 
 @media only screen and (max-width: 900px) and (min-width: 0px) {
-    .UnderlineText, .UnderlineText2{
+
+    .UnderlineText,
+    .UnderlineText2 {
         font-size: 13px;
         width: 100%;
     }
 }
 
-.buttonicon{
+.buttonicon {
     border: 1.3px solid rgb(179, 176, 176);
     padding: 10px;
     border-radius: 16px;
     color: black;
 }
 
-.buttonicon:hover{
+.buttonicon:hover {
     background-color: #000;
     color: white;
 }
 
-.icon{
+.icon {
     font-size: 20px;
 }
 
-.buttoncontenet{
+.buttoncontenet {
     border: 1.7px solid rgb(12, 12, 12);
     padding: 5px 13px;
     border-radius: 20px;
@@ -206,10 +371,12 @@
     font-weight: 500;
 }
 
-.buttoncontenet:hover{
+.buttoncontenet:hover {
     background-color: #000;
     color: white;
 }
+
+
 
 
 .Layout2 {
@@ -217,16 +384,17 @@
     margin: 0px 2em;
     justify-content: space-between;
     align-items: center;
-  
-  }
-  
-  .Layout2Box {
+
+}
+
+
+.Layout2Box {
     margin: 0px 2em 4em 2em;
-  }
-  
-  @media only screen and (max-width: 900px) and (min-width: 0px) {
+}
+
+@media only screen and (max-width: 900px) and (min-width: 0px) {
     .Layout2Box {
-      margin: 0px 0.9em;
+        margin: 0px 0.9em;
     }
     .Layout2text {
         /* font-size: 5em; */
@@ -237,10 +405,79 @@
         font-weight: 200;
         letter-spacing: -.04em;
     }
-    
+    .layout2con {
+        padding: 0px 10px;
+      }
+}
+
+.layout2con {
+    /* margin: 0px 10px; */
+    padding: 0px 10px;
   }
   
-  .Layout2text {
+
+  .imageLayout2 {
+    border-radius: 20px;
+  }
+
+  .Layout2Boxbutton {
+    margin-top: 18px;
+    border: 1px solid rgb(224, 223, 223);
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 13px;
+    color: #000;
+    text-transform: uppercase;
+  
+  
+  }
+
+
+.Layout2imageText {
+    color: #000 !important;
+    font-family: "Kaisei Opti", serif;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-left: 4px;
+  
+  }
+  
+  @media (min-width: 240px) {
+    .Layout2imageText {
+      font-size: 28px;
+      color: green;
+      /* Font size for small screens (640px and up) */
+    }
+  }
+  
+  
+  @media (min-width: 640px) {
+    .Layout2imageText {
+      font-size: 28px;
+      color: red;
+      /* Font size for small screens (640px and up) */
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .Layout2imageText {
+      font-size: 22px;
+      color: pink;
+      /* Font size for medium screens (768px and up) */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .Layout2imageText {
+      font-size: 30px;
+      color: blue;
+  
+    }
+  }
+
+
+
+.Layout2text {
     /* font-size: 5em; */
     color: #000 !important;
 
@@ -249,3 +486,6 @@
     font-weight: 200;
     letter-spacing: -.04em;
 }
+
+
+
