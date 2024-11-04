@@ -1,3 +1,8 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Kaisei+Opti&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playwrite+HR:wght@100..400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Kaisei+Opti&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playwrite+HR:wght@100..400&display=swap');
+
 /* .buttonDetailsText{
     border: 1px solid rgb(224, 223, 223);
     border-radius: 20px;
@@ -275,18 +280,19 @@ font-size: 20px;
 }
 
 .descriptionTitle{
-    color: #000 !important;
-    font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
-    font-weight: 100;
+    color: #4b4a4a !important;
+    font-family: "Crimson Text", serif;
+  font-weight: 200;
+  font-style: normal;
     margin-top: 30px;
     /* width: 100%;  */
-   
+   font-size: 22px;
 }
 
 @media only screen and (max-width: 900px) and (min-width: 0px) {
     .descriptionTitle{
         color: #000 !important;
-        font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+        font-family: "Crimson Text", serif;
         font-weight: 100;
         margin-top: 30px;
         /* width: 100%;  */
@@ -296,8 +302,8 @@ font-size: 20px;
 
 @media only screen and (max-width: 3901px) and (min-width: 901px) {
     .descriptionTitle{
-        color: #000 !important;
-        font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+        /* color: #000 !important; */
+        font-family: "Crimson Text", serif;
         font-weight: 100;
         margin-top: 30px;
         /* width: 100%;  */

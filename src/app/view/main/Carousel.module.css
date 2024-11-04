@@ -136,8 +136,9 @@
 .layout4box {
   margin-top: 6px;
 }
-.layout4{
-  margin:0px 3em
+
+.layout4 {
+  margin: 0px 3em
 }
 
 @media only screen and (max-width: 900px) and (min-width: 0px) {
@@ -171,8 +172,9 @@
   .layout4box {
     margin-top: 0px;
   }
-  .layout4{
-    margin:0px 1.3em
+
+  .layout4 {
+    margin: 0px 1.3em
   }
 }
 
@@ -220,6 +222,7 @@
 .Layout2Box {
   margin: 0px 2em;
 }
+
 @media only screen and (max-width: 900px) and (min-width: 0px) {
   .Layout2Box {
     margin: 0px 0.9em;
@@ -257,18 +260,21 @@
   font-weight: 200;
   letter-spacing: -.04em;
 }
-.layout2con{
+
+.layout2con {
   /* margin: 0px 10px; */
   padding: 0px 10px;
 }
+
 @media only screen and (max-width: 900px) and (min-width: 0px) {
   .Layout2 {
-   
+
     margin: 0px 1em;
-   
-  
+
+
   }
-  .layout2con{
+
+  .layout2con {
     padding: 0px 10px;
   }
 }
@@ -310,10 +316,18 @@
   margin-top: 18px;
   border: 1px solid rgb(224, 223, 223);
   border-radius: 20px;
-  padding: 5px 15px;
-  font-size: 13px;
+  padding: 5px 12px;
+  font-size: 11px;
   color: #000;
   text-transform: uppercase;
+
+
+}
+
+.Layout2Boxbutton:hover {
+ 
+  background-color: #000;
+  color: white;
 
 
 }
@@ -429,3 +443,6 @@
 
   }
 }
+
+
+ 

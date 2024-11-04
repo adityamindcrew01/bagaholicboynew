@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playwrite+HR:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Kaisei+Opti&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playwrite+HR:wght@100..400&display=swap');
 
 
 /* .buttonDetailsText{
@@ -287,7 +288,7 @@ font-size: 20px;
     font-family: "Kaisei Opti", serif;
     font-weight: 500;
     margin-top: 30px;
-    /* width: 100%;  */
+    font-size: 18px;
 
 }
 
@@ -304,9 +305,9 @@ font-size: 20px;
 
 @media only screen and (max-width: 3901px) and (min-width: 901px) {
     .descriptionTitle {
-        color: #000 !important;
-        font-family: "Kaisei Opti", serif;
-        font-weight: 500;
+        /* color: #000 !important;
+        font-family: "Kaisei Opti", serif; */
+        /* font-weight: 500; */
         margin-top: 30px;
         /* width: 100%;  */
         width: 50%;

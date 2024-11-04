@@ -17,6 +17,7 @@ import SmallChannelLayout from '@/components/SmallChannelLayout';
 import { Base_URL } from '@/app/Config';
 import Footer from '@/components/Footer';
 import client from '@/lib/contentful';
+import moment from 'moment/moment';
 
 
 export default function Page() {
@@ -264,7 +265,7 @@ const CelebrityDetails = ({ product }) => {
 
 
                 <div className='text-center flex justify-center items-center'>
-                    <p className={`${styles.dateDetails} text-sm md:text-base lg:text-lg`}>{commonproduct?.date}</p>
+                    <p className={`${styles.dateDetails} text-sm md:text-base lg:text-lg`}>{moment(commonproduct?.date).format('DD MMMM YYYY')}</p>
                 </div>
 
                 <div className="flex justify-center items-center min-h-[300px] sm:min-h-[400px] md:min-h-screen">

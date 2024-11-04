@@ -8,6 +8,7 @@ import { Base_URL } from '@/app/Config';
 
 import ima from '../app/asset/image/brand.png'
 
+import Link from 'next/link';
 import Image from 'next/image';
 
 
@@ -33,29 +34,48 @@ const Footer = () => {
                         <div class="lg:w-1/2 md:w-1/2 sm:w-1/2 w-full px-10">
                             {/* <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2> */}
                             <nav class="list-none mb-10">
-                                <li>
-                                    <a class="text-black hover:border-b-2 border-black text-xs">BAGS</a>
+                                <li className='mt-2 mb-2'>
+                                    <Link href='/view/bags'>
+                                        <p class="text-black hover:border-b-2 border-black text-xs">BAGS</p>
+                                    </Link>
                                 </li>
-                                <li>
-                                    <a class="text-black hover:border-b-2 border-black  text-xs">BEAUTY</a>
+
+                                <li className='mt-2 mb-2'>
+                                    <Link href='/view/beauty'>
+                                        <p class="text-black hover:border-b-2 border-black  text-xs">BEAUTY</p>
+                                    </Link>
                                 </li>
-                                <li>
-                                    <a class="text-black hover:border-b-2 border-black  text-xs">FASHION</a>
+
+                                <li className='mt-2 mb-2'>
+
+                                    <Link href='/view/Fashion'>
+                                        <p class="text-black hover:border-b-2 border-black  text-xs">FASHION</p>
+                                    </Link>
                                 </li>
-                                <li>
-                                    <a class="text-black hover:border-b-2 border-black  text-xs">JEWELLERY</a>
+
+                                <li className='mt-2 mb-2'>
+                                    <Link href='/view/Jewellery'>
+                                        <p class="text-black hover:border-b-2 border-black  text-xs">JEWELLERY</p>
+                                    </Link>
                                 </li>
-                                <li>
-                                    <a class="text-black hover:border-b-2 border-black  text-xs">
-                                        WATCHES</a>
+
+                                <li className='mt-2 mb-2'>
+                                    <Link href='/view/Watches'>
+                                        <p class="text-black hover:border-b-2 border-black  text-xs">
+                                            WATCHES</p>
+                                    </Link>
                                 </li>
-                                <li>
-                                    <a class="text-black hover:border-b-2 border-black  text-xs">LIFESTYLE</a>
+
+                                <li className='mt-2 mb-2'>
+                                    <Link href='/view/Lifestyle'>
+                                        <p class="text-black hover:border-b-2 border-black  text-xs">LIFESTYLE</p>
+                                    </Link>
                                 </li>
 
                             </nav>
                         </div>
-                        <div class="lg:w-1/2 md:w-1/2 w-full px-10">
+                        {/* <div class="lg:w-1/2 md:w-1/2 w-full px-10"> */}
+                        <div class="w-full px-10">
                             {/* <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2> */}
                             <nav class="list-none mb-10">
                                 <li>
@@ -69,10 +89,15 @@ const Footer = () => {
                                 </li>
                                 <br />
                                 <li>
-                                    <a class="text-black hover:text-gray-800 text-xs">ABOUT US</a>
+                                <Link href='/view/Allabout'>
+                                    <p class="text-black hover:text-gray-800 text-xs">ABOUT US</p>
+                                    </Link>
                                 </li>
+                               
                                 <li>
-                                    <a class="text-black hover:text-gray-800 text-xs">PRIVACY POLICY</a>
+                                <Link href='/view/privacypolicy'>
+                                    <p class="text-black hover:text-gray-800 text-xs mt-2">PRIVACY POLICY</p>
+                               </Link>
                                 </li>
                             </nav>
                         </div>
@@ -84,7 +109,7 @@ const Footer = () => {
                 </div>
 
 
-                <div style={{ backgroundColor: '#f0f0f0',}}>
+                <div style={{ backgroundColor: '#f0f0f0', }}>
                     <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
                         <Image
                             src={ima} // Use the imported image

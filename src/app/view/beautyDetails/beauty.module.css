@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playwrite+HR:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Kaisei+Opti&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playwrite+HR:wght@100..400&display=swap');
 
 
 /* .buttonDetailsText{
@@ -283,18 +284,22 @@ font-size: 20px;
 }
 
 .descriptionTitle {
-    color: #000 !important;
-    font-family: "Kaisei Opti", serif;
-    font-weight: 500;
+    color: #252424 !important;
+   
     margin-top: 30px;
-    font-style: normal;
-    /* width: 100%;  */
+
+    font-size: 19px;
+
+
+    font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: normal;
 
 }
 
 @media only screen and (max-width: 900px) and (min-width: 0px) {
     .descriptionTitle {
-        color: #000 !important;
+        /* color: #000 !important; */
         font-family: "Kaisei Opti", serif;
         font-weight: 500;
         margin-top: 30px;
@@ -305,9 +310,9 @@ font-size: 20px;
 
 @media only screen and (max-width: 3901px) and (min-width: 901px) {
     .descriptionTitle {
-        color: #000 !important;
+        /* color: #000 !important; */
         font-family: "Kaisei Opti", serif;
-        font-weight: 500;
+        /* font-weight: 500; */
         margin-top: 30px;
         /* width: 100%;  */
         width: 50%;
@@ -396,31 +401,33 @@ font-size: 20px;
     .Layout2Box {
         margin: 0px 0.9em;
     }
+
     .Layout2text {
         /* font-size: 5em; */
         color: #000 !important;
-    
+
         font-family: Rhymes Display;
         font-size: 2em !important;
         font-weight: 200;
         letter-spacing: -.04em;
     }
+
     .layout2con {
         padding: 0px 10px;
-      }
+    }
 }
 
 .layout2con {
     /* margin: 0px 10px; */
     padding: 0px 10px;
-  }
-  
+}
 
-  .imageLayout2 {
+
+.imageLayout2 {
     border-radius: 20px;
-  }
+}
 
-  .Layout2Boxbutton {
+.Layout2Boxbutton {
     margin-top: 18px;
     border: 1px solid rgb(224, 223, 223);
     border-radius: 20px;
@@ -428,9 +435,9 @@ font-size: 20px;
     font-size: 13px;
     color: #000;
     text-transform: uppercase;
-  
-  
-  }
+
+
+}
 
 
 .Layout2imageText {
@@ -439,41 +446,41 @@ font-size: 20px;
     font-weight: 500;
     margin-top: 10px;
     margin-left: 4px;
-  
-  }
-  
-  @media (min-width: 240px) {
+
+}
+
+@media (min-width: 240px) {
     .Layout2imageText {
-      font-size: 28px;
-      color: green;
-      /* Font size for small screens (640px and up) */
+        font-size: 28px;
+        color: green;
+        /* Font size for small screens (640px and up) */
     }
-  }
-  
-  
-  @media (min-width: 640px) {
+}
+
+
+@media (min-width: 640px) {
     .Layout2imageText {
-      font-size: 28px;
-      color: red;
-      /* Font size for small screens (640px and up) */
+        font-size: 28px;
+        color: red;
+        /* Font size for small screens (640px and up) */
     }
-  }
-  
-  @media (min-width: 768px) {
+}
+
+@media (min-width: 768px) {
     .Layout2imageText {
-      font-size: 22px;
-      color: pink;
-      /* Font size for medium screens (768px and up) */
+        font-size: 22px;
+        color: pink;
+        /* Font size for medium screens (768px and up) */
     }
-  }
-  
-  @media (min-width: 1024px) {
+}
+
+@media (min-width: 1024px) {
     .Layout2imageText {
-      font-size: 30px;
-      color: blue;
-  
+        font-size: 30px;
+        color: blue;
+
     }
-  }
+}
 
 
 
@@ -486,6 +493,3 @@ font-size: 20px;
     font-weight: 200;
     letter-spacing: -.04em;
 }
-
-
-
