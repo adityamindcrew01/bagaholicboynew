@@ -11,6 +11,7 @@ import client from '@/lib/contentful';
 import ima from '../../../app/asset/image/brand.png'
 import Image from "next/image";
 import Youmaylike from '../Youmaylike/page';
+
 export default function Bags() {
 
 

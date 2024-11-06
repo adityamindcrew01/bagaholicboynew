@@ -157,7 +157,7 @@ font-size: 20px;
 .buttonDetailsText{
     border: 1px solid rgb(224, 223, 223);
     border-radius: 20px;
-    padding: 8px 14px;
+    padding: 5px 14px;
     /* font-size: 18px; */
     color: #000;
     text-transform: uppercase;
@@ -173,7 +173,7 @@ font-size: 20px;
     .buttonDetailsText{
         border: 1px solid rgb(224, 223, 223);
         border-radius: 20px;
-        padding: 8px 14px;
+        /* padding: 8px 14px; */
         font-size: 18px;
         color: #000;
         text-transform: uppercase;
@@ -184,7 +184,7 @@ font-size: 20px;
     .buttonDetailsText{
         border: 1px solid rgb(224, 223, 223);
         border-radius: 20px;
-        padding: 8px 14px;
+        /* padding: 8px 14px; */
         font-size: 10px;
         color: #000;
         text-transform: uppercase;

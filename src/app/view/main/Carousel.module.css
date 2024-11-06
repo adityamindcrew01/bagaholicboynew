@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Kaisei+Opti&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playwrite+HR:wght@100..400&display=swap');
+
+
 .carouselWrapper {
   /* display: flex;
     flex-direction: column;
@@ -333,9 +336,11 @@
 }
 
 .Layout2imageText {
-  color: #000 !important;
-  font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
-  font-weight: 500;
+  color: #000 ;
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.0em;
   margin-top: 10px;
   margin-left: 4px;
 
@@ -344,7 +349,7 @@
 @media (min-width: 240px) {
   .Layout2imageText {
     font-size: 28px;
-    color: green;
+   
     /* Font size for small screens (640px and up) */
   }
 }
@@ -353,7 +358,7 @@
 @media (min-width: 640px) {
   .Layout2imageText {
     font-size: 28px;
-    color: red;
+   
     /* Font size for small screens (640px and up) */
   }
 }
@@ -361,7 +366,7 @@
 @media (min-width: 768px) {
   .Layout2imageText {
     font-size: 22px;
-    color: pink;
+   
     /* Font size for medium screens (768px and up) */
   }
 }
@@ -369,7 +374,7 @@
 @media (min-width: 1024px) {
   .Layout2imageText {
     font-size: 30px;
-    color: blue;
+ 
 
   }
 }
@@ -403,11 +408,12 @@
 
 .Layout3imageText {
   color: #000 !important;
-  font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
-  font-weight: 500;
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: normal;
   margin-top: 10px;
   margin-left: 4px;
-  line-height: normal;
+  line-height: 1.0em;
 
 }
 
@@ -445,4 +451,52 @@
 }
 
 
- 
+
+
+.imageContainer {
+  position: relative;
+  /* display: flex; */
+  /* flex-direction: column; */
+  align-items: center;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.imageLayout2 {
+  transition: transform 0.3s ease; /* Optional image zoom effect */
+}
+
+.hoverOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(239, 53, 246, 0.5); /* Pink with 50% opacity */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 20px;
+}
+.layout2con:hover .hoverOverlay{
+  opacity: 1;
+}
+.imageWrappers:hover .hoverOverlay {
+  opacity: 1;
+}
+.imageWrapper:hover .hoverOverlay {
+  opacity: 1;
+}
+
+.imageWrapper:hover .imageLayout2 {
+  /* transform: scale(1.05);  */
+}
+
+.imageWrapper:hover .Layout2imageText{
+  
+}

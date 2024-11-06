@@ -157,7 +157,7 @@ font-size: 20px;
 .buttonDetailsText{
     border: 1px solid rgb(224, 223, 223);
     border-radius: 20px;
-    padding: 8px 14px;
+    padding: 5px 14px;
     /* font-size: 18px; */
     color: #000;
     text-transform: uppercase;
@@ -173,8 +173,8 @@ font-size: 20px;
     .buttonDetailsText{
         border: 1px solid rgb(224, 223, 223);
         border-radius: 20px;
-        padding: 8px 14px;
-        font-size: 18px;
+        /* padding: 8px 14px; */
+        font-size: 15px;
         color: #000;
         text-transform: uppercase;
         font-weight: 500;
@@ -268,8 +268,9 @@ font-size: 20px;
 
 .dateDetails{
     color: #000 !important;
-    font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
-    font-weight: 500;
+    font-family: "Crimson Text", serif;
+    font-weight: 200;
+    font-style: normal;
 }
 
 .imageDetails{

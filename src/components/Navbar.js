@@ -91,13 +91,13 @@ export default function Navbar() {
 
         const handleScroll = () => {
             if (window.scrollY > 500) {
-                navbar.classList.add('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out');
+                navbar.classList.add('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out', );
                 // brandImage.classList.add('w-[10px]');
                 //brandImage.classList.add(styles.shrink); // Add shrink class
 
                 setSrcoll(true)
             } else {
-                navbar.classList.remove('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out');
+                navbar.classList.remove('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out', );
                 // brandImage.classList.remove('w-[10px]');
                 //brandImage.classList.add(styles.brandImage); // Add shrink class
                 setSrcoll(false)
@@ -204,7 +204,7 @@ export default function Navbar() {
                             <Image
                                 src={ima}
                                 alt="Description of image"
-                                className={` brand-image ${scrolle ? styles.shrink: styles.brandImage} h-auto transition-all duration-300 ease-in-out`}
+                                className={` brand-image ${scrolle ? styles.shrink : styles.brandImage} h-auto transition-all duration-300 ease-in-out`}
                             />
                         </Link>
                     </div>
@@ -215,19 +215,29 @@ export default function Navbar() {
 
                     {/* Right side Links (Desktop and Tablet) */}
                     <nav className="hidden md:flex flex-wrap items-center text-base justify-center space-x-3 text-xs">
-                        <a className="hover:text-gray-900 text-gray-900">INSTAGRAM</a>
-                        <a className="hover:text-gray-900 text-gray-900">TIKTOK</a>
+                        <Link href='https://www.instagram.com/bagaholicboy/'
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <p className="hover:text-gray-900 text-gray-900">INSTAGRAM</p>
+                        </Link>
+                        <Link href='https://www.tiktok.com/about'
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                        <p className="hover:text-gray-900 text-gray-900">TIKTOK</p>
+                        </Link>
                         <Link href='/view/Search'>
-                        <p className="hover:text-gray-900 text-gray-900">SEARCH</p>
+                            <p className="hover:text-gray-900 text-gray-900">SEARCH</p>
                         </Link>
                     </nav>
 
-{/* 
+                    {/* 
                     <button
                         onClick={toggleMenu2}
                         className="inline-flex items-center md:hidden text-gray-900 focus:outline-none"
                     > */}
-                    <Link href='/view/Search'  className="inline-flex items-center md:hidden text-gray-900 focus:outline-none">
+                    <Link href='/view/Search' className="inline-flex items-center md:hidden text-gray-900 focus:outline-none">
                         <svg
                             className="w-6 h-6"
                             fill="none"
@@ -242,7 +252,7 @@ export default function Navbar() {
                                 d="M21 21l-4.35-4.35m0 0a7 7 0 111.415-1.414L21 21z"
                             ></path>
                         </svg>
-                        </Link>
+                    </Link>
                     {/* </button> */}
 
                     {/* Dropdown menu for mobile */}
@@ -270,13 +280,19 @@ export default function Navbar() {
                                 <p className="hover:border-b-2 border-black text-black">LIFESTYLE</p>
                             </Link>
 
-                            <Link href='/view/Lifestyle'>
-                                <p className="hover:border-b-2 border-black text-black">INSTAGRAM</p>
-                            </Link>
-
-                            <Link href='/view/Lifestyle'>
-                                <p className="hover:border-b-2 border-black text-black">TIKTOK</p>
-                            </Link>
+                            <Link href='https://www.instagram.com/bagaholicboy/'
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <p className="hover:text-gray-900 text-gray-900">INSTAGRAM</p>
+                        </Link>
+                        <Link href='https://www.tiktok.com/about'
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                        <p className="hover:text-gray-900 text-gray-900">TIKTOK</p>
+                        </Link>
+                     
 
                         </div>
                     )}
@@ -285,8 +301,8 @@ export default function Navbar() {
                     {/* Dropdown menu for mobile */}
                     {isOpen2 && (
                         <div className="flex flex-col w-full mt-4 md:hidden space-y-2 text-center">
-   <Link href='/view/Search'>
-                            <p className="hover:text-gray-900 " >SEARCH</p>
+                            <Link href='/view/Search'>
+                                <p className="hover:text-gray-900 " >SEARCH</p>
                             </Link>
                         </div>
                     )}

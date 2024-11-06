@@ -380,17 +380,38 @@ export default function Main() {
                                 return (
                                     <>
 
-                                        <div class={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
+                                        {/* <div class={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
                                             <Link href={`/view/latestNewDetails?id=${item?.sys?.id}`}>
                                                 <div className={`${styles.imageContainer} px-0 pt-10 pb-0 rounded-lg overflow-hidden relative h-full`}>
                                                     <img src={item?.fields.image.fields?.file?.url} className={styles.imageLayout2} />
+                                                    <div className={styles.hoverOverlay}></div>
                                                     <button className={styles.Layout2Boxbutton}>{item?.fields?.tag}</button>
                                                     <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout2imageText}>{item?.fields?.title}</h1>
 
 
                                                 </div>
                                             </Link>
+                                        </div> */}
+
+                                        <div className={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
+                                            <Link href={`/view/latestNewDetails?id=${item?.sys?.id}`}>
+                                                <div className={`${styles.imageContainer} px-0 pt-10 pb-0 rounded-lg overflow-hidden relative h-full`}>
+                                                    <div className={styles.imageWrapper}>
+                                                        <img src={item?.fields.image.fields?.file?.url} className={styles.imageLayout2} />
+
+                                                        {/* Hover Overlay */}
+                                                        <div className={styles.hoverOverlay}></div>
+                                                    </div>
+
+                                                    <button className={styles.Layout2Boxbutton}>{item?.fields?.tag}</button>
+                                                    <h1 className={`${styles.Layout2imageText} title-font sm:text-2xl text-xl font-medium  mb-3 mt-2`}>
+                                                        {item?.fields?.title}
+                                                    </h1>
+                                                </div>
+                                            </Link>
                                         </div>
+
+
 
 
                                     </>
@@ -405,7 +426,7 @@ export default function Main() {
             </div>
 
 
-            
+
 
 
 
@@ -422,18 +443,16 @@ export default function Main() {
                             commonproduct?.map((item, index) => {
                                 return (
                                     <>
-                                        <div class="p-0 lg:w-1/2 md:w-1/1 sm:w-1/1">
+                                        {/* <div class="p-0 lg:w-1/2 md:w-1/1 sm:w-1/1">
                                             <Link href={`/view/DetailsCommonproduct?id=${item?.sys?.id}`}>
 
                                                 <div className={`flex lg:w-3/8 mx-auto pb-4 mb-4 gap-2  ${styles.flexcommpon}`}>
                                                     <div class="sm:mr-5 inline-flex items-center justify-center rounded-lg flex-shrink-0">
 
 
-                                                        {/* <img
-                                                        class="sm:w-32 sm:h-32 h-20 w-20 rounded-lg"
-                                                        src={`http://localhost:1337/${item?.image?.url}`} /> */}
+                                                     
                                                         <img
-                                                            //  class="sm:w-[152px] sm:h-[152px] w-[100px] h-[100px] rounded-xl"
+                                                          
                                                             className={styles.commonimage}
                                                             src={item?.fields.image.fields?.file?.url}
 
@@ -453,7 +472,33 @@ export default function Main() {
                                                     </div>
                                                 </div>
                                             </Link>
+                                        </div> */}
+
+                                        <div className={` ${styles.imageWrappers} p-0 lg:w-1/2 md:w-1/1 sm:w-1/1`}>
+                                            <Link href={`/view/DetailsCommonproduct?id=${item?.sys?.id}`}>
+                                                <div className={`flex lg:w-3/8 mx-auto pb-4 mb-4 gap-2 ${styles.flexcommpon}`}>
+                                                    <div className="sm:mr-5 inline-flex items-center justify-center rounded-lg flex-shrink-0">
+
+
+                                                        <div className={styles.imageWrapper}>
+                                                            <img
+                                                                className={styles.commonimage}
+                                                                src={item?.fields.image.fields?.file?.url}
+                                                            />
+                                                            <div className={styles.hoverOverlay}></div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div className={`flex-grow sm:text-left ${styles.layout4box}`}>
+                                                        <button className={styles.Layout3Boxbutton}>{item?.fields?.tag}</button>
+                                                        <h1 className={`${styles.Layout3imageText} title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2`}>
+                                                            {item?.fields?.title}
+                                                        </h1>
+                                                    </div>
+                                                </div>
+                                            </Link>
                                         </div>
+
                                     </>
                                 )
                             })
@@ -516,7 +561,7 @@ export default function Main() {
                                 return (
                                     <>
 
-                                        <div class={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
+                                        {/* <div class={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
                                             <Link href={`/view/BagsDetails?id=${item?.sys?.id}`}>
                                                 <div class=" px-0 pt-10 pb-0 rounded-lg overflow-hidden relative h-full">
                                                     <img src={item?.fields?.image?.fields?.file?.url} className={styles.imageLayout2} />
@@ -524,6 +569,23 @@ export default function Main() {
                                                     <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout2imageText}>{item?.fields?.title}</h1>
 
 
+                                                </div>
+                                            </Link>
+                                        </div> */}
+                                        <div className={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
+                                            <Link href={`/view/latestNewDetails?id=${item?.sys?.id}`}>
+                                                <div className={`${styles.imageContainer} px-0 pt-10 pb-0 rounded-lg overflow-hidden relative h-full`}>
+                                                    <div className={styles.imageWrapper}>
+                                                        <img src={item?.fields.image.fields?.file?.url} className={styles.imageLayout2} />
+
+                                                        {/* Hover Overlay */}
+                                                        <div className={styles.hoverOverlay}></div>
+                                                    </div>
+
+                                                    <button className={styles.Layout2Boxbutton}>{item?.fields?.tag}</button>
+                                                    <h1 className={`${styles.Layout2imageText} title-font sm:text-2xl text-xl font-medium  mb-3 mt-2`}>
+                                                        {item?.fields?.title}
+                                                    </h1>
                                                 </div>
                                             </Link>
                                         </div>
@@ -557,54 +619,6 @@ export default function Main() {
 
             </div>
 
-            {/* <section class="text-gray-600 body-font">
-                <div class="mx-12 py-7 ">
-                    <div class="flex flex-wrap -m-4 ">
-                        {
-                            fashionlist?.data?.map((item, index) => {
-                                return (
-                                    <>
-                                        <div class="p-2 lg:w-1/2 md:w-1/2 sm:w-1/1">
-                                            <Link href={`/view/DetailsCommonproduct?id=${item?.id}`}>
-                                                <div class="flex lg:w-3/8 mx-auto pb-0 mb-4  sm:flex-row flex-col">
-                                                    <div class="sm:mr-5 inline-flex items-center justify-center rounded-lg flex-shrink-0">
-
-
-                                                        <img
-                                                            // class="sm:w-[152px] sm:h-[152px] w-[100px] h-[100px] rounded-xl"
-                                                            className={styles.commonimage}
-                                                            src={item?.image?.url}
-                                                        />
-
-                                                    </div>
-
-
-                                                    <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-
-                                                        <button className={styles.Layout3Boxbutton}>{item?.tag}</button>
-
-                                                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout3imageText}>{item?.title}</h1>
-                                                    </div>
-                                                </div>
-
-                                               
-                                            </Link>
-                                        </div>
-                                    </>
-                                )
-                            })
-                        }
-
-
-
-
-
-
-
-
-                    </div>
-                </div>
-            </section> */}
 
             <section class="text-gray-600 body-font mt-5 mx-2">
                 <div class={` last:py-2 ${styles.layout4}`}>
@@ -613,17 +627,15 @@ export default function Main() {
                             fashionlist?.map((item, index) => {
                                 return (
                                     <>
-                                        <div class="p-0 lg:w-1/2 md:w-1/1 sm:w-1/1">
+                                        {/* <div class="p-0 lg:w-1/2 md:w-1/1 sm:w-1/1">
                                             <Link href={`/view/fashionDetails?id=${item?.sys?.id}`}>
                                                 <div className={`flex lg:w-3/8 mx-auto pb-4 mb-4 gap-2  ${styles.flexcommpon}`}>
                                                     <div class="sm:mr-5 inline-flex items-center justify-center rounded-lg flex-shrink-0">
 
 
-                                                        {/* <img
-                                                        class="sm:w-32 sm:h-32 h-20 w-20 rounded-lg"
-                                                        src={`http://localhost:1337/${item?.image?.url}`} /> */}
+                                                      
+                                                       
                                                         <img
-                                                            //  class="sm:w-[152px] sm:h-[152px] w-[100px] h-[100px] rounded-xl"
                                                             className={styles.commonimage}
                                                             src={item?.fields?.image?.fields?.file?.url}
 
@@ -640,6 +652,30 @@ export default function Main() {
 
 
 
+                                                    </div>
+                                                </div>
+                                            </Link>
+                                        </div> */}
+                                        <div className={` ${styles.imageWrappers} p-0 lg:w-1/2 md:w-1/1 sm:w-1/1`}>
+                                            <Link href={`/view/DetailsCommonproduct?id=${item?.sys?.id}`}>
+                                                <div className={`flex lg:w-3/8 mx-auto pb-4 mb-4 gap-2 ${styles.flexcommpon}`}>
+                                                    <div className="sm:mr-5 inline-flex items-center justify-center rounded-lg flex-shrink-0">
+
+
+                                                        <div className={styles.imageWrapper}>
+                                                            <img
+                                                                className={styles.commonimage}
+                                                                src={item?.fields.image.fields?.file?.url}
+                                                            />
+                                                            <div className={styles.hoverOverlay}></div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div className={`flex-grow sm:text-left ${styles.layout4box}`}>
+                                                        <button className={styles.Layout3Boxbutton}>{item?.fields?.tag}</button>
+                                                        <h1 className={`${styles.Layout3imageText} title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2`}>
+                                                            {item?.fields?.title}
+                                                        </h1>
                                                     </div>
                                                 </div>
                                             </Link>
@@ -681,11 +717,11 @@ export default function Main() {
                 <section class="text-gray-600 body-font">
                     <div class="">
                         <div class="flex flex-wrap">
-                            {Celebrity?.map((itrem, index) => {
+                            {Celebrity?.map((item, index) => {
                                 return (
                                     <>
 
-                                        <div class={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
+                                        {/* <div class={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
                                             <Link href={`/view/CelebrityDetails?id=${itrem?.sys?.id}`}>
                                                 <div class=" px-0 pt-0 pb-5 rounded-lg overflow-hidden relative h-full">
                                                     <img src={itrem?.fields?.image?.fields?.file?.url} className={styles.imageLayout2} />
@@ -693,6 +729,24 @@ export default function Main() {
                                                     <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout2imageText}>{itrem?.fields?.title}</h1>
 
 
+                                                </div>
+                                            </Link>
+                                        </div> */}
+
+                                        <div className={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
+                                            <Link href={`/view/latestNewDetails?id=${item?.sys?.id}`}>
+                                                <div className={`${styles.imageContainer} px-0 pt-0 pb-0 rounded-lg overflow-hidden relative h-full`}>
+                                                    <div className={styles.imageWrapper}>
+                                                        <img src={item?.fields.image.fields?.file?.url} className={styles.imageLayout2} />
+
+                                                        {/* Hover Overlay */}
+                                                        <div className={styles.hoverOverlay}></div>
+                                                    </div>
+
+                                                    <button className={styles.Layout2Boxbutton}>{item?.fields?.tag}</button>
+                                                    <h1 className={`${styles.Layout2imageText} title-font sm:text-2xl text-xl font-medium  mb-3 mt-2`}>
+                                                        {item?.fields?.title}
+                                                    </h1>
                                                 </div>
                                             </Link>
                                         </div>
@@ -729,17 +783,14 @@ export default function Main() {
                             beauties?.map((item, index) => {
                                 return (
                                     <>
-                                        <div class="pt-3 lg:w-1/2 md:w-1/1 sm:w-1/1">
+                                        {/* <div class="pt-3 lg:w-1/2 md:w-1/1 sm:w-1/1">
                                             <Link href={`/view/beautyDetails?id=${item?.sys?.id}`}>
                                                 <div className={`flex lg:w-3/8 mx-auto pb-4 mb-4 gap-2  ${styles.flexcommpon}`}>
                                                     <div class="sm:mr-5 inline-flex items-center justify-center rounded-lg flex-shrink-0">
 
 
-                                                        {/* <img
-                                                        class="sm:w-32 sm:h-32 h-20 w-20 rounded-lg"
-                                                        src={`http://localhost:1337/${item?.image?.url}`} /> */}
+                                                      
                                                         <img
-                                                            //  class="sm:w-[152px] sm:h-[152px] w-[100px] h-[100px] rounded-xl"
                                                             className={styles.commonimage}
                                                             src={item?.fields?.image?.fields?.file?.url}
 
@@ -756,6 +807,31 @@ export default function Main() {
 
 
 
+                                                    </div>
+                                                </div>
+                                            </Link>
+                                        </div> */}
+
+                                        <div className={` ${styles.imageWrappers} pt-3 lg:w-1/2 md:w-1/1 sm:w-1/1`}>
+                                            <Link href={`/view/DetailsCommonproduct?id=${item?.sys?.id}`}>
+                                                <div className={`flex lg:w-3/8 mx-auto pb-4 mb-4 gap-2 ${styles.flexcommpon}`}>
+                                                    <div className="sm:mr-5 inline-flex items-center justify-center rounded-lg flex-shrink-0">
+
+
+                                                        <div className={styles.imageWrapper}>
+                                                            <img
+                                                                className={styles.commonimage}
+                                                                src={item?.fields.image.fields?.file?.url}
+                                                            />
+                                                            <div className={styles.hoverOverlay}></div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div className={`flex-grow sm:text-left ${styles.layout4box}`}>
+                                                        <button className={styles.Layout3Boxbutton}>{item?.fields?.tag}</button>
+                                                        <h1 className={`${styles.Layout3imageText} title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2`}>
+                                                            {item?.fields?.title}
+                                                        </h1>
                                                     </div>
                                                 </div>
                                             </Link>
@@ -827,6 +903,8 @@ export default function Main() {
                                                 </div>
                                             </Link>
                                         </div>
+
+
                                     </>
                                 )
                             })}

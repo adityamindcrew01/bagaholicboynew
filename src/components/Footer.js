@@ -78,26 +78,38 @@ const Footer = () => {
                         <div class="w-full px-10">
                             {/* <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2> */}
                             <nav class="list-none mb-10">
-                                <li>
-                                    <a class="text-black hover:border-b-2 border-black text-xs">INSTAGRAM</a>
-                                </li>
-                                <li>
-                                    <a class="text-black hover:text-gray-800 text-xs">TIKTOK</a>
-                                </li>
-                                <li>
-                                    <a class="text-black hover:text-gray-800 text-xs">SEARCH</a>
-                                </li>
-                                <br />
-                                <li>
-                                <Link href='/view/Allabout'>
-                                    <p class="text-black hover:text-gray-800 text-xs">ABOUT US</p>
+                                <li className='mt-2 mb-2'>
+                                    <Link href='https://www.instagram.com/bagaholicboy/'
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <p class="text-black hover:border-b-2 border-black text-xs">INSTAGRAM</p>
                                     </Link>
                                 </li>
-                               
-                                <li>
-                                <Link href='/view/privacypolicy'>
-                                    <p class="text-black hover:text-gray-800 text-xs mt-2">PRIVACY POLICY</p>
-                               </Link>
+                                <li className='mt-2 mb-2'>
+                                    <Link href='https://www.tiktok.com/about'
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <p class="text-black hover:border-b-2 border-black  text-xs">TIKTOK</p>
+                                    </Link>
+                                </li>
+                                <li className='mt-2 mb-2'>
+                                <Link href='/view/Search'>
+                                    <p class="text-black hover:border-b-2 border-black  text-xs">SEARCH</p>
+                                    </Link>
+                                </li>
+                                <br />
+                                <li >
+                                    <Link href='/view/Allabout'>
+                                        <p class="text-black hover:border-b-2 border-black  text-xs">ABOUT US</p>
+                                    </Link>
+                                </li>
+
+                                <li className='mt-2 mb-2'>
+                                    <Link href='/view/privacypolicy'>
+                                        <p class="text-black hover:border-b-2 border-black  text-xs">PRIVACY POLICY</p>
+                                    </Link>
                                 </li>
                             </nav>
                         </div>

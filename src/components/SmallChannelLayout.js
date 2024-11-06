@@ -6,7 +6,7 @@ import styles from './styles.module.css';
 import Image from 'next/image';
 import M from './channel1.jpg';
 import { Base_URL } from '@/app/Config';
-
+import Link from 'next/link'
 import client from '@/lib/contentful';
 
 const SmallChannelLayout = () => {
@@ -73,7 +73,7 @@ const SmallChannelLayout = () => {
 
     return (
         <div>
-            
+
 
             {/* 
             <div className=" flex justify-center mt-20 mb-20 mx-20">
@@ -83,13 +83,21 @@ const SmallChannelLayout = () => {
                 />
             </div> */}
             {data?.map((item) => (
+                <Link href='https://www.chanel.com/sg/watches/j12/c/4x2x1/?utm_source=bagaholicboy&utm_medium=display-static&utm_campaign=wfj_wa_j12_2024_&utm_term=banner_static&utm_content=worn_zx&adfcd=1730710509.N6pYAsnvwEqwSCiqz-2CQg.MzM1NzMzMCwyMTIzMTU5'
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
 
-                <div className=" flex justify-center mt-20 mb-20 mx-20">
-                    <img alt="ecommerce" className="lg:w-4/6 w-full lg:h-auto h-24 object-cover object-center rounded"
+                    <div className=" flex justify-center mt-20 mb-20 mx-20">
 
-                        src={item?.fields.image.fields?.file?.url}
-                    />
-                </div>
+
+                        <img alt="ecommerce" className="lg:w-4/6 w-full lg:h-auto h-24 object-cover object-center rounded"
+
+                            src={item?.fields.image.fields?.file?.url}
+                        />
+
+                    </div>
+                </Link>
             ))}
 
 
