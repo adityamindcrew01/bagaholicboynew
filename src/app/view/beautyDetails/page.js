@@ -98,83 +98,99 @@ const BeautyDetails = ({ product }) => {
 
             <div className='mx-4 md:mx-10 mt-10 md:mt-20'>
 
-                <div className='text-center'>
-                    <button className={styles.buttonDetailsText}>{commonproduct?.tag}</button>
-                </div>
+<div className='text-center'>
+    <button className={styles.buttonDetailsText}>{commonproduct?.tag}</button>
+</div>
 
-                <div className='text-center flex justify-center items-center'>
-                    <h1 className={`${styles.detailsTitle} text-2xl md:text-4xl lg:text-5xl sm:text-xl`}>{commonproduct?.title}</h1>
-                </div>
+<div className='text-center flex justify-center items-center'>
+    <h1 className={`${styles.detailsTitle} text-2xl md:text-4xl lg:text-5xl sm:text-xl`}>{commonproduct?.title}</h1>
+</div>
+
+<div className='text-center flex justify-center items-center'>
+    <p className={`${styles.dateDetails} text-sm md:text-base lg:text-lg`}>{moment(commonproduct?.date).format('DD MMMM YYYY')}</p>
+</div>
 
 
 
-                <div className='text-center flex justify-center items-center'>
-                    <p className={`${styles.dateDetails} text-sm md:text-base lg:text-lg`}>{moment(commonproduct?.date).format('DD MMMM YYYY')}</p>
-                </div>
 
-                <div className="flex justify-center items-center min-h-[300px] sm:min-h-[400px] md:min-h-screen">
-                    <img src={commonproduct?.image?.fields?.file?.url} alt="Product Image" className="lg:w-[50%] sm:w-[100%] md:w-[50%]  rounded-lg" />
-                </div>
 
-                {commonproduct?.description?.split('\n').map((paragraph, index) => (
-                    <div className='flex justify-center items-center' key={index}>
-                        <p className={`${styles.descriptionTitle} text-sm md:text-base lg:text-lg`}>
-                            {paragraph.trim()}
-                        </p>
-                    </div>
-                ))}
+<div className="flex justify-center items-center min-h-[200px] sm:min-h-[400px] md:min-h-screen">
 
-                {commonproduct?.image2?.fields?.file?.url && (
-                    <div className="flex justify-center items-center min-h-[300px] sm:min-h-[400px] md:min-h-screen">
-                        <img src={commonproduct?.image2?.fields?.file?.url} alt="Product Image" className="lg:w-[50%] sm:w-[100%] md:w-[50%]  rounded-lg " />
-                    </div>
-                )}
 
-                {commonproduct?.description2?.split('\n').map((paragraph, index) => (
-                    <div className='flex justify-center items-center' key={index}>
-                        <p className={`${styles.descriptionTitle} text-sm md:text-base lg:text-lg`}>
-                            {paragraph.trim()}
-                        </p>
-                    </div>
-                ))}
 
-                <div className='flex justify-center items-center'>
-                    <i className={`${styles.UnderlineText} text-sm md:text-base lg:text-lg`}>
-                        For more information, do visit OMEGAWATCHES.com
-                    </i>
-                </div>
+    <img src={commonproduct?.image?.fields?.file?.url} alt="Product Image" className="lg:w-[50%] sm:w-[100%] md:w-[50%]  rounded-lg" />
+  
+   
+</div>
 
-                <div className='flex justify-center items-center'>
-                    <i className={`${styles.UnderlineText2} text-sm md:text-base lg:text-lg`}>
-                        PHOTOS COURTESY OF OMEGA
-                    </i>
-                </div>
+<div className='text-center '>
+    <p className={`${styles.imageDetails} `}>{commonproduct?.image?.fields?.title}</p>
+</div>
 
-                <div className="flex justify-center w-full mt-10 md:mt-20 mb-5">
-                    <div className="flex flex-col md:flex-row justify-between items-center w-full md:w-1/2 border-t-2 border-grey border-b-2 pt-2 pb-2">
-                        <p className={`${styles.shareText} text-sm md:text-base lg:text-lg text-black `}>Share</p>
-                        <div className='flex gap-2'>
-                            <button className={styles.buttonicon}>
-                                <FaFacebookF className={styles.icon} />
-                            </button>
-                            <button className={styles.buttonicon}>
-                                <FaInstagram className={styles.icon} />
-                            </button>
-                            <button className={styles.buttonicon}>
-                                <FaTiktok className={styles.icon} />
-                            </button>
-                        </div>
-                    </div>
-                </div>
 
-                <div className="flex justify-center w-full mb-20">
-                    <div className="flex gap-2">
-                        <button className={styles.buttoncontenet}>Fall-Winter 2024</button>
-                        <button className={styles.buttoncontenet}>Omega</button>
-                        <button className={styles.buttoncontenet}>Watches</button>
-                    </div>
-                </div>
-            </div>
+
+{commonproduct?.description?.split('\n').map((paragraph, index) => (
+    <div className='flex justify-center items-center' key={index}>
+        <p className={`${styles.descriptionTitle} text-sm md:text-base lg:text-lg`}>
+            {paragraph.trim()}
+        </p>
+    </div>
+))}
+
+{commonproduct?.image2?.fields?.file?.url && (
+    <div className="flex justify-center items-center min-h-[300px] sm:min-h-[400px] md:min-h-screen">
+        <img src={commonproduct?.image2?.fields?.file?.url} alt="Product Image" className="lg:w-[50%] sm:w-[100%] md:w-[50%]  rounded-lg " />
+    </div>
+)}
+  <div className='text-center '>
+    <p className={`${styles.imageDetails} `}>{commonproduct?.image2?.fields?.title}</p>
+</div>
+
+{commonproduct?.description2?.split('\n').map((paragraph, index) => (
+    <div className='flex justify-center items-center' key={index}>
+        <p className={`${styles.descriptionTitle} text-sm md:text-base lg:text-lg`}>
+            {paragraph.trim()}
+        </p>
+    </div>
+))}
+
+<div className='flex justify-center items-center'>
+    <i className={`${styles.UnderlineText} text-sm md:text-base lg:text-lg`}>
+        For more information, do visit OMEGAWATCHES.com
+    </i>
+</div>
+
+<div className='flex justify-center items-center'>
+    <i className={`${styles.UnderlineText2} text-sm md:text-base lg:text-lg`}>
+        PHOTOS COURTESY OF OMEGA
+    </i>
+</div>
+
+<div className="flex justify-center w-full mt-10 md:mt-20 mb-5">
+    <div className="flex flex-col md:flex-row justify-between items-center w-full md:w-1/2 border-t-2 border-grey border-b-2 pt-2 pb-2">
+        <p className={`${styles.shareText} text-sm md:text-base lg:text-lg text-black `}>Share</p>
+        <div className='flex gap-2'>
+            <button className={styles.buttonicon}>
+                <FaFacebookF className={styles.icon} />
+            </button>
+            <button className={styles.buttonicon}>
+                <FaInstagram className={styles.icon} />
+            </button>
+            <button className={styles.buttonicon}>
+                <FaTiktok className={styles.icon} />
+            </button>
+        </div>
+    </div>
+</div>
+
+<div className="flex justify-center w-full mb-20">
+    <div className="flex gap-2">
+        <button className={styles.buttoncontenet}>Fall-Winter 2024</button>
+        <button className={styles.buttoncontenet}>Omega</button>
+        <button className={styles.buttoncontenet}>Watches</button>
+    </div>
+</div>
+</div>
 
             
           
