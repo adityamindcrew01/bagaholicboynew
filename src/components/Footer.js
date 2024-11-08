@@ -96,12 +96,12 @@ const Footer = () => {
                                         <p className={` ${styles.menu} text-black  border-black text-xs`}>TIKTOK</p>
                                     </Link>
                                 </li>
-                                <li className=' '>
+                                <li className=' mb-4'>
                                     <Link href='/view/Search'>
                                         <p className={` ${styles.menu} text-black  border-black text-xs`}>SEARCH</p>
                                     </Link>
                                 </li>
-                                <br />
+
                                 <li >
                                     <Link href='/view/Allabout'>
                                         <p className={` ${styles.menu} text-black  border-black text-xs`}>ABOUT US</p>

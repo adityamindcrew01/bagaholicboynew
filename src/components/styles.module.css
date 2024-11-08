@@ -80,6 +80,12 @@
     color: gray;
     text-decoration: none;
   }
+  .navmenu{
+    display: inline-block;
+  }
+  .navmenu:hover{
+    border-bottom: 1px solid black;
+  }
 
   @media only screen and (max-width: 900px) and (min-width: 0px) {
     .imageBrandName{

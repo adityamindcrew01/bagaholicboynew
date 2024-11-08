@@ -158,24 +158,24 @@ export default function Navbar() {
                     {/* Menu Links (Desktop and Tablet) */}
                     <nav className="hidden md:flex flex-wrap items-center text-base justify-center space-x-3 text-xs">
                         <Link href='/view/bags'>
-                            <p className="hover:border-b-2 border-black text-black">BAGS</p>
+                            <p className={`${styles.navmenu} text-black`}>BAGS</p>
 
                         </Link>
                         <Link href='/view/beauty'>
-                            <p className="hover:border-b-2 border-black text-black">BEAUTY</p>
+                            <p  className={`${styles.navmenu} text-black`} >BEAUTY</p>
 
                         </Link>
                         <Link href='/view/Fashion'>
-                            <p className="hover:border-b-2 border-black text-black">FASHION</p>
+                            <p  className={`${styles.navmenu} text-black`}>FASHION</p>
                         </Link>
                         <Link href='/view/Jewellery'>
-                            <p className="hover:border-b-2 border-black text-black">JEWELLERY</p>
+                            <p  className={`${styles.navmenu} text-black`}>JEWELLERY</p>
                         </Link>
                         <Link href='/view/Watches'>
-                            <p className="hover:border-b-2 border-black text-black">WATCHES</p>
+                            <p  className={`${styles.navmenu} text-black`}>WATCHES</p>
                         </Link>
                         <Link href='/view/Lifestyle'>
-                            <p className="hover:border-b-2 border-black text-black">LIFESTYLE</p>
+                            <p  className={`${styles.navmenu} text-black`}>LIFESTYLE</p>
                         </Link>
                     </nav>
 
@@ -219,16 +219,16 @@ export default function Navbar() {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <p className="hover:text-gray-900 text-gray-900">INSTAGRAM</p>
+                            <p  className={`${styles.navmenu} text-black`}>INSTAGRAM</p>
                         </Link>
                         <Link href='https://www.tiktok.com/about'
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                        <p className="hover:text-gray-900 text-gray-900">TIKTOK</p>
+                        <p  className={`${styles.navmenu} text-black`}>TIKTOK</p>
                         </Link>
                         <Link href='/view/Search'>
-                            <p className="hover:text-gray-900 text-gray-900">SEARCH</p>
+                            <p  className={`${styles.navmenu} text-black`}>SEARCH</p>
                         </Link>
                     </nav>
 
