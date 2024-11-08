@@ -106,7 +106,7 @@ const Allabout = ({ product }) => {
 
 
                 <div className='flex justify-center items-center' >
-                    <p className={`${styles.descriptionTitle}  md:text-base lg:text-lg`}>
+                    <p className={`${styles.descriptionTitle}  md:text-base lg:text-lg pt-10`}>
                         Bagaholicboy chronicles our never-ending quest to seek out the best designer bags, and today is among the most visited source of inspiration for bags, beauty, fashion, lifestyle and all of lifes little luxuries.
                         <br />
                         <br />
@@ -124,33 +124,35 @@ const Allabout = ({ product }) => {
                         <br />
 
 
+                    </p>
+                </div>
+
+
+                <div className={styles.bottomCurve}>
+                    <div className={` ${styles.allaboutFlex}  px-8 py-8 border  rounded-full  bg-white`}>
+                        <p className={`${styles.textBottom} font-semibold text-gray-800`}>
+                            Advertising / General Enquiries
+                        </p>
+                        <p className={`${styles.textBottom} text-gray-800`}>
+                            contact@bagaholicboy.com
                         </p>
                     </div>
+                </div>
 
 
-                        <div className={styles.bottomCurve}>
-                            <div className={` ${styles.allaboutFlex}  px-8 py-8 border  rounded-full  bg-white`}>
-                                <p className={`${styles.textBottom} font-semibold text-gray-800`}>
-                                    Advertising / General Enquiries
-                                </p>
-                                <p className={`${styles.textBottom} text-gray-800`}>
-                                    contact@bagaholicboy.com
-                                </p>
-                            </div>
-                        </div>
 
 
-                    
-                
+             
+
 
 
             </div>
-        
-            
-   
 
- <Footer />
-    </div>  
+
+
+
+            <Footer />
+        </div>
 
 
     )

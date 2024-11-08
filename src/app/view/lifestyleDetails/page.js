@@ -253,6 +253,7 @@ const LifeStyleDetails = ({ product }) => {
             <Navbar />
           
 
+           
             <div className='mx-4 md:mx-10 mt-10 md:mt-20'>
 
                 <div className='text-center'>
@@ -263,15 +264,28 @@ const LifeStyleDetails = ({ product }) => {
                     <h1 className={`${styles.detailsTitle} text-2xl md:text-4xl lg:text-5xl sm:text-xl`}>{commonproduct?.title}</h1>
                 </div>
 
-
-
                 <div className='text-center flex justify-center items-center'>
                     <p className={`${styles.dateDetails} text-sm md:text-base lg:text-lg`}>{moment(commonproduct?.date).format('DD MMMM YYYY')}</p>
                 </div>
 
-                <div className="flex justify-center items-center min-h-[300px] sm:min-h-[400px] md:min-h-screen">
+
+
+                
+
+                <div className="flex justify-center items-center min-h-[200px] sm:min-h-[400px] md:min-h-screen">
+               
+
+               
                     <img src={commonproduct?.image?.fields?.file?.url} alt="Product Image" className="lg:w-[50%] sm:w-[100%] md:w-[50%]  rounded-lg" />
+                  
+                   
                 </div>
+
+                <div className='text-center '>
+                    <p className={`${styles.imageDetails} `}>{commonproduct?.image?.fields?.title}</p>
+                </div>
+               
+                
 
                 {commonproduct?.description?.split('\n').map((paragraph, index) => (
                     <div className='flex justify-center items-center' key={index}>
@@ -286,6 +300,9 @@ const LifeStyleDetails = ({ product }) => {
                         <img src={commonproduct?.image2?.fields?.file?.url} alt="Product Image" className="lg:w-[50%] sm:w-[100%] md:w-[50%]  rounded-lg " />
                     </div>
                 )}
+                  <div className='text-center '>
+                    <p className={`${styles.imageDetails} `}>{commonproduct?.image2?.fields?.title}</p>
+                </div>
 
                 {commonproduct?.description2?.split('\n').map((paragraph, index) => (
                     <div className='flex justify-center items-center' key={index}>

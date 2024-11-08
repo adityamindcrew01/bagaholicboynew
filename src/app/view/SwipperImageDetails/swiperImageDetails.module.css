@@ -1,6 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Kaisei+Opti&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playwrite+HR:wght@100..400&display=swap');
 
-
+@font-face {
+    font-family: 'ABCMonumentGroteskRegular';
+    src: url('../../../public/fonts/ABCMonumentGrotesk-Regular.woff') format('woff');
+    font-weight: normal; /* or specify 'bold' if applicable */
+    font-style: normal; /* or specify 'italic' if applicable */
+  }
+  
+  @font-face {
+    font-family: 'Light';
+    src: url('../../../public/fonts/Rhymes\ Display\ Light.woff') format('woff');
+    font-weight: normal; 
+    font-style: normal; 
+  }
+  
+  @font-face {
+    font-family: 'Text';
+    src: url('../../../public/fonts/RhymesTextLight.woff') format('woff');
+    font-weight: normal; /* or specify 'bold' if applicable */
+    font-style: normal; 
+  }
 /* .buttonDetailsText{
     border: 1px solid rgb(224, 223, 223);
     border-radius: 20px;
@@ -157,11 +176,12 @@ font-size: 20px;
 .buttonDetailsText{
     border: 1px solid rgb(224, 223, 223);
     border-radius: 20px;
-    padding: 8px 14px;
+    padding: 5px 12px;
     /* font-size: 18px; */
     color: #000;
     text-transform: uppercase;
     font-weight: 500;
+    font-family: 'ABCMonumentGroteskRegular' , 'serif';
 }
 
 .buttonDetailsText:hover{
@@ -173,33 +193,57 @@ font-size: 20px;
     .buttonDetailsText{
         border: 1px solid rgb(224, 223, 223);
         border-radius: 20px;
-        padding: 8px 14px;
-        font-size: 18px;
+        padding: 5px 14px;
+        font-size: 15px;
         color: #000;
         text-transform: uppercase;
         font-weight: 500;
+    }
+    .imageDetails{
+        color: #6a7176 !important;
+        font-family: "ABCMonumentGroteskRegular", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        position: relative;
+        bottom: 40px;
+    
+    
     }
 }
 @media only screen and (max-width: 900px) and (min-width: 0px) {
     .buttonDetailsText{
         border: 1px solid rgb(224, 223, 223);
         border-radius: 20px;
-        padding: 8px 14px;
+        padding: 5px 12px;
         font-size: 10px;
         color: #000;
         text-transform: uppercase;
         font-weight: 500;
     }
+    .imageDetails{
+        color: #6a7176 !important;
+        font-family: "ABCMonumentGroteskRegular", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        /* position: relative;
+        bottom: 40px; */
+        margin-top: 10px;
+    
+    
+    }
 }
 
 .detailsTitle{
     color: #000 !important;
-    font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+    font-family: 'Text', 'serif';
     font-weight: 500;
     margin-top: 10px;
     width: 53%; 
     line-height: 1;
     margin-bottom: 10px;
+    letter-spacing: -.04em;
 
    
 }
@@ -207,7 +251,7 @@ font-size: 20px;
 @media only screen and (max-width: 900px) and (min-width: 0px) {
     .detailsTitle{
         color: #000 !important;
-        font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+       
         font-weight: 500;
         margin-top: 10px;
         width: 100%; 
@@ -221,7 +265,7 @@ font-size: 20px;
 @media only screen and (max-width: 3901px) and (min-width: 901px) {
     .detailsTitle{
         color: #000 !important;
-        font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+      font-size: 55px;
         font-weight: 500;
         margin-top: 10px;
         width: 50%; 
@@ -268,8 +312,9 @@ font-size: 20px;
 
 .dateDetails{
     color: #000 !important;
-    font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
-    font-weight: 500;
+    font-family: Light, serif;
+    font-weight: 600;
+    font-size: 14px;
 }
 
 .imageDetails{
@@ -284,23 +329,23 @@ font-size: 20px;
     margin-top: 30px;
     width: 100%;  */
     color: #2f2e2e !important;
-    font-family: "Crimson Text", serif;
-  font-weight: 200;
+    font-family: "Text", serif;
+  font-weight: 400;
   font-style: normal;
     margin-top: 30px;
     /* width: 100%;  */
-   font-size: 24px;
+
    
 }
 
 @media only screen and (max-width: 900px) and (min-width: 0px) {
     .descriptionTitle{
         /* color: #000 !important; */
-        font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
-        font-weight: 100;
+   
         margin-top: 30px;
         /* width: 100%;  */
         width: 100%;
+        font-size: 24px;
     }
 }
 
@@ -308,10 +353,11 @@ font-size: 20px;
     .descriptionTitle{
         /* color: #000 !important; */
         /* font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif; */
-        font-weight: 100;
+      
         margin-top: 30px;
         /* width: 100%;  */
         width: 50%;
+        font-size: 21px;
     }
 }
 

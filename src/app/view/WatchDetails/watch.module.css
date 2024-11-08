@@ -1,5 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Kaisei+Opti&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playwrite+HR:wght@100..400&display=swap');
 
+@font-face {
+    font-family: 'ABCMonumentGroteskRegular';
+    src: url('../../../public/fonts/ABCMonumentGrotesk-Regular.woff') format('woff');
+    font-weight: normal;
+    /* or specify 'bold' if applicable */
+    font-style: normal;
+    /* or specify 'italic' if applicable */
+}
+
+@font-face {
+    font-family: 'Light';
+    src: url('../../../public/fonts/Rhymes\ Display\ Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Text';
+    src: url('../../../public/fonts/RhymesTextLight.woff') format('woff');
+    font-weight: normal;
+    /* or specify 'bold' if applicable */
+    font-style: normal;
+}
 
 /* .buttonDetailsText{
     border: 1px solid rgb(224, 223, 223);
@@ -154,156 +177,179 @@ font-size: 20px;
 
 
 
-.buttonDetailsText{
+.buttonDetailsText {
     border: 1px solid rgb(224, 223, 223);
     border-radius: 20px;
     padding: 5px 14px;
     /* font-size: 18px; */
     color: #000;
     text-transform: uppercase;
-    font-weight: 500;
+
+
 }
 
-.buttonDetailsText:hover{
+.buttonDetailsText:hover {
     background-color: #000;
     color: white;
 }
 
+
 @media only screen and (max-width: 3901px) and (min-width: 901px) {
-    .buttonDetailsText{
+    .buttonDetailsText {
         border: 1px solid rgb(224, 223, 223);
         border-radius: 20px;
-        
+        /* padding: 8px 14px; */
         font-size: 15px;
         color: #000;
         text-transform: uppercase;
         font-weight: 500;
+
+    }
+    .imageDetails{
+        color: #6a7176 !important;
+        font-family: "ABCMonumentGroteskRegular", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        position: relative;
+        bottom: 40px;
+    
+    
     }
 }
+
 @media only screen and (max-width: 900px) and (min-width: 0px) {
-    .buttonDetailsText{
+    .buttonDetailsText {
         border: 1px solid rgb(224, 223, 223);
         border-radius: 20px;
-        
+        /* padding: 8px 14px; */
         font-size: 10px;
         color: #000;
         text-transform: uppercase;
-        font-weight: 500;
+
+        font-family: "Crimson Text", serif;
+        font-weight: 400;
+        font-style: normal;
     }
+    .imageDetails{
+        color: #6a7176 !important;
+        font-family: "ABCMonumentGroteskRegular", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        /* position: relative;
+        bottom: 40px; */
+        margin-top: 10px;
+    
+    
+    }
+
 }
 
-.detailsTitle{
+.detailsTitle {
     color: #000 !important;
-    font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+    font-family: 'Text' , serif;
     font-weight: 500;
     margin-top: 10px;
-    width: 53%; 
+    width: 53%;
     line-height: 1;
     margin-bottom: 10px;
+    letter-spacing: -.04em;
 
-   
+
 }
 
 @media only screen and (max-width: 900px) and (min-width: 0px) {
-    .detailsTitle{
+    .detailsTitle {
         color: #000 !important;
-        font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
-        font-weight: 500;
+       
+        
         margin-top: 10px;
-        width: 100%; 
+        width: 100%;
         line-height: 1;
         margin-bottom: 10px;
-    
-       
+
+
     }
 }
 
 @media only screen and (max-width: 3901px) and (min-width: 901px) {
-    .detailsTitle{
+    .detailsTitle {
         color: #000 !important;
-        font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
-        font-weight: 500;
+      
+       
         margin-top: 10px;
-        width: 50%; 
+        width: 50%;
         line-height: 1;
         margin-bottom: 10px;
-    
-       
+        font-size: 60px;
+
+
     }
 }
 
-.shareText{
+.shareText {
     color: #000 !important;
-     font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif; 
+    font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
     font-weight: 100;
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left: 4px;
     font-size: 1.3em;
-   
+
     width: 100%;
     letter-spacing: -.03em;
 
 }
 
 @media only screen and (max-width: 900px) and (min-width: 0px) {
-    .shareText{
+    .shareText {
         color: #000 !important;
-         font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif; 
+        font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
         font-weight: 100;
         margin-top: 15px;
         margin-bottom: 15px;
         margin-left: 4px;
         font-size: 1.3em;
-       
+
         width: 100%;
         letter-spacing: -.03em;
         text-align: center;
-    
+
     }
 }
 
 
 
 
-.dateDetails{
+.dateDetails {
     color: #000 !important;
-   
-    
     font-family: "Crimson Text", serif;
-  font-weight: 200;
-  font-style: normal;
-   
-   font-size: 17px;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.imageDetails{
-    width: 100%; /* Responsive width for smaller screens */
+.imageDetails {
+    width: 100%;
+    /* Responsive width for smaller screens */
     border-radius: 20px;
 }
 
-.descriptionTitle{
-    /* color: #000 !important;
-    font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
-    font-weight: 100;
+.descriptionTitle {
+    color: #000 !important;
+    font-family: Light;
+    font-weight: 500;
     margin-top: 30px;
-    width: 100%;  */
-
-    color: #2f2e2e !important;
-    font-family: "Crimson Text", serif;
-  font-weight: 200;
-  font-style: normal;
-    margin-top: 30px;
+    line-height: 1.4em;
     /* width: 100%;  */
-   font-size: 22px;
-   
+
 }
 
 @media only screen and (max-width: 900px) and (min-width: 0px) {
-    .descriptionTitle{
+    .descriptionTitle {
         color: #000 !important;
-        /* font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif; */
-        font-weight: 100;
+       
+      
         margin-top: 30px;
         /* width: 100%;  */
         width: 100%;
@@ -311,19 +357,21 @@ font-size: 20px;
 }
 
 @media only screen and (max-width: 3901px) and (min-width: 901px) {
-    .descriptionTitle{
-        /* color: #000 !important; */
-        /* font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif; */
-        font-weight: 100;
+    .descriptionTitle {
+        color: #000 !important;
+       
+       
         margin-top: 30px;
         /* width: 100%;  */
         width: 50%;
+        font-size: 22px;
     }
 }
 
 
 
-.UnderlineText, .UnderlineText2{
+.UnderlineText,
+.UnderlineText2 {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 2px;
@@ -332,37 +380,42 @@ font-size: 20px;
     font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
 
 }
+
 @media only screen and (max-width: 3901px) and (min-width: 901px) {
-    .UnderlineText, .UnderlineText2{
+
+    .UnderlineText,
+    .UnderlineText2 {
         font-size: 20px;
         width: 50%;
     }
 }
 
 @media only screen and (max-width: 900px) and (min-width: 0px) {
-    .UnderlineText, .UnderlineText2{
+
+    .UnderlineText,
+    .UnderlineText2 {
         font-size: 13px;
         width: 100%;
     }
 }
 
-.buttonicon{
+.buttonicon {
     border: 1.3px solid rgb(179, 176, 176);
     padding: 10px;
     border-radius: 16px;
     color: black;
 }
 
-.buttonicon:hover{
+.buttonicon:hover {
     background-color: #000;
     color: white;
 }
 
-.icon{
+.icon {
     font-size: 20px;
 }
 
-.buttoncontenet{
+.buttoncontenet {
     border: 1.7px solid rgb(12, 12, 12);
     padding: 5px 13px;
     border-radius: 20px;
@@ -371,7 +424,7 @@ font-size: 20px;
     font-weight: 500;
 }
 
-.buttoncontenet:hover{
+.buttoncontenet:hover {
     background-color: #000;
     color: white;
 }

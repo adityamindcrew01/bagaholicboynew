@@ -364,7 +364,7 @@ export default function Search() {
                                             <>
 
                                                 <div class={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
-                                                    <Link href={`/view/BagsDetails?id=${item?.sys?.id}}`}>
+                                                    <Link href={`/view/BagsDetails?id=${item?.sys?.id}`}>
                                                         <div class=" px-0 pt-10 pb-0 rounded-lg overflow-hidden relative h-full">
                                                             <img src={item?.fields?.image?.fields?.file?.url} className={styles.imageLayout2} />
                                                             <button className={styles.Layout2Boxbutton}>{item?.fields?.tag}</button>

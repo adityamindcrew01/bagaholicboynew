@@ -18,15 +18,16 @@ import { Base_URL } from '@/app/Config';
 import Footer from '@/components/Footer';
 
 import client from '@/lib/contentful';
+import moment from 'moment/moment';
 
 
 export default function Page() {
     return (
-      <Suspense fallback={<p>Loading...</p>}>
-        <SwipperImageDetails />
-      </Suspense>
+        <Suspense fallback={<p>Loading...</p>}>
+            <SwipperImageDetails />
+        </Suspense>
     );
-  }
+}
 
 
 const SwipperImageDetails = ({ product }) => {
@@ -38,17 +39,17 @@ const SwipperImageDetails = ({ product }) => {
 
     const fetchProductDetails = async () => {
         try {
-          // Fetch product by sys.id using getEntry
-          const product = await client.getEntry(id);
-    
-          console.log("jsjas", product )
-          setcommonProduct(product?.fields)
-         
+            // Fetch product by sys.id using getEntry
+            const product = await client.getEntry(id);
+
+            console.log("jsjas", product)
+            setcommonProduct(product?.fields)
+
         } catch (error) {
-          console.error('Error fetching product details:', error);
+            console.error('Error fetching product details:', error);
         }
-      };
-    
+    };
+
 
 
 
@@ -94,13 +95,13 @@ const SwipperImageDetails = ({ product }) => {
 
     return (
 
-       
-       
+
+
 
         <div style={{ overflowX: 'hidden' }}>
             <ChannelLayout />
             <Navbar />
-          
+
 
             <div className='mx-4 md:mx-10 mt-10 md:mt-20'>
 
@@ -115,11 +116,14 @@ const SwipperImageDetails = ({ product }) => {
 
 
                 <div className='text-center flex justify-center items-center'>
-                    <p className={`${styles.dateDetails} text-sm md:text-base lg:text-lg`}>{commonproduct?.date}</p>
+                    <p className={`${styles.dateDetails} text-sm md:text-base lg:text-lg`}>{moment(commonproduct?.date).format('DD MMMM YYYY')}</p>
                 </div>
 
                 <div className="flex justify-center items-center min-h-[200px] sm:min-h-[400px] md:min-h-screen">
                     <img src={commonproduct?.image?.fields?.file?.url} alt="Product Image" className="lg:w-[50%] sm:w-[100%] md:w-[50%]  rounded-lg" />
+                </div>
+                <div className='text-center '>
+                    <p className={`${styles.imageDetails} `}>{commonproduct?.image?.fields?.title}</p>
                 </div>
 
                 {commonproduct?.description?.split('\n').map((paragraph, index) => (
@@ -136,6 +140,10 @@ const SwipperImageDetails = ({ product }) => {
                     </div>
                 )}
 
+                <div className='text-center '>
+                    <p className={`${styles.imageDetails} `}>{commonproduct?.image?.fields?.title}</p>
+                </div>
+
                 {commonproduct?.description2?.split('\n').map((paragraph, index) => (
                     <div className='flex justify-center items-center' key={index}>
                         <p className={`${styles.descriptionTitle} text-sm md:text-base lg:text-lg`}>
@@ -143,7 +151,7 @@ const SwipperImageDetails = ({ product }) => {
                         </p>
                     </div>
                 ))}
-                <br/>
+                <br />
 
                 <div className='flex justify-center items-center'>
                     <i className={`${styles.UnderlineText} text-sm md:text-base lg:text-lg`}>
@@ -182,13 +190,13 @@ const SwipperImageDetails = ({ product }) => {
                     </div>
                 </div>
             </div>
-          
+
 
             <SmallChannelLayout />
             <Footer />
         </div>
-      
-      
+
+
 
 
     )

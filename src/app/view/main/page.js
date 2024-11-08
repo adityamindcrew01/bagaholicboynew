@@ -304,7 +304,7 @@ export default function Main() {
                                     <Link href={`/view/SwipperImageDetails?id=${item?.sys?.id}`}>
                                         <img
                                             // src={item?.image?.url} 
-                                            src={item?.fields.image.fields?.file?.url}
+                                            src={item?.fields.thumbnail?.fields?.file?.url}
                                             alt="Slide 1" className={styles.imageSlider} />
 
 
@@ -886,7 +886,7 @@ export default function Main() {
             </div>
 
 
-            <div className={styles.Layout2Box}>
+            <div className={` ${styles.Layout2Box} pb-10 pt-2`}>
                 <section class="text-gray-600 body-font">
                     <div class="">
                         <div class="flex flex-wrap">
@@ -894,7 +894,7 @@ export default function Main() {
                                 return (
                                     <>
 
-                                        <div class={`${styles.layout2con} lg:w-1/6 sm:w-1/2 md:w-1/4 xs:w-1/2`}>
+                                        <div class={`${styles.layout2con} lg:w-1/6 sm:w-1/2 md:w-1/4 xs:w-1/2 `}>
                                             <Link href={`/view/moretolove?id=${itrem?.fields?.brand}`}>
                                                 <div class=" px-0 pt-0 pb-5 rounded-lg overflow-hidden relative h-full">
                                                     <img src={itrem?.fields?.image?.fields?.file?.url} className={styles.imageLayout2} />

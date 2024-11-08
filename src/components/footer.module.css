@@ -1,11 +1,53 @@
+@font-face {
+  font-family: 'ABCMonumentGroteskRegular';
+  src: url('../public/fonts/ABCMonumentGrotesk-Regular.woff') format('woff');
+  font-weight: normal; /* or specify 'bold' if applicable */
+  font-style: normal; /* or specify 'italic' if applicable */
+}
+
+@font-face {
+  font-family: 'Light';
+  src: url('../public/fonts/Rhymes\ Display\ Light.woff') format('woff');
+  font-weight: normal; /* or specify 'bold' if applicable */
+  font-style: normal; /* or specify 'italic' if applicable */
+}
+
+@font-face {
+  font-family: 'Text';
+  src: url('../public/fonts/RhymesTextLight.woff') format('woff');
+  font-weight: normal; /* or specify 'bold' if applicable */
+  font-style: normal; /* or specify 'italic' if applicable */
+}
+
+
+
 
 .textFooter {
     color: #000 !important;
-    font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+    /* font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif; */
+    font-family: 'ABCMonumentGroteskRegular', sans-serif;
     font-weight: 500;
    line-height: 1.1;
     margin-left: 4px;
   
+  }
+  .textSub{
+    text-transform: uppercase;
+    color: #000;
+    font-size: 11px;
+    font-family: 'ABCMonumentGroteskRegular', sans-serif;
+    font-weight: 500;
+  }
+  .menu{
+    text-transform: uppercase;
+    color: #000;
+    font-size: 12px;
+    font-family: 'ABCMonumentGroteskRegular', sans-serif;
+    font-weight: 600;
+    display: inline-block;
+  }
+  .menu:hover{
+    border-bottom: 1px solid black;
   }
   
   @media (min-width: 240px) {
@@ -41,4 +83,16 @@
     }
   }
   
+  
+
+  @media only screen and (max-width: 900px) and (min-width: 0px) {
+    .fotterContainer{
+      margin: 0px 20px;
+    }
+  }
+  @media only screen and (max-width: 3900px) and (min-width: 901px) {
+    .fotterContainer{
+      margin: 0px 40px;
+    }
+  }
   

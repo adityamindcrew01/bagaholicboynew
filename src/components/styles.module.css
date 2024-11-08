@@ -97,11 +97,15 @@
 
 .shrink {
   width: 200px; /* Shrinks to 10px on scroll */
+  position: relative;
+  left:-60px;
 }
 
 .brandImage {
-  width: 300px; /* You can adjust the width as needed */
+  width: 260px; /* You can adjust the width as needed */
   height: auto;
+  position: relative;
+  left:-60px;
 
 
 

@@ -17,14 +17,15 @@ import SmallChannelLayout from '@/components/SmallChannelLayout';
 import { Base_URL } from '@/app/Config';
 import Footer from '@/components/Footer';
 import client from '@/lib/contentful';
+import moment from 'moment/moment';
 
 export default function Page() {
     return (
-      <Suspense fallback={<p>Loading...</p>}>
-        <DetailsCommonproduct />
-      </Suspense>
+        <Suspense fallback={<p>Loading...</p>}>
+            <DetailsCommonproduct />
+        </Suspense>
     );
-  }
+}
 
 
 const DetailsCommonproduct = ({ product }) => {
@@ -75,13 +76,13 @@ const DetailsCommonproduct = ({ product }) => {
         try {
             // Fetch product by sys.id using getEntry
             const product = await client.getEntry(id);
-      
+
             console.log("jsjas", product.fields)
             setcommonProduct(product.fields)
-           
-          } catch (error) {
+
+        } catch (error) {
             console.error('Error fetching product details:', error);
-          }
+        }
     }
 
 
@@ -244,12 +245,12 @@ const DetailsCommonproduct = ({ product }) => {
         //     <Footer />
 
         // </div>
-       
+
 
         <div style={{ overflowX: 'hidden' }}>
             <ChannelLayout />
             <Navbar />
-          
+
 
             <div className='mx-4 md:mx-10 mt-10 md:mt-20'>
 
@@ -264,12 +265,17 @@ const DetailsCommonproduct = ({ product }) => {
 
 
                 <div className='text-center flex justify-center items-center'>
-                    <p className={`${styles.dateDetails} text-sm md:text-base lg:text-lg`}>{commonproduct?.date}</p>
+                    <p className={`${styles.dateDetails} text-sm md:text-base lg:text-lg`}>{moment(commonproduct?.date).format('DD MMMM YYYY')}</p>
                 </div>
 
                 <div className="flex justify-center items-center min-h-[300px] sm:min-h-[400px] md:min-h-screen">
                     <img src={commonproduct?.image?.fields?.file?.url} alt="Product Image" className="lg:w-[50%] sm:w-[100%] md:w-[50%]  rounded-lg" />
                 </div>
+
+                <div className='text-center '>
+                    <p className={`${styles.imageDetails} `}>{commonproduct?.image?.fields?.title}</p>
+                </div>
+
 
                 {commonproduct?.description?.split('\n').map((paragraph, index) => (
                     <div className='flex justify-center items-center' key={index}>
@@ -284,6 +290,12 @@ const DetailsCommonproduct = ({ product }) => {
                         <img src={commonproduct?.image2?.fields?.file?.url} alt="Product Image" className="lg:w-[50%] sm:w-[100%] md:w-[50%]  rounded-lg " />
                     </div>
                 )}
+
+
+                <div className='text-center '>
+                    <p className={`${styles.imageDetails} `}>{commonproduct?.image2?.fields?.title}</p>
+                </div>
+
 
                 {commonproduct?.description2?.split('\n').map((paragraph, index) => (
                     <div className='flex justify-center items-center' key={index}>
@@ -330,13 +342,13 @@ const DetailsCommonproduct = ({ product }) => {
                     </div>
                 </div>
             </div>
-          
+
 
             <SmallChannelLayout />
             <Footer />
         </div>
-      
-      
+
+
 
 
     )

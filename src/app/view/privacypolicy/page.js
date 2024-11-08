@@ -101,11 +101,11 @@ const PrivacyPolicy = ({ product }) => {
 
 
                 <div className='text-center flex justify-center items-center'>
-                    <h1 className={`${styles.detailsTitle} text-2xl md:text-4xl lg:text-5xl sm:text-xl`}>Privacy Policy</h1>
+                    <h1 className={`${styles.detailsTitle} text-2xl md:text-4xl lg:text-5xl sm:text-xl pt-10 pb-5`}>Privacy Policy</h1>
                 </div>
 
 
-                <div className='flex justify-center items-center' >
+                <div className='flex justify-center items-center pb-20' >
                     <p className={`${styles.descriptionTitle}  md:text-base lg:text-lg`}>
                         This Privacy Policy (the “Policy”) applies to the collection, use and disclosure of an individual customer’s Personal Data (hereinafter defined) arising from goods and/or services offered by Bagaholicboy (‘BBOY‘).
                         <br />

@@ -17,12 +17,13 @@ import SmallChannelLayout from '@/components/SmallChannelLayout';
 import { Base_URL } from '@/app/Config';
 import Footer from '@/components/Footer';
 import client from '@/lib/contentful';
+import moment from 'moment/moment';
 
 
 export default function Page() {
     return (
         <Suspense fallback={<p>Loading...</p>}>
-            <YoumaylikeDetails/>
+            <YoumaylikeDetails />
         </Suspense>
     );
 }
@@ -106,7 +107,7 @@ const YoumaylikeDetails = ({ product }) => {
 
     return (
 
-       
+
 
 
         <div style={{ overflowX: 'hidden' }}>
@@ -124,15 +125,28 @@ const YoumaylikeDetails = ({ product }) => {
                     <h1 className={`${styles.detailsTitle} text-2xl md:text-4xl lg:text-5xl sm:text-xl`}>{commonproduct?.title}</h1>
                 </div>
 
-
-
                 <div className='text-center flex justify-center items-center'>
-                    <p className={`${styles.dateDetails} text-sm md:text-base lg:text-lg`}>{commonproduct?.date}</p>
+                    <p className={`${styles.dateDetails} text-sm md:text-base lg:text-lg`}>{moment(commonproduct?.date).format('DD MMMM YYYY')}</p>
                 </div>
 
-                <div className="flex justify-center items-center min-h-[300px] sm:min-h-[400px] md:min-h-screen">
+
+
+
+
+                <div className="flex justify-center items-center min-h-[200px] sm:min-h-[400px] md:min-h-screen">
+
+
+
                     <img src={commonproduct?.image?.fields?.file?.url} alt="Product Image" className="lg:w-[50%] sm:w-[100%] md:w-[50%]  rounded-lg" />
+
+
                 </div>
+
+                <div className='text-center '>
+                    <p className={`${styles.imageDetails} `}>{commonproduct?.image?.fields?.title}</p>
+                </div>
+
+
 
                 {commonproduct?.description?.split('\n').map((paragraph, index) => (
                     <div className='flex justify-center items-center' key={index}>
@@ -147,6 +161,9 @@ const YoumaylikeDetails = ({ product }) => {
                         <img src={commonproduct?.image2?.fields?.file?.url} alt="Product Image" className="lg:w-[50%] sm:w-[100%] md:w-[50%]  rounded-lg " />
                     </div>
                 )}
+                <div className='text-center '>
+                    <p className={`${styles.imageDetails} `}>{commonproduct?.image2?.fields?.title}</p>
+                </div>
 
                 {commonproduct?.description2?.split('\n').map((paragraph, index) => (
                     <div className='flex justify-center items-center' key={index}>
@@ -156,7 +173,7 @@ const YoumaylikeDetails = ({ product }) => {
                     </div>
                 ))}
 
-                <div className='flex justify-center items-center'>
+                <div className='flex justify-center items-center pt-10 pb-10'>
                     <i className={`${styles.UnderlineText} text-sm md:text-base lg:text-lg`}>
                         For more information, do visit OMEGAWATCHES.com
                     </i>
@@ -256,8 +273,6 @@ const YoumaylikeDetails = ({ product }) => {
 
     )
 }
-
-
 
 
 
