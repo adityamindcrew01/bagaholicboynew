@@ -94,28 +94,37 @@
   
    
     }
+    .shrink {
+      width: 200px; /* Shrinks to 10px on scroll */
+     
+    }
   }
+  @media only screen and (max-width: 3900px) and (min-width: 901px) {
+    .shrink {
+      width: 200px; /* Shrinks to 10px on scroll */
+      position: relative;
+      left:-60px;
+    }
+    .brandImage {
+      width: 260px; /* You can adjust the width as needed */
+      height: auto;
+      position: relative;
+      left:-60px;
+    
+    
+    
+    }
+    
+    
+  }
+
 
 
   .smaller-brand {
     max-width: 150px; /* Adjust the size as needed */
 }
 
-.shrink {
-  width: 200px; /* Shrinks to 10px on scroll */
-  position: relative;
-  left:-60px;
-}
 
-.brandImage {
-  width: 260px; /* You can adjust the width as needed */
-  height: auto;
-  position: relative;
-  left:-60px;
-
-
-
-}
 
 
 @media only screen and (max-width: 900px) and (min-width: 0px) {
