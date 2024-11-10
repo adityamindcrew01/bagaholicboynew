@@ -92,40 +92,40 @@ export default function Watches() {
 
     const [isClient, setIsClient] = useState(false);
     const [scrolle, setSrcoll] = useState(false)
-  useLayoutEffect(() => {
-    setIsClient(true); // Ensure hydration is completed
+    useLayoutEffect(() => {
+        setIsClient(true); // Ensure hydration is completed
 
-    const navbar = document.querySelector('header');
-    const brandImage = document.querySelector('.brand-image');
+        const navbar = document.querySelector('header');
+        const brandImage = document.querySelector('.brand-image');
 
-    const handleScroll = () => {
-        if (window.scrollY > 300) {
-            // navbar.classList.add('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out');
-            // brandImage.classList.add('w-[10px]');
-            //brandImage.classList.add(styles.shrink); // Add shrink class
+        const handleScroll = () => {
+            if (window.scrollY > 300) {
+                // navbar.classList.add('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out');
+                // brandImage.classList.add('w-[10px]');
+                //brandImage.classList.add(styles.shrink); // Add shrink class
 
-            setSrcoll(true)
-        } else {
-            // navbar.classList.remove('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out');
-            // brandImage.classList.remove('w-[10px]');
-            //brandImage.classList.add(styles.brandImage); // Add shrink class
-            setSrcoll(false)
-        }
-    };
+                setSrcoll(true)
+            } else {
+                // navbar.classList.remove('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out');
+                // brandImage.classList.remove('w-[10px]');
+                //brandImage.classList.add(styles.brandImage); // Add shrink class
+                setSrcoll(false)
+            }
+        };
 
-    // Add scroll event listener
-    window.addEventListener('scroll', handleScroll);
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
 
-    // Cleanup listener on component unmount
-    return () => {
-        window.removeEventListener('scroll', handleScroll);
-    };
-}, []); // Empty de
+        // Cleanup listener on component unmount
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []); // Empty de
 
     return (
         <>
 
-<header className="bg-white sticky top-0 z-10 transition-all duration-3">
+            <header className="bg-white sticky top-0 z-10 transition-all duration-3">
                 <div className=" flex flex-wrap px-5 flex-row items-center justify-between">
 
 
@@ -163,20 +163,20 @@ export default function Watches() {
 
                         </Link>
                         <Link href='/view/beauty'>
-                            <p  className={`${styles.navmenu} text-black`} >BEAUTY</p>
+                            <p className={`${styles.navmenu} text-black`} >BEAUTY</p>
 
                         </Link>
                         <Link href='/view/Fashion'>
-                            <p  className={`${styles.navmenu} text-black`}>FASHION</p>
+                            <p className={`${styles.navmenu} text-black`}>FASHION</p>
                         </Link>
                         <Link href='/view/Jewellery'>
-                            <p  className={`${styles.navmenu} text-black`}>JEWELLERY</p>
+                            <p className={`${styles.navmenu} text-black`}>JEWELLERY</p>
                         </Link>
                         <Link href='/view/Watches'>
-                            <p  className={`${styles.navmenu} text-black`}>WATCHES</p>
+                            <p className={`${styles.navmenu} text-black`}>WATCHES</p>
                         </Link>
                         <Link href='/view/Lifestyle'>
-                            <p  className={`${styles.navmenu} text-black`}>LIFESTYLE</p>
+                            <p className={`${styles.navmenu} text-black`}>LIFESTYLE</p>
                         </Link>
                     </nav>
 
@@ -220,16 +220,16 @@ export default function Watches() {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <p  className={`${styles.navmenu} text-black`}>INSTAGRAM</p>
+                            <p className={`${styles.navmenu} text-black`}>INSTAGRAM</p>
                         </Link>
                         <Link href='https://www.tiktok.com/about'
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                        <p  className={`${styles.navmenu} text-black`}>TIKTOK</p>
+                            <p className={`${styles.navmenu} text-black`}>TIKTOK</p>
                         </Link>
                         <Link href='/view/Search'>
-                            <p  className={`${styles.navmenu} text-black`}>SEARCH</p>
+                            <p className={`${styles.navmenu} text-black`}>SEARCH</p>
                         </Link>
                     </nav>
 
@@ -282,18 +282,18 @@ export default function Watches() {
                             </Link>
 
                             <Link href='https://www.instagram.com/bagaholicboy/'
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <p className="hover:text-gray-900 text-gray-900">INSTAGRAM</p>
-                        </Link>
-                        <Link href='https://www.tiktok.com/about'
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                        <p className="hover:text-gray-900 text-gray-900">TIKTOK</p>
-                        </Link>
-                     
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <p className="hover:text-gray-900 text-gray-900">INSTAGRAM</p>
+                            </Link>
+                            <Link href='https://www.tiktok.com/about'
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <p className="hover:text-gray-900 text-gray-900">TIKTOK</p>
+                            </Link>
+
 
                         </div>
                     )}
@@ -330,7 +330,7 @@ export default function Watches() {
 
             </div>
 
-            <div className={styles.Layout2Box}>
+            {/* <div className={styles.Layout2Box}>
                 <section class="text-gray-600 body-font">
                     <div class="">
                         <div class="flex flex-wrap">
@@ -358,7 +358,77 @@ export default function Watches() {
                         </div>
                     </div>
                 </section>
+            </div> */}
+
+
+            <div className={styles.web}>
+                <div className={styles.Layout2Box}>
+                    <section class="text-gray-600 body-font">
+                        <div class="">
+                            <div class="flex flex-wrap">
+                                {products?.map((item, index) => {
+                                    return (
+                                        <>
+
+                                            <div class={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
+                                                <Link href={`/view/BagsDetails?id=${item?.sys?.id}`}>
+                                                    <div class=" px-0 pt-10 pb-0 rounded-lg overflow-hidden relative h-full">
+                                                        <img src={item?.fields?.image?.fields?.file?.url} className={styles.imageLayout2} />
+                                                        <button className={styles.Layout2Boxbutton}>{item?.fields?.tag}</button>
+                                                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout2imageText}>{item?.fields?.title}</h1>
+
+
+                                                    </div>
+                                                </Link>
+                                            </div>
+
+                                        </>
+                                    )
+                                })}
+
+
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
+
+
+            <div className={styles.mobile}>
+                <div className={styles.Layout2Box}>
+                    <section class="text-gray-600 body-font">
+                        <div class="">
+                            <div className={styles.mobiletwocolumns}>
+                                {products?.map((item, index) => {
+                                    return (
+                                        <>
+
+                                            <div class={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
+                                                <Link href={`/view/BagsDetails?id=${item?.sys?.id}`}>
+                                                    <div class=" px-0 pt-10 pb-0 rounded-lg overflow-hidden relative h-full">
+                                                        <img src={item?.fields?.image?.fields?.file?.url} className={styles.imageLayout2} />
+                                                        <button className={styles.Layout2Boxbutton}>{item?.fields?.tag}</button>
+                                                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout2imageText}>{item?.fields?.title}</h1>
+
+
+                                                    </div>
+                                                </Link>
+                                            </div>
+
+                                        </>
+                                    )
+                                })}
+
+
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
 
 
 

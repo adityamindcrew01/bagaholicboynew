@@ -256,6 +256,10 @@
   .Layout2Box {
     margin: 0px 0.9em;
   }
+  .imageLayout2 {
+    height: 10em;
+    width: 100%;
+  }
 }
 
 
@@ -310,7 +314,9 @@
 
 @media (min-width: 240px) {
   .Layout2text {
-    font-size: 28px;
+    font-size: 1.55em;
+    font-weight: 300;
+    letter-spacing: -.04em;
     color: green;
     /* Font size for small screens (640px and up) */
   }
@@ -375,7 +381,13 @@
 
 @media (min-width: 240px) {
   .Layout2imageText {
-    font-size: 28px;
+    /* font-size: 28px; */
+
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 300;
+    line-height: 110%;
+    letter-spacing: -.03em;
    
     /* Font size for small screens (640px and up) */
   }
@@ -527,3 +539,42 @@
 .imageWrapper:hover .Layout2imageText{
   
 }
+
+
+
+
+
+
+
+@media only screen and (max-width: 900px) and (min-width: 0px) {
+  .web{
+    display: none;
+  }
+  .mobile{
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 3901px) and (min-width: 901px) {
+  .web{
+    display: block;
+  }
+  .mobile{
+    display: none;
+  }
+}
+
+/* Custom CSS for mobile two-column layout */
+.mobiletwocolumns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* gap: 1rem;  */
+}
+
+/* Optional: Adjust columns for larger screens if needed */
+@media (min-width: 640px) {
+  .mobiletwocolumns {
+      grid-template-columns: repeat(4, 1fr);
+  }
+}
+

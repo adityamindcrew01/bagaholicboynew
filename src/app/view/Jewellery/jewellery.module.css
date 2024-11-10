@@ -1,158 +1,193 @@
-
 /* LAYOUT 2 */
 
+
+
+@font-face {
+  font-family: 'ABCMonumentGroteskRegular';
+  src: url('../../../public/fonts/ABCMonumentGrotesk-Regular.woff') format('woff');
+  font-weight: normal; /* or specify 'bold' if applicable */
+  font-style: normal; /* or specify 'italic' if applicable */
+}
+
+@font-face {
+  font-family: 'Light';
+  src: url('../../../public/fonts/Rhymes\ Display\ Light.woff') format('woff');
+  font-weight: normal; 
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: 'Text';
+  src: url('../../../public/fonts/RhymesTextLight.woff') format('woff');
+  font-weight: normal; /* or specify 'bold' if applicable */
+  font-style: normal; 
+}
+
+
+
 .Layout2 {
-    display: flex;
-    margin: 0px 2em;
-    justify-content: space-between;
-    align-items: center;
-  
-  }
-  
+  display: flex;
+  margin: 0px 2em;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.Layout2Box {
+  margin: 0px 2em 4em 2em;
+}
+
+@media only screen and (max-width: 900px) and (min-width: 0px) {
   .Layout2Box {
-    margin: 0px 2em 4em 2em;
+    margin: 0px 0.9em;
   }
-  @media only screen and (max-width: 900px) and (min-width: 0px) {
-    .Layout2Box {
-      margin: 0px 0.9em;
-    }
-  }
-  
-  
-  
   .imageLayout2 {
-    border-radius: 20px;
+    height: 11em;
+    width: 100%;
   }
-  
-  .viewallbutton {
-    background-color: #000;
-    padding: 15px 20px;
-    border-radius: 30px;
-    text-transform: uppercase;
-    font-family: ABC Monument Grotesk, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
-    font-size: 13px;
-    font-weight: 500;
+}
+
+
+
+.imageLayout2 {
+  border-radius: 20px;
+}
+
+.viewallbutton {
+  background-color: #000;
+  padding: 15px 20px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-family: ABC Monument Grotesk, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.viewallbutton:hover {
+  background-color: #fff;
+  border: 1px solid black;
+  color: #000;
+}
+
+.Layout2text {
+  /* font-size: 5em; */
+  color: #000 !important;
+
+  font-family: 'Text', serif ;
+
+  font-weight: 200;
+  letter-spacing: -.04em;
+}
+
+.layout2con {
+  /* margin: 0px 10px; */
+  padding: 0px 10px;
+}
+
+@media only screen and (max-width: 900px) and (min-width: 0px) {
+  .Layout2 {
+
+    margin: 0px 1em;
+    margin-top: 1em;
+
+
   }
-  
-  .viewallbutton:hover {
-    background-color: #fff;
-    border: 1px solid black;
-    color: #000;
-  }
-  
-  .Layout2text {
-    /* font-size: 5em; */
-    color: #000 !important;
-  
-    font-family: Rhymes Display;
-  
-    font-weight: 200;
-    letter-spacing: -.04em;
-  }
-  .layout2con{
-    /* margin: 0px 10px; */
+
+  .layout2con {
     padding: 0px 10px;
   }
-  @media only screen and (max-width: 900px) and (min-width: 0px) {
-    .Layout2 {
-     
-      margin: 0px 1em;
-     
-    
-    }
-    .layout2con{
-      padding: 0px 10px;
-    }
+}
+
+@media (min-width: 240px) {
+  .Layout2text {
+    font-size: 2.55em;
+    color: green;
+    /* Font size for small screens (640px and up) */
   }
-  
-  @media (min-width: 240px) {
-    .Layout2text {
-      font-size: 28px;
-      color: green;
-      /* Font size for small screens (640px and up) */
-    }
+}
+
+
+@media (min-width: 640px) {
+  .Layout2text {
+    font-size: 28px;
+    color: red;
+    /* Font size for small screens (640px and up) */
   }
-  
-  
-  @media (min-width: 640px) {
-    .Layout2text {
-      font-size: 28px;
-      color: red;
-      /* Font size for small screens (640px and up) */
-    }
+}
+
+@media (min-width: 768px) {
+  .Layout2text {
+    font-size: 42px;
+    color: pink;
+    /* Font size for medium screens (768px and up) */
   }
-  
-  @media (min-width: 768px) {
-    .Layout2text {
-      font-size: 42px;
-      color: pink;
-      /* Font size for medium screens (768px and up) */
-    }
+}
+
+@media (min-width: 1024px) {
+  .Layout2text {
+    font-size: 66px;
+    /* color: blue; */
+
   }
+}
+
+.Layout2Boxbutton {
+  margin-top: 18px;
+  border: 1px solid rgb(224, 223, 223);
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-size: 13px;
+  color: #000;
+  text-transform: uppercase;
+
+
+}
+
+.Layout2imageText {
+  color: #000 !important;
+  font-family: Light;
+  /* font-weight: bold; */
   
-  @media (min-width: 1024px) {
-    .Layout2text {
-      font-size: 66px;
-      /* color: blue; */
-  
-    }
-  }
-  
-  .Layout2Boxbutton {
-    margin-top: 18px;
-    border: 1px solid rgb(224, 223, 223);
-    border-radius: 20px;
-    padding: 5px 15px;
-    font-size: 13px;
-    color: #000;
-    text-transform: uppercase;
-  
-  
-  }
-  
+  line-height: 1.0em;
+  margin-top: 10px;
+  margin-left: 4px;
+}
+
+@media (min-width: 240px) {
   .Layout2imageText {
-    color: #000 !important;
-    font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
-    font-weight: 500;
-    margin-top: 10px;
-    margin-left: 4px;
-  
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 300;
+    line-height: 110%;
+    letter-spacing: -.03em;
+    /* Font size for small screens (640px and up) */
   }
-  
-  @media (min-width: 240px) {
-    .Layout2imageText {
-      font-size: 28px;
-      color: green;
-      /* Font size for small screens (640px and up) */
-    }
-  }
-  
-  
-  @media (min-width: 640px) {
-    .Layout2imageText {
-      font-size: 28px;
-      color: red;
-      /* Font size for small screens (640px and up) */
-    }
-  }
-  
-  @media (min-width: 768px) {
-    .Layout2imageText {
-      font-size: 22px;
-      color: pink;
-      /* Font size for medium screens (768px and up) */
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    .Layout2imageText {
-      font-size: 30px;
-      color: blue;
-  
-    }
-  }
+}
 
 
+@media (min-width: 640px) {
+  .Layout2imageText {
+    font-size: 28px;
+    color: red;
+    /* Font size for small screens (640px and up) */
+  }
+}
+
+@media (min-width: 768px) {
+  .Layout2imageText {
+    font-size: 22px;
+    color: pink;
+    /* Font size for medium screens (768px and up) */
+  }
+}
+
+@media (min-width: 1024px) {
+  .Layout2imageText {
+    font-size: 30px;
+    color: blue;
+
+  }
+}
 
 
 
@@ -214,3 +249,45 @@
 
 } 
 }
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 900px) and (min-width: 0px) {
+  .web{
+    display: none;
+  }
+  .mobile{
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 3901px) and (min-width: 901px) {
+  .web{
+    display: block;
+  }
+  .mobile{
+    display: none;
+  }
+}
+
+/* Custom CSS for mobile two-column layout */
+.mobiletwocolumns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 30px;
+  /* gap: 1rem;  */
+}
+
+/* Optional: Adjust columns for larger screens if needed */
+@media (min-width: 640px) {
+  .mobiletwocolumns {
+      grid-template-columns: repeat(4, 1fr);
+  }
+}
+

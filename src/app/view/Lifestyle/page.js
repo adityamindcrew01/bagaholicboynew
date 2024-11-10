@@ -8,6 +8,7 @@ import Footer from '@/components/Footer';
 import ima from '../../../app/asset/image/brand.png'
 import Image from "next/image";
 import client from '@/lib/contentful';
+import { RxCross2 } from 'react-icons/rx';
 
 export default function Lifestyle() {
 
@@ -327,7 +328,7 @@ export default function Lifestyle() {
 
             </div>
 
-            <div className={styles.Layout2Box}>
+            {/* <div className={styles.Layout2Box}>
                 <section class="text-gray-600 body-font">
                     <div class="">
                         <div class="flex flex-wrap">
@@ -355,7 +356,77 @@ export default function Lifestyle() {
                         </div>
                     </div>
                 </section>
+            </div> */}
+
+
+<div className={styles.web}>
+                <div className={styles.Layout2Box}>
+                    <section class="text-gray-600 body-font">
+                        <div class="">
+                            <div class="flex flex-wrap">
+                                {products?.map((item, index) => {
+                                    return (
+                                        <>
+
+                                            <div class={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
+                                                <Link href={`/view/BagsDetails?id=${item?.sys?.id}`}>
+                                                    <div class=" px-0 pt-10 pb-0 rounded-lg overflow-hidden relative h-full">
+                                                        <img src={item?.fields?.image?.fields?.file?.url} className={styles.imageLayout2} />
+                                                        <button className={styles.Layout2Boxbutton}>{item?.fields?.tag}</button>
+                                                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout2imageText}>{item?.fields?.title}</h1>
+
+
+                                                    </div>
+                                                </Link>
+                                            </div>
+
+                                        </>
+                                    )
+                                })}
+
+
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
+
+
+            <div className={styles.mobile}>
+                <div className={styles.Layout2Box}>
+                    <section class="text-gray-600 body-font">
+                        <div class="">
+                            <div className={styles.mobiletwocolumns}>
+                                {products?.map((item, index) => {
+                                    return (
+                                        <>
+
+                                            <div class={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
+                                                <Link href={`/view/BagsDetails?id=${item?.sys?.id}`}>
+                                                    <div class=" px-0 pt-10 pb-0 rounded-lg overflow-hidden relative h-full">
+                                                        <img src={item?.fields?.image?.fields?.file?.url} className={styles.imageLayout2} />
+                                                        <button className={styles.Layout2Boxbutton}>{item?.fields?.tag}</button>
+                                                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout2imageText}>{item?.fields?.title}</h1>
+
+
+                                                    </div>
+                                                </Link>
+                                            </div>
+
+                                        </>
+                                    )
+                                })}
+
+
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
 
 
 

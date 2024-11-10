@@ -108,7 +108,7 @@ const MoretoloveDetails = ({ product }) => {
 
     return (
 
-     
+
 
         <div style={{ overflowX: 'hidden' }}>
             <ChannelLayout />
@@ -131,8 +131,11 @@ const MoretoloveDetails = ({ product }) => {
                     <p className={`${styles.dateDetails} text-sm md:text-base lg:text-lg`}>{moment(commonproduct?.date).format('DD MMMM YYYY')}</p>
                 </div>
 
-                <div className="flex justify-center items-center min-h-[300px] sm:min-h-[400px] md:min-h-screen">
+                <div className="flex justify-center items-center min-h-[200px] sm:min-h-[400px] md:min-h-screen">
                     <img src={commonproduct?.subimage1?.fields?.file?.url} alt="Product Image" className="lg:w-[50%] sm:w-[100%] md:w-[50%]  rounded-lg" />
+                </div>
+                <div className='text-center '>
+                    <p className={`${styles.imageDetails} `}>{commonproduct?.image?.fields?.title}</p>
                 </div>
 
                 {commonproduct?.description?.split('\n').map((paragraph, index) => (
@@ -143,11 +146,15 @@ const MoretoloveDetails = ({ product }) => {
                     </div>
                 ))}
 
-                {commonproduct?.subimage2?.fields?.file?.url && (
-                    <div className="flex justify-center items-center min-h-[300px] sm:min-h-[400px] md:min-h-screen">
+                {commonproduct?.image2?.fields?.file?.url && (
+                    <div className={`${styles.image2Img} flex justify-center items-center min-h-[300px] sm:min-h-[400px] md:min-h-screen`}>
                         <img src={commonproduct?.subimage2?.fields?.file?.url} alt="Product Image" className="lg:w-[50%] sm:w-[100%] md:w-[50%]  rounded-lg " />
                     </div>
                 )}
+
+                <div className='text-center '>
+                    <p className={`${styles.imageDetails} `}>{commonproduct?.image2?.fields?.title}</p>
+                </div>
 
                 {commonproduct?.description2?.split('\n').map((paragraph, index) => (
                     <div className='flex justify-center items-center' key={index}>
@@ -156,6 +163,7 @@ const MoretoloveDetails = ({ product }) => {
                         </p>
                     </div>
                 ))}
+                <br />
 
                 <div className='flex justify-center items-center'>
                     <i className={`${styles.UnderlineText} text-sm md:text-base lg:text-lg`}>
@@ -170,7 +178,7 @@ const MoretoloveDetails = ({ product }) => {
                 </div>
 
                 <div className="flex justify-center w-full mt-10 md:mt-20 mb-5">
-                    <div className="flex flex-col md:flex-row justify-between items-center w-full md:w-1/2 border-t-2 border-grey border-b-2 pt-2 pb-2">
+                    <div className="flex  md:flex-row justify-between items-center w-full md:w-1/2 border-t-2 border-grey border-b-2 pt-2 pb-2">
                         <p className={`${styles.shareText} text-sm md:text-base lg:text-lg text-black `}>Share</p>
                         <div className='flex gap-2'>
                             <button className={styles.buttonicon}>
@@ -186,7 +194,7 @@ const MoretoloveDetails = ({ product }) => {
                     </div>
                 </div>
 
-                <div className="flex justify-center w-full mb-20">
+                <div className="flex lg:justify-center sm:justify-start w-full mb-20">
                     <div className="flex gap-2">
                         <button className={styles.buttoncontenet}>Fall-Winter 2024</button>
                         <button className={styles.buttoncontenet}>Omega</button>
@@ -199,15 +207,16 @@ const MoretoloveDetails = ({ product }) => {
             <SmallChannelLayout />
 
 
-   
-
-            <Youmaylike/>
 
 
+            <Youmaylike />
 
 
 
 
+
+
+            <SmallChannelLayout />
 
 
             <Footer />

@@ -215,8 +215,8 @@ font-size: 20px;
     .buttonDetailsText{
         border: 1px solid rgb(224, 223, 223);
         border-radius: 20px;
-        padding: 5px 12px;
-        font-size: 10px;
+        padding: 7px 14px;
+        font-size:14px;
         color: #000;
         text-transform: uppercase;
         font-weight: 500;
@@ -257,6 +257,7 @@ font-size: 20px;
         width: 100%; 
         line-height: 1;
         margin-bottom: 10px;
+        font-size: 2.25rem;
     
        
     }
@@ -274,11 +275,18 @@ font-size: 20px;
     
        
     }
+    .dateDetails{
+        color: #000 !important;
+        font-family: Light, serif;
+        font-weight: 600;
+        font-size: 14px;
+    }
+    
 }
 
 .shareText{
     color: #000 !important;
-     font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif; 
+     font-family: 'ABCMonumentGroteskRegular', serif; 
     font-weight: 100;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -293,8 +301,7 @@ font-size: 20px;
 @media only screen and (max-width: 900px) and (min-width: 0px) {
     .shareText{
         color: #000 !important;
-         font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif; 
-        font-weight: 100;
+        
         margin-top: 15px;
         margin-bottom: 15px;
         margin-left: 4px;
@@ -302,9 +309,18 @@ font-size: 20px;
        
         width: 100%;
         letter-spacing: -.03em;
-        text-align: center;
+        
     
     }
+    .dateDetails{
+        color: #000 !important;
+        font-family: Light, serif;
+        font-weight: 600;
+        font-size: 14px;
+        margin-top: 14px;
+        margin-bottom: 36px;
+    }
+    
 }
 
 
@@ -313,8 +329,7 @@ font-size: 20px;
 .dateDetails{
     color: #000 !important;
     font-family: Light, serif;
-    font-weight: 600;
-    font-size: 14px;
+  
 }
 
 .imageDetails{
@@ -340,12 +355,31 @@ font-size: 20px;
 
 @media only screen and (max-width: 900px) and (min-width: 0px) {
     .descriptionTitle{
-        /* color: #000 !important; */
+        
    
-        margin-top: 30px;
-        /* width: 100%;  */
+        /* margin-top: 30px;
+     
         width: 100%;
-        font-size: 24px;
+        font-size: 24px; */
+
+
+        /* margin-top: 2rem; */
+    /* margin-bottom: 2rem; */
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 300;
+    line-height: 160%;
+    letter-spacing: -.03em;
+    --tw-text-opacity: 1;
+    color: #444;
+    color: rgba(68, 68, 68, var(--tw-text-opacity));
+
+
+
+
+    }
+    .image2Img{
+        margin-top: 30px;
     }
 }
 
@@ -367,7 +401,7 @@ font-size: 20px;
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 2px;
-    color: #000;
+    color: #444;
     padding-bottom: 20px;
     font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
 
@@ -381,8 +415,10 @@ font-size: 20px;
 
 @media only screen and (max-width: 900px) and (min-width: 0px) {
     .UnderlineText, .UnderlineText2{
-        font-size: 13px;
+       
         width: 100%;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
     }
 }
 

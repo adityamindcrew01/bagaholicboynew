@@ -105,28 +105,18 @@ const JewelleryDetails = ({ product }) => {
                     <h1 className={`${styles.detailsTitle} text-2xl md:text-4xl lg:text-5xl sm:text-xl`}>{commonproduct?.title}</h1>
                 </div>
 
+
+
                 <div className='text-center flex justify-center items-center'>
                     <p className={`${styles.dateDetails} text-sm md:text-base lg:text-lg`}>{moment(commonproduct?.date).format('DD MMMM YYYY')}</p>
                 </div>
 
-
-
-
-
                 <div className="flex justify-center items-center min-h-[200px] sm:min-h-[400px] md:min-h-screen">
-
-
-
                     <img src={commonproduct?.image?.fields?.file?.url} alt="Product Image" className="lg:w-[50%] sm:w-[100%] md:w-[50%]  rounded-lg" />
-
-
                 </div>
-
                 <div className='text-center '>
                     <p className={`${styles.imageDetails} `}>{commonproduct?.image?.fields?.title}</p>
                 </div>
-
-
 
                 {commonproduct?.description?.split('\n').map((paragraph, index) => (
                     <div className='flex justify-center items-center' key={index}>
@@ -137,10 +127,11 @@ const JewelleryDetails = ({ product }) => {
                 ))}
 
                 {commonproduct?.image2?.fields?.file?.url && (
-                    <div className="flex justify-center items-center min-h-[300px] sm:min-h-[400px] md:min-h-screen">
+                    <div className={`${styles.image2Img} flex justify-center items-center min-h-[300px] sm:min-h-[400px] md:min-h-screen`}>
                         <img src={commonproduct?.image2?.fields?.file?.url} alt="Product Image" className="lg:w-[50%] sm:w-[100%] md:w-[50%]  rounded-lg " />
                     </div>
                 )}
+
                 <div className='text-center '>
                     <p className={`${styles.imageDetails} `}>{commonproduct?.image2?.fields?.title}</p>
                 </div>
@@ -152,6 +143,7 @@ const JewelleryDetails = ({ product }) => {
                         </p>
                     </div>
                 ))}
+                <br />
 
                 <div className='flex justify-center items-center'>
                     <i className={`${styles.UnderlineText} text-sm md:text-base lg:text-lg`}>
@@ -166,7 +158,7 @@ const JewelleryDetails = ({ product }) => {
                 </div>
 
                 <div className="flex justify-center w-full mt-10 md:mt-20 mb-5">
-                    <div className="flex flex-col md:flex-row justify-between items-center w-full md:w-1/2 border-t-2 border-grey border-b-2 pt-2 pb-2">
+                    <div className="flex  md:flex-row justify-between items-center w-full md:w-1/2 border-t-2 border-grey border-b-2 pt-2 pb-2">
                         <p className={`${styles.shareText} text-sm md:text-base lg:text-lg text-black `}>Share</p>
                         <div className='flex gap-2'>
                             <button className={styles.buttonicon}>
@@ -182,7 +174,7 @@ const JewelleryDetails = ({ product }) => {
                     </div>
                 </div>
 
-                <div className="flex justify-center w-full mb-20">
+                <div className="flex lg:justify-center sm:justify-start w-full mb-20">
                     <div className="flex gap-2">
                         <button className={styles.buttoncontenet}>Fall-Winter 2024</button>
                         <button className={styles.buttoncontenet}>Omega</button>
@@ -196,6 +188,8 @@ const JewelleryDetails = ({ product }) => {
 
 
             <Youmaylike />
+
+            <SmallChannelLayout />
             <Footer />
         </div>
 
