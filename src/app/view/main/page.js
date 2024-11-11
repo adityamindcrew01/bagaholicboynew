@@ -374,7 +374,7 @@ export default function Main() {
             </div>
 
             <div className={styles.mobile}>
-            <div className={styles.Layout2}>
+                <div className={styles.Layout2}>
                     <div className='flex gap-4 items-center'>
                         <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-black w-8 h-8 md:w-12 md:h-12 lg:w-16 lg:h-16">
                             <path d="M44.8342 18.3319L17.3649 45.7969L18.9765 47.4082L46.4457 19.9432L44.8342 18.3319Z" fill="black"></path><path d="M49.5072 8.16016C56.0951 13.6526 60.2879 21.9181 60.2879 31.1649C60.2879 47.7016 46.8802 61.1073 30.3409 61.1073C24.72 61.1073 19.463 59.5562 14.9686 56.8629C20.1618 61.1943 26.8425 63.802 34.135 63.802C50.6743 63.802 64.0835 50.3964 64.0835 33.8597C64.0835 22.9429 58.2379 13.3931 49.5072 8.16161V8.16016Z" fill="black"></path><path d="M4.18646 33.8559C4.18646 17.3192 17.5942 3.91351 34.135 3.91351C39.7559 3.91351 45.0128 5.46455 49.5072 8.15786C44.3126 3.82653 37.6319 1.21875 30.3394 1.21875C13.8001 1.21875 0.392334 14.6244 0.392334 31.1611C0.392334 42.0779 6.23793 51.6277 14.9686 56.8592C8.38073 51.3668 4.18646 43.1013 4.18646 33.8545V33.8559Z" fill="black">
@@ -394,7 +394,7 @@ export default function Main() {
 
 
                 </div>
-                </div>
+            </div>
 
 
             <div className={styles.web}>
@@ -511,44 +511,15 @@ export default function Main() {
 
 
 
-
-            <div class="text-gray-600 body-font">
+            {/* original approach */}
+            {/* <div class="text-gray-600 body-font">
                 <div class={`py-2 ${styles.layout4}`}>
                     <div class="flex flex-wrap -m-4 ">
                         {
                             commonproduct?.map((item, index) => {
                                 return (
                                     <>
-                                        {/* <div class="p-0 lg:w-1/2 md:w-1/1 sm:w-1/1">
-                                            <Link href={`/view/DetailsCommonproduct?id=${item?.sys?.id}`}>
 
-                                                <div className={`flex lg:w-3/8 mx-auto pb-4 mb-4 gap-2  ${styles.flexcommpon}`}>
-                                                    <div class="sm:mr-5 inline-flex items-center justify-center rounded-lg flex-shrink-0">
-
-
-                                                     
-                                                        <img
-                                                          
-                                                            className={styles.commonimage}
-                                                            src={item?.fields.image.fields?.file?.url}
-
-                                                        />
-
-                                                    </div>
-
-
-                                                    <div class={`flex-grow sm:text-left  ${styles.layout4box} `}>
-
-                                                        <button className={styles.Layout3Boxbutton}>{item?.fields?.tag}</button>
-
-                                                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout3imageText}>{item?.fields?.title}</h1>
-
-
-
-                                                    </div>
-                                                </div>
-                                            </Link>
-                                        </div> */}
 
                                         <div className={` ${styles.imageWrappers} p-0 lg:w-1/2 md:w-1/1 sm:w-1/1`}>
                                             <Link href={`/view/DetailsCommonproduct?id=${item?.sys?.id}`}>
@@ -583,31 +554,142 @@ export default function Main() {
 
 
 
-                        {/* <div class="p-0 lg:w-1/2">
-                            <div class="flex  lg:w-3/8 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-                                <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-lg bg-indigo-100 text-indigo-500 flex-shrink-0">
-                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
-                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                                    </svg>
-                                </div>
-                                <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-                                    <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Shooting Stars</h2>
-                                    <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-                                    <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                                            <path d="M5 12h14M12 5l7 7-7 7"></path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div> */}
+                  
 
 
 
 
                     </div>
                 </div>
+            </div> */}
+
+
+            {/* other approach */}
+            {/* 
+            <div class="text-gray-600 body-font">
+                <div class={`py-2 ${styles.layout4}`}>
+                    <div class="flex flex-wrap -m-4 ">
+                        {
+                            commonproduct?.map((item, index) => {
+                                return (
+                                    <>
+
+
+                                        <div className={` ${styles.imageWrappers} p-0 lg:w-1/2 md:w-1/1 sm:w-1/1`}>
+                                            <Link href={`/view/DetailsCommonproduct?id=${item?.sys?.id}`}>
+                                                <div className={`flex `}>
+                                                    <div className={`flex gap-2`}>
+                                                         <div className="w-[146px] h-[146px] overflow-hidden rounded-lg flex-shrink-0">
+                                            <img
+                                                className="w-full h-full object-cover"
+                                                src={item?.fields.image.fields?.file?.url}
+                                                alt={item?.fields?.title}
+                                            />
+                                        </div>
+                                                        <div>
+                                                            <h1>dcdsc</h1>
+                                                            <p>sdcjbxhsdbhj</p>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </Link>
+                                        </div>
+
+                                    </>
+                                )
+                            })
+                        }
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div> */}
+
+
+
+
+
+
+            {/* fixed 146 px image */}
+
+            {/* <div className="text-gray-600 body-font">
+                <div className={`py-0 ${styles.layout4}`}>
+                    <div className="flex flex-wrap -m-4 ">
+                        {commonproduct?.map((item, index) => (
+                            <div key={index} className={`p-0 lg:w-1/2 md:w-full sm:w-full`}>
+                                <Link href={`/view/DetailsCommonproduct?id=${item?.sys?.id}`}>
+                                    <div className="flex  gap-2 lg:p-4 pb-4 bg-white rounded-lg  duration-200">
+                                        <div className="w-[146px] h-[146px]  overflow-hidden rounded-lg flex-shrink-0">
+                                            <img
+                                                className="w-full h-full object-cover"
+                                                src={item?.fields.image.fields?.file?.url}
+                                                alt={item?.fields?.title}
+                                            />
+                                        </div>
+                                        <div className="flex-grow">
+                                        <button className={styles.Layout3Boxbutton}>{item?.fields?.tag}</button>
+                                                        <h1 className={`${styles.Layout3imageText} title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2`}>
+                                                            {item?.fields?.title}
+                                                        </h1>
+                                           
+                                        </div>
+                                    </div>
+                                </Link>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div> */}
+
+
+            <div className="text-gray-600 body-font">
+                <div className={`py-0 ${styles.layout4}`}>
+                    <div className="flex flex-wrap -m-4 ">
+                        {commonproduct?.map((item, index) => (
+                            <div key={index} className={`p-0 lg:w-1/2 md:w-full sm:w-full`}>
+                                <Link href={`/view/DetailsCommonproduct?id=${item?.sys?.id}`}>
+                                    <div className="flex  gap-2 lg:p-4 pb-4 bg-white rounded-lg  duration-200">
+                                        <div className="w-[116px] h-[116px] lg:w-[146px] lg:h-[146px] overflow-hidden rounded-xl flex-shrink-0">
+                                            <img
+                                                className="w-full h-full object-cover"
+                                                src={item?.fields.image.fields?.file?.url}
+                                                alt={item?.fields?.title}
+                                            />
+                                        </div>
+                                        <div className="flex-grow">
+                                            <button className={styles.Layout3Boxbutton}>{item?.fields?.tag}</button>
+                                            <h1 className={`${styles.Layout3imageText} title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2`}>
+                                                {item?.fields?.title}
+                                            </h1>
+
+                                        </div>
+                                    </div>
+                                </Link>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -727,42 +809,14 @@ export default function Main() {
             </div>
 
 
-            <section class="text-gray-600 body-font mt-0 mx-2">
+            {/* <section class="text-gray-600 body-font mt-0 mx-2">
                 <div class={` last:py-2 ${styles.layout42}`}>
                     <div class="flex flex-wrap -m-4 ">
                         {
                             fashionlist?.map((item, index) => {
                                 return (
                                     <>
-                                        {/* <div class="p-0 lg:w-1/2 md:w-1/1 sm:w-1/1">
-                                            <Link href={`/view/fashionDetails?id=${item?.sys?.id}`}>
-                                                <div className={`flex lg:w-3/8 mx-auto pb-4 mb-4 gap-2  ${styles.flexcommpon}`}>
-                                                    <div class="sm:mr-5 inline-flex items-center justify-center rounded-lg flex-shrink-0">
-
-
-                                                      
-                                                       
-                                                        <img
-                                                            className={styles.commonimage}
-                                                            src={item?.fields?.image?.fields?.file?.url}
-
-                                                        />
-
-                                                    </div>
-
-
-                                                    <div class={`flex-grow sm:text-left  ${styles.layout4box} `}>
-
-                                                        <button className={styles.Layout3Boxbutton}>{item?.fields?.tag}</button>
-
-                                                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout3imageText}>{item?.fields?.title}</h1>
-
-
-
-                                                    </div>
-                                                </div>
-                                            </Link>
-                                        </div> */}
+                                      
                                         <div className={` ${styles.imageWrappers} p-0 lg:w-1/2 md:w-1/1 sm:w-1/1`}>
                                             <Link href={`/view/DetailsCommonproduct?id=${item?.sys?.id}`}>
                                                 <div className={`flex lg:w-3/8 mx-auto pb-1 mb-4 gap-2 ${styles.flexcommpon}`}>
@@ -800,7 +854,37 @@ export default function Main() {
 
                     </div>
                 </div>
-            </section>
+            </section> */}
+
+
+            <div className="text-gray-600 body-font">
+                <div className={`py-0 ${styles.layout42}`}>
+                    <div className="flex flex-wrap -m-4 ">
+                        {fashionlist?.map((item, index) => (
+                            <div key={index} className={`p-0 lg:w-1/2 md:w-full sm:w-full`}>
+                                <Link href={`/view/DetailsCommonproduct?id=${item?.sys?.id}`}>
+                                    <div className="flex  gap-2 lg:p-3 pb-4 bg-white rounded-lg  duration-200">
+                                        <div className="w-[116px] h-[116px] lg:w-[146px] lg:h-[146px] overflow-hidden rounded-xl flex-shrink-0">
+                                            <img
+                                                className="w-full h-full object-cover"
+                                                src={item?.fields.image.fields?.file?.url}
+                                                alt={item?.fields?.title}
+                                            />
+                                        </div>
+                                        <div className="flex-grow">
+                                            <button className={styles.Layout3Boxbutton}>{item?.fields?.tag}</button>
+                                            <h1 className={`${styles.Layout3imageText} title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2`}>
+                                                {item?.fields?.title}
+                                            </h1>
+
+                                        </div>
+                                    </div>
+                                </Link>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
 
 
 
@@ -934,41 +1018,14 @@ export default function Main() {
             </div>
 
 
-            <section class="text-gray-600 body-font">
+            {/* <section class="text-gray-600 body-font">
                 <div class={`py-2 ${styles.layout42}`}>
                     <div class="flex flex-wrap -m-4 ">
                         {
                             beauties?.map((item, index) => {
                                 return (
                                     <>
-                                        {/* <div class="pt-3 lg:w-1/2 md:w-1/1 sm:w-1/1">
-                                            <Link href={`/view/beautyDetails?id=${item?.sys?.id}`}>
-                                                <div className={`flex lg:w-3/8 mx-auto pb-4 mb-4 gap-2  ${styles.flexcommpon}`}>
-                                                    <div class="sm:mr-5 inline-flex items-center justify-center rounded-lg flex-shrink-0">
-
-
-                                                      
-                                                        <img
-                                                            className={styles.commonimage}
-                                                            src={item?.fields?.image?.fields?.file?.url}
-
-                                                        />
-
-                                                    </div>
-
-
-                                                    <div class={`flex-grow sm:text-left  ${styles.layout4box} `}>
-
-                                                        <button className={styles.Layout3Boxbutton}>{item?.fields?.tag}</button>
-
-                                                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2" className={styles.Layout3imageText}>{item?.fields?.title}</h1>
-
-
-
-                                                    </div>
-                                                </div>
-                                            </Link>
-                                        </div> */}
+                                       
 
                                         <div className={` ${styles.imageWrappers} pt-2 lg:w-1/2 md:w-1/1 sm:w-1/1`}>
                                             <Link href={`/view/DetailsCommonproduct?id=${item?.sys?.id}`}>
@@ -1014,7 +1071,41 @@ export default function Main() {
 
                     </div>
                 </div>
-            </section>
+            </section> */}
+
+
+            <div className="text-gray-600 body-font">
+                <div className={`py-0 ${styles.layout42}`}>
+                    <div className="flex flex-wrap -m-4 ">
+                        {beauties?.map((item, index) => (
+                            <div key={index} className={`p-0 lg:w-1/2 md:w-full sm:w-full`}>
+                                <Link href={`/view/DetailsCommonproduct?id=${item?.sys?.id}`}>
+                                    <div className="flex  gap-2 lg:p-3 pb-4 bg-white rounded-lg  duration-200">
+                                        <div className="w-[116px] h-[116px] lg:w-[146px] lg:h-[146px] overflow-hidden rounded-xl flex-shrink-0">
+                                            <img
+                                                className="w-full h-full object-cover"
+                                                src={item?.fields.image.fields?.file?.url}
+                                                alt={item?.fields?.title}
+                                            />
+                                        </div>
+                                        <div className="flex-grow">
+                                            <button className={styles.Layout3Boxbutton}>{item?.fields?.tag}</button>
+                                            <h1 className={`${styles.Layout3imageText} title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2`}>
+                                                {item?.fields?.title}
+                                            </h1>
+
+                                        </div>
+                                    </div>
+                                </Link>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+
+
+
 
 
 
