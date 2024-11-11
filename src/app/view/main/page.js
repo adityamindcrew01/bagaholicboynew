@@ -512,7 +512,7 @@ export default function Main() {
 
 
 
-            <section class="text-gray-600 body-font">
+            <div class="text-gray-600 body-font">
                 <div class={`py-2 ${styles.layout4}`}>
                     <div class="flex flex-wrap -m-4 ">
                         {
@@ -607,7 +607,7 @@ export default function Main() {
 
                     </div>
                 </div>
-            </section>
+            </div>
 
 
 
