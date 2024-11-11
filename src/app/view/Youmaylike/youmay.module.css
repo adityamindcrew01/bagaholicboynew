@@ -1,5 +1,29 @@
 /* LAYOUT 2 */
 
+
+@font-face {
+  font-family: 'ABCMonumentGroteskRegular';
+  src: url('../../../public/fonts/ABCMonumentGrotesk-Regular.woff') format('woff');
+  font-weight: normal; /* or specify 'bold' if applicable */
+  font-style: normal; /* or specify 'italic' if applicable */
+}
+
+@font-face {
+  font-family: 'Light';
+  src: url('../../../public/fonts/Rhymes\ Display\ Light.woff') format('woff');
+  font-weight: normal; 
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: 'Text';
+  src: url('../../../public/fonts/RhymesTextLight.woff') format('woff');
+  font-weight: normal; /* or specify 'bold' if applicable */
+  font-style: normal; 
+}
+
+
+
 .Layout2 {
     display: flex;
     margin: 0px 2em;
@@ -113,10 +137,14 @@
   
   }
   
+
   .Layout2imageText {
-    color: #000 !important;
-    font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
-    font-weight: 500;
+    color: #000 !important ;
+    /* font-family: "Crimson Text", serif; */
+    font-family: Light;
+    /* font-weight: bold; */
+    
+    line-height: 1.0em;
     margin-top: 10px;
     margin-left: 4px;
   
@@ -124,9 +152,11 @@
   
   @media (min-width: 240px) {
     .Layout2imageText {
-      font-size: 28px;
-      color: green;
-      /* Font size for small screens (640px and up) */
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      font-weight: 300;
+      line-height: 110%;
+      letter-spacing: -.03em;
     }
   }
   
@@ -197,3 +227,44 @@
     
     } 
   }
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 900px) and (min-width: 0px) {
+  .web{
+    display: none;
+  }
+  .mobile{
+    display: block;
+   
+  }
+}
+
+@media only screen and (max-width: 3901px) and (min-width: 901px) {
+  .web{
+    display: block;
+  }
+  .mobile{
+    display: none;
+  }
+}
+
+/* Custom CSS for mobile two-column layout */
+.mobiletwocolumns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* gap: 1rem;  */
+}
+
+/* Optional: Adjust columns for larger screens if needed */
+@media (min-width: 640px) {
+  .mobiletwocolumns {
+      grid-template-columns: repeat(4, 1fr);
+  }
+}
+

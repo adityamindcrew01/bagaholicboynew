@@ -82,7 +82,9 @@ const SmallChannelLayout = () => {
                     src={data?.data?.image?.url}
                 />
             </div> */}
-            {data?.map((item) => (
+
+
+            {/* {data?.map((item) => (
                 <Link href='https://www.chanel.com/sg/watches/j12/c/4x2x1/?utm_source=bagaholicboy&utm_medium=display-static&utm_campaign=wfj_wa_j12_2024_&utm_term=banner_static&utm_content=worn_zx&adfcd=1730710509.N6pYAsnvwEqwSCiqz-2CQg.MzM1NzMzMCwyMTIzMTU5'
                     target="_blank"
                     rel="noopener noreferrer"
@@ -98,7 +100,21 @@ const SmallChannelLayout = () => {
 
                     </div>
                 </Link>
+            ))} */}
+
+            {data?.map((item) => (
+                <Link href='https://www.chanel.com/sg/watches/j12/c/4x2x1/?utm_source=bagaholicboy&utm_medium=display-static&utm_campaign=wfj_wa_j12_2024_&utm_term=banner_static&utm_content=worn_zx&adfcd=1730710509.N6pYAsnvwEqwSCiqz-2CQg.MzM1NzMzMCwyMTIzMTU5'
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <div className="flex justify-center mt-10 mx-7  mb-10   ">
+                        <img alt="ecommerce" className="lg:w-3/5 w-full  lg:h-auto md:h-40 sm:h-40  rounded"
+                            src={item?.fields.image.fields?.file?.url}
+                        />
+                    </div>
+                </Link>
             ))}
+
 
 
         </div>
