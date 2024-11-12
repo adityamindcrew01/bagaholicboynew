@@ -24,8 +24,14 @@
 .SearchText{
     color: black;
     font-size: 20px;
-    font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+    font-family: 'Text', serif;
 }
+.barndlisttext{
+  font-family: 'ABCMonumentGroteskRegular', serif;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
 
 
 /* LAYOUT 2 */
@@ -208,7 +214,7 @@
         font-weight: 500;
     }
     .searchInput {
-        font-size: 54px;
+        font-size: 48px;
         color: #150808; 
         text-align: center; 
         border: none;
@@ -314,6 +320,16 @@
 
 
 
+
+
+
+.navmenu{
+  display: inline-block;
+}
+.navmenu:hover{
+  border-bottom: 1px solid black;
+}
+
 @media only screen and (max-width: 900px) and (min-width: 0px) {
   .imageBrandName{
   position: relative ;
@@ -321,24 +337,37 @@
 
  
   }
+  .shrink {
+    width: 200px; /* Shrinks to 10px on scroll */
+   
+  }
 }
+@media only screen and (max-width: 3900px) and (min-width: 901px) {
+  .shrink {
+    width: 200px; /* Shrinks to 10px on scroll */
+    position: relative;
+    left:-60px;
+  }
+  .brandImage {
+    width: 260px; /* You can adjust the width as needed */
+    height: auto;
+    position: relative;
+    left:-60px;
+  
+  
+  
+  }
+  
+  
+}
+
 
 
 .smaller-brand {
   max-width: 150px; /* Adjust the size as needed */
 }
 
-.shrink {
-width: 200px; /* Shrinks to 10px on scroll */
-}
 
-.brandImage {
-width: 300px; /* You can adjust the width as needed */
-height: auto;
-
-
-
-}
 
 
 @media only screen and (max-width: 900px) and (min-width: 0px) {
@@ -348,4 +377,5 @@ height: auto;
 
 } 
 }
-  
+
+

@@ -89,8 +89,8 @@ const ChannelLayout = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <div className="flex justify-center mt-10 mx-10">
-                        <img alt="ecommerce" className="lg:w-4/5 w-full  lg:h-auto md:h-40 sm:h-40  rounded"
+                    <div className="flex justify-center mt-10 mx-10 ">
+                        <img alt="ecommerce" className={`${styles.imageChannel} lg:w-4/5 w-full  lg:h-auto md:h-40 sm:h-40  `}
                             src={item?.fields.image.fields?.file?.url}
                         />
                     </div>

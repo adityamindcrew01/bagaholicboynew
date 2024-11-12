@@ -108,7 +108,7 @@ const SmallChannelLayout = () => {
                     rel="noopener noreferrer"
                 >
                     <div className="flex justify-center mt-10 mx-7  mb-10   ">
-                        <img alt="ecommerce" className="lg:w-3/5 w-full  lg:h-auto md:h-40 sm:h-40  rounded"
+                        <img alt="ecommerce" className={`${styles.smallimage} lg:w-3/5 w-full  lg:h-auto md:h-40 sm:h-40  `}
                             src={item?.fields.image.fields?.file?.url}
                         />
                     </div>
