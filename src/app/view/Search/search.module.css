@@ -1,4 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playwrite+HR:wght@100..400&display=swap');
+
+@font-face {
+  font-family: 'ABCMonumentGroteskRegular';
+  src: url('../../../public/fonts/ABCMonumentGrotesk-Regular.woff') format('woff');
+  font-weight: normal; /* or specify 'bold' if applicable */
+  font-style: normal; /* or specify 'italic' if applicable */
+}
+
+@font-face {
+  font-family: 'Light';
+  src: url('../../../public/fonts/Rhymes\ Display\ Light.woff') format('woff');
+  font-weight: normal; 
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: 'Text';
+  src: url('../../../public/fonts/RhymesTextLight.woff') format('woff');
+  font-weight: normal; /* or specify 'bold' if applicable */
+  font-style: normal; 
+}
+
 .SearchText{
     color: black;
     font-size: 20px;
@@ -191,7 +213,7 @@
         text-align: center; 
         border: none;
         outline: none;
-        font-family: "Libre Baskerville", serif;
+        font-family: "Text", serif;
         font-weight: 400;
         font-style: normal; 
     
@@ -209,22 +231,19 @@
         font-weight: 500;
     }
     .searchInput {
-        font-size: 34px;
+        font-size: 2em;
         color: #150808; 
         text-align: center; 
         border: none;
         outline: none;
-        font-family: "Libre Baskerville", serif;
+        font-family: "Text", serif;
         font-weight: 400;
         font-style: normal; 
         
-    
+        width: 100%;
+        padding: 0px 10px;
     }
 
-    .searchInput{
-    width: 100%;
-    padding: 0px 20px;
-    }
     .searchInput::placeholder {
         white-space: pre-wrap !important;  
       }
@@ -244,6 +263,7 @@
   .searchInput::placeholder {
     color: #c0c0c0; /* Placeholder color */
     opacity: 1; /* Ensures full opacity for the placeholder */
+    font-family: 'Text', serif;
   }
   
   .searchInput:focus {

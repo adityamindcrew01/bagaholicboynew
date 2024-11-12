@@ -650,7 +650,9 @@ export default function Main() {
             </div> */}
 
 
-            <div className="text-gray-600 body-font">
+
+            {/* without hover        */}
+            {/* <div className="text-gray-600 body-font">
                 <div className={`py-0 ${styles.layout4}`}>
                     <div className="flex flex-wrap -m-4 ">
                         {commonproduct?.map((item, index) => (
@@ -663,6 +665,8 @@ export default function Main() {
                                                 src={item?.fields.image.fields?.file?.url}
                                                 alt={item?.fields?.title}
                                             />
+
+                                            
                                         </div>
                                         <div className="flex-grow">
                                             <button className={styles.Layout3Boxbutton}>{item?.fields?.tag}</button>
@@ -677,7 +681,47 @@ export default function Main() {
                         ))}
                     </div>
                 </div>
+            </div> */}
+
+
+            {/* with hover        */}
+            <div className="text-gray-600 body-font">
+                <div className={`py-4 ${styles.layout4}`}>
+                    <div className="flex flex-wrap -m-4">
+                        {commonproduct?.map((item, index) => (
+                            <div key={index} className="p-0 lg:w-1/2 md:w-full sm:w-full">
+                                <Link href={`/view/DetailsCommonproduct?id=${item?.sys?.id}`}>
+                                    <div className="group flex items-center gap-2 lg:p-4 pb-4 bg-white rounded-lg  duration-200">
+                                        {/* Image Container */}
+                                        <div className="relative w-[116px] h-[116px] lg:w-[146px] lg:h-[146px] overflow-hidden rounded-lg flex-shrink-0">
+                                            {/* Image */}
+                                            <img
+                                                className="w-full h-full object-cover"
+                                                src={item?.fields.image.fields?.file?.url}
+                                                alt={item?.fields?.title}
+                                            />
+                                            {/* Overlay */}
+                                            <div className="absolute inset-0 bg-[#ef35f680] opacity-0 group-hover:opacity-60 transition-opacity duration-200"></div>
+                                        </div>
+
+                                        {/* Content */}
+
+                                        <div className="flex-grow">
+                                            <button className={styles.Layout3Boxbutton}>{item?.fields?.tag}</button>
+                                            <h1 className={`${styles.Layout3imageText} title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 mt-2`}>
+                                                {item?.fields?.title}
+                                            </h1>
+
+
+                                        </div>
+                                    </div>
+                                </Link>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
+
 
 
 

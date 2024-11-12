@@ -336,9 +336,9 @@ export default function Search() {
                             )
                         })}
                     </div> */}
-                    <div className="flex flex-col items-center mt-5 mb-10">
+                    <div className="flex flex-col items-center mt-5 mb-10 mx-2">
 
-                        <div className="flex flex-wrap justify-center gap-2 w-[50%]">
+                        <div className="flex flex-wrap justify-center gap-2 w-[75%]">
                             {brandName.map((item, index) => (
                                 <span
                                     key={index}
@@ -347,6 +347,8 @@ export default function Search() {
                                 >
                                     {item?.fields?.brandName}
                                 </span>
+
+                                
                             ))}
                         </div>
                     </div>
