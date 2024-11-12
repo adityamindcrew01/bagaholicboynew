@@ -387,7 +387,7 @@ export default function Search() {
                             {brandName.map((item, index) => (
                                 <span
                                     key={index}
-                                    className={`${styles.barndlisttext} px-3 py-1 border rounded-full text-sm text-gray-700 hover:bg-black transition hover:text-white`}
+                                    className={`${styles.barndlisttext} px-3 py-1 border rounded-full  text-gray-700 hover:bg-black transition hover:text-white`}
                                     onClick={() => handleSubmit(item?.fields?.brandName)}
                                 >
                                     {item?.fields?.brandName}
