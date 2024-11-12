@@ -18,6 +18,7 @@ import { Base_URL } from '@/app/Config';
 import Footer from '@/components/Footer';
 import client from '@/lib/contentful';
 import moment from 'moment/moment';
+import Youmaylike from '../Youmaylike/page';
 
 
 export default function Page() {
@@ -173,20 +174,20 @@ const YoumaylikeDetails = ({ product }) => {
                     </div>
                 ))}
 
-                <div className='flex justify-center items-center pt-10 pb-10'>
-                    <i className={`${styles.UnderlineText} text-sm md:text-base lg:text-lg`}>
-                        For more information, do visit OMEGAWATCHES.com
-                    </i>
+<div className='flex justify-center items-center mt-10'>
+                    <p className={`${styles.UnderlineText} text-sm md:text-base lg:text-lg`}>
+                        For more information, do visit <span> CHANEL.com</span>
+                    </p>
                 </div>
 
                 <div className='flex justify-center items-center'>
-                    <i className={`${styles.UnderlineText2} text-sm md:text-base lg:text-lg`}>
+                    <p className={`${styles.UnderlineText2} text-sm md:text-base lg:text-lg`}>
                         PHOTOS COURTESY OF OMEGA
-                    </i>
+                    </p>
                 </div>
 
                 <div className="flex justify-center w-full mt-10 md:mt-20 mb-5">
-                    <div className="flex flex-col md:flex-row justify-between items-center w-full md:w-1/2 border-t-2 border-grey border-b-2 pt-2 pb-2">
+                    <div className="flex  md:flex-row justify-between items-center w-full md:w-1/2 border-t-2 border-grey border-b-2 pt-2 pb-2">
                         <p className={`${styles.shareText} text-sm md:text-base lg:text-lg text-black `}>Share</p>
                         <div className='flex gap-2'>
                             <button className={styles.buttonicon}>
@@ -202,7 +203,7 @@ const YoumaylikeDetails = ({ product }) => {
                     </div>
                 </div>
 
-                <div className="flex justify-center w-full mb-20">
+                <div className="flex lg:justify-center sm:justify-start w-full mb-20">
                     <div className="flex gap-2">
                         <button className={styles.buttoncontenet}>Fall-Winter 2024</button>
                         <button className={styles.buttoncontenet}>Omega</button>
@@ -215,7 +216,11 @@ const YoumaylikeDetails = ({ product }) => {
             <SmallChannelLayout />
 
 
-            <div className={styles.Layout2}>
+            <Youmaylike/>
+            <br/>
+
+
+            {/* <div className={styles.Layout2}>
                 <div className='flex gap-4 items-center'>
                     <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-black w-8 h-8 md:w-12 md:h-12 lg:w-16 lg:h-16">
                         <path d="M44.8342 18.3319L17.3649 45.7969L18.9765 47.4082L46.4457 19.9432L44.8342 18.3319Z" fill="black"></path><path d="M49.5072 8.16016C56.0951 13.6526 60.2879 21.9181 60.2879 31.1649C60.2879 47.7016 46.8802 61.1073 30.3409 61.1073C24.72 61.1073 19.463 59.5562 14.9686 56.8629C20.1618 61.1943 26.8425 63.802 34.135 63.802C50.6743 63.802 64.0835 50.3964 64.0835 33.8597C64.0835 22.9429 58.2379 13.3931 49.5072 8.16161V8.16016Z" fill="black"></path><path d="M4.18646 33.8559C4.18646 17.3192 17.5942 3.91351 34.135 3.91351C39.7559 3.91351 45.0128 5.46455 49.5072 8.15786C44.3126 3.82653 37.6319 1.21875 30.3394 1.21875C13.8001 1.21875 0.392334 14.6244 0.392334 31.1611C0.392334 42.0779 6.23793 51.6277 14.9686 56.8592C8.38073 51.3668 4.18646 43.1013 4.18646 33.8545V33.8559Z" fill="black">
@@ -259,7 +264,7 @@ const YoumaylikeDetails = ({ product }) => {
                         </div>
                     </div>
                 </section>
-            </div>
+            </div> */}
 
 
 

@@ -329,6 +329,16 @@
 .navmenu:hover{
   border-bottom: 1px solid black;
 }
+.navmenu2{
+  display: inline-block;
+  font-size: 13px;
+}
+.navmenu:hover{
+  border-bottom: 1px solid black;
+}
+.follow{
+  font-size: 11px;
+}
 
 @media only screen and (max-width: 900px) and (min-width: 0px) {
   .imageBrandName{

@@ -131,17 +131,7 @@
   }
 }
 
-.Layout2Boxbutton {
-  margin-top: 18px;
-  border: 1px solid rgb(224, 223, 223);
-  border-radius: 20px;
-  padding: 5px 15px;
-  font-size: 13px;
-  color: #000;
-  text-transform: uppercase;
 
-
-}
 
 .Layout2imageText {
   color: #000 !important;
@@ -202,6 +192,17 @@
   border-bottom: 1px solid black;
 }
 
+.navmenu2{
+  display: inline-block;
+  font-size: 13px;
+}
+.navmenu:hover{
+  border-bottom: 1px solid black;
+}
+.follow{
+  font-size: 11px;
+}
+
 @media only screen and (max-width: 900px) and (min-width: 0px) {
   .imageBrandName{
   position: relative ;
@@ -212,6 +213,17 @@
   .shrink {
     width: 200px; /* Shrinks to 10px on scroll */
    
+  }
+  .Layout2Boxbutton {
+    margin-top: 18px;
+    border: 1px solid rgb(224, 223, 223);
+    border-radius: 20px;
+    padding: 5px 13px;
+    font-size: 9px;
+    color: #000;
+    text-transform: uppercase;
+  
+  
   }
 }
 @media only screen and (max-width: 3900px) and (min-width: 901px) {
@@ -229,6 +241,18 @@
   
   
   }
+  .Layout2Boxbutton {
+    margin-top: 18px;
+    border: 1px solid rgb(224, 223, 223);
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 13px;
+    color: #000;
+    text-transform: uppercase;
+  
+  
+  }
+ 
   
   
 }

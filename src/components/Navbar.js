@@ -91,13 +91,13 @@ export default function Navbar() {
 
         const handleScroll = () => {
             if (window.scrollY > 500) {
-                navbar.classList.add('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out', );
+                navbar.classList.add('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out',);
                 // brandImage.classList.add('w-[10px]');
                 //brandImage.classList.add(styles.shrink); // Add shrink class
 
                 setSrcoll(true)
             } else {
-                navbar.classList.remove('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out', );
+                navbar.classList.remove('fixed', 'top-0', 'left-0', 'w-full', 'transition-all', 'duration-300', 'ease-in-out',);
                 // brandImage.classList.remove('w-[10px]');
                 //brandImage.classList.add(styles.brandImage); // Add shrink class
                 setSrcoll(false)
@@ -162,20 +162,20 @@ export default function Navbar() {
 
                         </Link>
                         <Link href='/view/beauty'>
-                            <p  className={`${styles.navmenu} text-black`} >BEAUTY</p>
+                            <p className={`${styles.navmenu} text-black`} >BEAUTY</p>
 
                         </Link>
                         <Link href='/view/Fashion'>
-                            <p  className={`${styles.navmenu} text-black`}>FASHION</p>
+                            <p className={`${styles.navmenu} text-black`}>FASHION</p>
                         </Link>
                         <Link href='/view/Jewellery'>
-                            <p  className={`${styles.navmenu} text-black`}>JEWELLERY</p>
+                            <p className={`${styles.navmenu} text-black`}>JEWELLERY</p>
                         </Link>
                         <Link href='/view/Watches'>
-                            <p  className={`${styles.navmenu} text-black`}>WATCHES</p>
+                            <p className={`${styles.navmenu} text-black`}>WATCHES</p>
                         </Link>
                         <Link href='/view/Lifestyle'>
-                            <p  className={`${styles.navmenu} text-black`}>LIFESTYLE</p>
+                            <p className={`${styles.navmenu} text-black`}>LIFESTYLE</p>
                         </Link>
                     </nav>
 
@@ -219,16 +219,16 @@ export default function Navbar() {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <p  className={`${styles.navmenu} text-black`}>INSTAGRAM</p>
+                            <p className={`${styles.navmenu} text-black`}>INSTAGRAM</p>
                         </Link>
                         <Link href='https://www.tiktok.com/about'
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                        <p  className={`${styles.navmenu} text-black`}>TIKTOK</p>
+                            <p className={`${styles.navmenu} text-black`}>TIKTOK</p>
                         </Link>
                         <Link href='/view/Search'>
-                            <p  className={`${styles.navmenu} text-black`}>SEARCH</p>
+                            <p className={`${styles.navmenu} text-black`}>SEARCH</p>
                         </Link>
                     </nav>
 
@@ -257,42 +257,44 @@ export default function Navbar() {
 
                     {/* Dropdown menu for mobile */}
                     {isOpen && (
-                        <div className="flex flex-col w-full mt-0 pb-3 md:hidden space-y-2 text-center shadow-lg">
+                        <div className="flex flex-col w-full mt-0 pt-5 pb-10 md:hidden space-y-2 text-center shadow-lg">
 
                             <Link href='/view/bags'>
-                                <p className="hover:border-b-2 border-black text-black">BAGS</p>
+                                <p className={`${styles.navmenu} text-black`}>BAGS</p>
 
                             </Link>
                             <Link href='/view/beauty'>
-                                <p className="hover:border-b-2 border-black text-black">BEAUTY</p>
+                                <p className={`${styles.navmenu} text-black`}>BEAUTY</p>
 
                             </Link>
                             <Link href='/view/Fashion'>
-                                <p className="hover:border-b-2 border-black text-black">FASHION</p>
+                                <p className={`${styles.navmenu} text-black`}>FASHION</p>
                             </Link>
                             <Link href='/view/Jewellery'>
-                                <p className="hover:border-b-2 border-black text-black">JEWELLERY</p>
+                                <p className={`${styles.navmenu} text-black`}>JEWELLERY</p>
                             </Link>
                             <Link href='/view/Watches'>
-                                <p className="hover:border-b-2 border-black text-black">WATCHES</p>
+                                <p className={`${styles.navmenu} text-black`}>WATCHES</p>
                             </Link>
                             <Link href='/view/Lifestyle'>
-                                <p className="hover:border-b-2 border-black text-black">LIFESTYLE</p>
+                                <p className={`${styles.navmenu} text-black`}>LIFESTYLE</p>
                             </Link>
 
+                            <p className={` ${styles.follow} text-black pt-5 `}>FOLLOW</p>
+
                             <Link href='https://www.instagram.com/bagaholicboy/'
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <p className="hover:text-gray-900 text-gray-900">INSTAGRAM</p>
-                        </Link>
-                        <Link href='https://www.tiktok.com/about'
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                        <p className="hover:text-gray-900 text-gray-900">TIKTOK</p>
-                        </Link>
-                     
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <p className={`${styles.navmenu2} text-black`}>INSTAGRAM</p>
+                            </Link>
+                            <Link href='https://www.tiktok.com/about'
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <p className={`${styles.navmenu2} text-black`}>TIKTOK</p>
+                            </Link>
+
 
                         </div>
                     )}

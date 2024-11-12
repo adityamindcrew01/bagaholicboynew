@@ -125,17 +125,6 @@
     }
   }
   
-  .Layout2Boxbutton {
-    margin-top: 18px;
-    border: 1px solid rgb(224, 223, 223);
-    border-radius: 20px;
-    padding: 5px 15px;
-    font-size: 13px;
-    color: #000;
-    text-transform: uppercase;
-  
-  
-  }
  
 
   .Layout2imageText {
@@ -196,6 +185,7 @@
   
   
     }
+    
   
   
   }
@@ -243,6 +233,18 @@
     display: block;
    
   }
+  .Layout2Boxbutton {
+    margin-top: 18px;
+    border: 1px solid rgb(224, 223, 223);
+    border-radius: 20px;
+    padding: 5px 13px;
+    font-size: 9px;
+    color: #000;
+    text-transform: uppercase;
+  
+  
+  }
+ 
 }
 
 @media only screen and (max-width: 3901px) and (min-width: 901px) {
@@ -252,6 +254,18 @@
   .mobile{
     display: none;
   }
+  .Layout2Boxbutton {
+    margin-top: 18px;
+    border: 1px solid rgb(224, 223, 223);
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 13px;
+    color: #000;
+    text-transform: uppercase;
+  
+  
+  }
+ 
 }
 
 /* Custom CSS for mobile two-column layout */

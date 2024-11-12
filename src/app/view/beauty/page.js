@@ -122,7 +122,7 @@ export default function Beauty() {
     return (
         <>
 
-<header className="bg-white sticky top-0 z-10 transition-all duration-3">
+            <header className="bg-white z-10 transition-all duration-3">
                 <div className=" flex flex-wrap px-5 flex-row items-center justify-between">
 
 
@@ -160,20 +160,20 @@ export default function Beauty() {
 
                         </Link>
                         <Link href='/view/beauty'>
-                            <p  className={`${styles.navmenu} text-black`} >BEAUTY</p>
+                            <p className={`${styles.navmenu} text-black`} >BEAUTY</p>
 
                         </Link>
                         <Link href='/view/Fashion'>
-                            <p  className={`${styles.navmenu} text-black`}>FASHION</p>
+                            <p className={`${styles.navmenu} text-black`}>FASHION</p>
                         </Link>
                         <Link href='/view/Jewellery'>
-                            <p  className={`${styles.navmenu} text-black`}>JEWELLERY</p>
+                            <p className={`${styles.navmenu} text-black`}>JEWELLERY</p>
                         </Link>
                         <Link href='/view/Watches'>
-                            <p  className={`${styles.navmenu} text-black`}>WATCHES</p>
+                            <p className={`${styles.navmenu} text-black`}>WATCHES</p>
                         </Link>
                         <Link href='/view/Lifestyle'>
-                            <p  className={`${styles.navmenu} text-black`}>LIFESTYLE</p>
+                            <p className={`${styles.navmenu} text-black`}>LIFESTYLE</p>
                         </Link>
                     </nav>
 
@@ -217,16 +217,16 @@ export default function Beauty() {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <p  className={`${styles.navmenu} text-black`}>INSTAGRAM</p>
+                            <p className={`${styles.navmenu} text-black`}>INSTAGRAM</p>
                         </Link>
                         <Link href='https://www.tiktok.com/about'
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                        <p  className={`${styles.navmenu} text-black`}>TIKTOK</p>
+                            <p className={`${styles.navmenu} text-black`}>TIKTOK</p>
                         </Link>
                         <Link href='/view/Search'>
-                            <p  className={`${styles.navmenu} text-black`}>SEARCH</p>
+                            <p className={`${styles.navmenu} text-black`}>SEARCH</p>
                         </Link>
                     </nav>
 
@@ -255,42 +255,44 @@ export default function Beauty() {
 
                     {/* Dropdown menu for mobile */}
                     {isOpen && (
-                        <div className="flex flex-col w-full mt-0 pb-3 md:hidden space-y-2 text-center shadow-lg">
+                        <div className="flex flex-col w-full mt-0 pt-5 pb-10 md:hidden space-y-2 text-center shadow-lg">
 
                             <Link href='/view/bags'>
-                                <p className="hover:border-b-2 border-black text-black">BAGS</p>
+                                <p className={`${styles.navmenu} text-black`}>BAGS</p>
 
                             </Link>
                             <Link href='/view/beauty'>
-                                <p className="hover:border-b-2 border-black text-black">BEAUTY</p>
+                                <p className={`${styles.navmenu} text-black`}>BEAUTY</p>
 
                             </Link>
                             <Link href='/view/Fashion'>
-                                <p className="hover:border-b-2 border-black text-black">FASHION</p>
+                                <p className={`${styles.navmenu} text-black`}>FASHION</p>
                             </Link>
                             <Link href='/view/Jewellery'>
-                                <p className="hover:border-b-2 border-black text-black">JEWELLERY</p>
+                                <p className={`${styles.navmenu} text-black`}>JEWELLERY</p>
                             </Link>
                             <Link href='/view/Watches'>
-                                <p className="hover:border-b-2 border-black text-black">WATCHES</p>
+                                <p className={`${styles.navmenu} text-black`}>WATCHES</p>
                             </Link>
                             <Link href='/view/Lifestyle'>
-                                <p className="hover:border-b-2 border-black text-black">LIFESTYLE</p>
+                                <p className={`${styles.navmenu} text-black`}>LIFESTYLE</p>
                             </Link>
 
+                            <p className={` ${styles.follow} text-black pt-5 `}>FOLLOW</p>
+
                             <Link href='https://www.instagram.com/bagaholicboy/'
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <p className="hover:text-gray-900 text-gray-900">INSTAGRAM</p>
-                        </Link>
-                        <Link href='https://www.tiktok.com/about'
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                        <p className="hover:text-gray-900 text-gray-900">TIKTOK</p>
-                        </Link>
-                     
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <p className={`${styles.navmenu2} text-black`}>INSTAGRAM</p>
+                            </Link>
+                            <Link href='https://www.tiktok.com/about'
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <p className={`${styles.navmenu2} text-black`}>TIKTOK</p>
+                            </Link>
+
 
                         </div>
                     )}
@@ -358,7 +360,7 @@ export default function Beauty() {
             </div> */}
 
 
-<div className={styles.web}>
+            <div className={styles.web}>
                 <div className={styles.Layout2Box}>
                     <section class="text-gray-600 body-font">
                         <div class="">
@@ -368,7 +370,7 @@ export default function Beauty() {
                                         <>
 
                                             <div class={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
-                                                <Link href={`/view/BagsDetails?id=${item?.sys?.id}`}>
+                                                <Link href={`/view/beautyDetails?id=${item?.sys?.id}`}>
                                                     <div class=" px-0 pt-10 pb-0 rounded-lg overflow-hidden relative h-full">
                                                         <img src={item?.fields?.image?.fields?.file?.url} className={styles.imageLayout2} />
                                                         <button className={styles.Layout2Boxbutton}>{item?.fields?.tag}</button>
@@ -402,7 +404,7 @@ export default function Beauty() {
                                         <>
 
                                             <div class={`${styles.layout2con} lg:w-1/4 sm:w-1/2 md:w-1/2 xs:w-1/2`}>
-                                                <Link href={`/view/BagsDetails?id=${item?.sys?.id}`}>
+                                                <Link href={`/view/beautyDetails?id=${item?.sys?.id}`}>
                                                     <div class=" px-0 pt-10 pb-0 rounded-lg overflow-hidden relative h-full">
                                                         <img src={item?.fields?.image?.fields?.file?.url} className={styles.imageLayout2} />
                                                         <button className={styles.Layout2Boxbutton}>{item?.fields?.tag}</button>
