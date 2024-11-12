@@ -165,7 +165,7 @@ const BagsDetails = ({ product }) => {
                 ))}
                 <br />
 
-                <div className='flex justify-center items-center'>
+                <div className='flex justify-center items-center pt-10'>
                     <p className={`${styles.UnderlineText} text-sm md:text-base lg:text-lg`}>
                         For more information, do visit <span> CHANEL.com</span>
                     </p>

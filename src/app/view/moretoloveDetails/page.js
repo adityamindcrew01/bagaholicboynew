@@ -165,16 +165,16 @@ const MoretoloveDetails = ({ product }) => {
                 ))}
                 <br />
 
-                <div className='flex justify-center items-center'>
-                    <i className={`${styles.UnderlineText} text-sm md:text-base lg:text-lg`}>
-                        For more information, do visit OMEGAWATCHES.com
-                    </i>
+                <div className='flex justify-center items-center pt-10'>
+                    <p className={`${styles.UnderlineText} text-sm md:text-base lg:text-lg`}>
+                        For more information, do visit <span> CHANEL.com</span>
+                    </p>
                 </div>
 
                 <div className='flex justify-center items-center'>
-                    <i className={`${styles.UnderlineText2} text-sm md:text-base lg:text-lg`}>
+                    <p className={`${styles.UnderlineText2} text-sm md:text-base lg:text-lg`}>
                         PHOTOS COURTESY OF OMEGA
-                    </i>
+                    </p>
                 </div>
 
                 <div className="flex justify-center w-full mt-10 md:mt-20 mb-5">

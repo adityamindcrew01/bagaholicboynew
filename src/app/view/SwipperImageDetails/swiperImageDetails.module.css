@@ -343,9 +343,9 @@ font-size: 20px;
     font-weight: 100;
     margin-top: 30px;
     width: 100%;  */
-    color: #2f2e2e !important;
-    font-family: "Text", serif;
-  font-weight: 400;
+    color: #444444 !important;
+    font-family: "Light", serif;
+  font-weight: 300;
   font-style: normal;
     margin-top: 30px;
     /* width: 100%;  */
@@ -397,7 +397,7 @@ font-size: 20px;
 
 
 
-.UnderlineText, .UnderlineText2{
+/* .UnderlineText, .UnderlineText2{
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 2px;
@@ -405,19 +405,63 @@ font-size: 20px;
     padding-bottom: 20px;
     font-family: Rhymes Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
 
+} */
+.UnderlineText{
+   
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+    color: black;
+    padding-bottom: 20px;
+    font-family: 'Text', serif;
+    font-weight: 600;
+
+}
+.UnderlineText span{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+    color: black;
+    padding-bottom: 20px;
+    font-family: 'Text', serif;
+    font-weight: 600;
+   
+    
+
+}
+.UnderlineText2{
+   
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+    color: #6A7176;
+    padding-bottom: 20px;
+    font-family: 'ABCMonumentGroteskRegular', serif;
+    margin-top: 10px;
+    /* font-weight: 500; */
+  
+
+
 }
 @media only screen and (max-width: 3901px) and (min-width: 901px) {
-    .UnderlineText, .UnderlineText2{
-        font-size: 20px;
+    .UnderlineText{ 
+        font-size: 1.145rem;
+        width: 50%;
+    }
+    .UnderlineText2{
+        font-size: 0.95rem;
         width: 50%;
     }
 }
 
 @media only screen and (max-width: 900px) and (min-width: 0px) {
-    .UnderlineText, .UnderlineText2{
+    .UnderlineText{
        
         width: 100%;
-        font-size: 1.125rem;
+        font-size: 1.15rem;
+        line-height: 1.75rem;
+    }
+    .UnderlineText2{
+        width: 100%;
+        font-size: 0.85rem;
         line-height: 1.75rem;
     }
 }
