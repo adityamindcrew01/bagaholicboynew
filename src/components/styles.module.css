@@ -85,6 +85,7 @@
 
   .navmenu{
     display: inline-block;
+    color:black
   }
   .navmenu:hover{
     border-bottom: 1px solid black;
@@ -93,12 +94,14 @@
   .navmenu2{
     display: inline-block;
     font-size: 13px;
+    color:black
   }
   .navmenu:hover{
     border-bottom: 1px solid black;
   }
   .follow{
     font-size: 11px;
+    color:black
   }
 
   @media only screen and (max-width: 900px) and (min-width: 0px) {

@@ -286,9 +286,10 @@
   padding: 15px 20px;
   border-radius: 30px;
   text-transform: uppercase;
-  font-family: ABC Monument Grotesk, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  font-family: "ABCMonumentGroteskRegular" , serif;
   font-size: 13px;
   font-weight: 500;
+  color: white;
 }
 
 .viewallbutton:hover {
@@ -459,13 +460,22 @@
 
 
 .Layout3imageText {
-  color: #000 !important;
+  /* color: #000 !important;
   font-family: "Crimson Text", serif;
   font-weight: 400;
   font-style: normal;
   margin-top: 10px;
   margin-left: 4px;
+  line-height: 1.0em; */
+
+  color: #000 !important;
+  /* font-family: "Crimson Text", serif; */
+  font-family: Light;
+  /* font-weight: bold; */
+  
   line-height: 1.0em;
+  margin-top: 10px;
+  margin-left: 4px;
 
 }
 

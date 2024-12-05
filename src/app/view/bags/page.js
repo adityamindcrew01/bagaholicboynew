@@ -12,6 +12,7 @@ import ima from '../../../app/asset/image/brand.png'
 import Image from "next/image";
 import Youmaylike from '../Youmaylike/page';
 import { RxCross2 } from 'react-icons/rx';
+import { MdMenu } from "react-icons/md";
 
 export default function Bags() {
 
@@ -117,7 +118,7 @@ export default function Bags() {
 
     return (
         <>
-             <header className="bg-white z-10 transition-all duration-3">
+           <header className="bg-white z-10 transition-all duration-3">
                 <div className=" flex flex-wrap px-5 flex-row items-center justify-between">
 
 
@@ -130,20 +131,21 @@ export default function Bags() {
 
                             <RxCross2 className="w-6 h-6" />
                         ) : (
-                            <svg
-                                className="w-6 h-6"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M4 6h16M4 12h16m-7 6h7"
-                                ></path>
-                            </svg>
+                            // <svg
+                            //     className="w-6 h-6"
+                            //     fill="none"
+                            //     stroke="currentColor"
+                            //     viewBox="0 0 24 24"
+                            //     xmlns="http://www.w3.org/2000/svg"
+                            // >
+                            //     <path
+                            //         strokeLinecap="round"
+                            //         strokeLinejoin="round"
+                            //         strokeWidth="2"
+                            //         d="M4 6h16M4 12h16m-7 6h7"
+                            //     ></path>
+                            // </svg>
+                            <MdMenu className="" style={{ fontSize: '25px' }} />
                         )}
 
                     </button>
@@ -249,7 +251,7 @@ export default function Bags() {
                     {/* </button> */}
 
                     {/* Dropdown menu for mobile */}
-                    {isOpen && (
+                    {/* {isOpen && (
                         <div className="flex flex-col w-full mt-0 pt-5 pb-10 md:hidden space-y-2 text-center shadow-lg">
 
                             <Link href='/view/bags'>
@@ -289,6 +291,108 @@ export default function Bags() {
                             </Link>
 
 
+                        </div>
+                    )} */}
+
+                    {isOpen && (
+                        <div className="fixed inset-0 bg-white z-50 md:hidden" style={{height:'34em'}}>
+                            <div className="flex flex-col h-full">
+                                {/* Header with close and search icons */}
+                                <div className="flex justify-between items-center px-5">
+                                    <button
+                                        onClick={toggleMenu}
+                                        className="inline-flex items-center text-gray-900 focus:outline-none"
+                                    >
+                                        <RxCross2 className="w-6 h-6" />
+                                    </button>
+
+                                    {/* <div className="text-center py-6">
+                                        <Link href='/'>
+                                            <h1 className="text-2xl tracking-wider font-light">BAGAHOLICBOY</h1>
+                                        </Link>
+                                    </div> */}
+                                    <div className="mx-auto py-4 lg:pr-20 md:pr-0 sm:pr-0 flex flex-wrap flex-col sm:flex-row items-center">
+                                        <Link href='/'>
+                                            {/* <Image
+                                    src={ima}
+                                    alt="Description of image"
+                                    className="brand-image w-full max-w-[150px] sm:max-w-[200px] md:max-w-[250px]  xl:max-w-[300px] h-auto transition-all duration-300 ease-in-out"
+                                /> */}
+                                            <Image
+                                                src={ima}
+                                                alt="Description of image"
+                                                className={` brand-image ${scrolle ? styles.shrink : styles.brandImage} h-auto transition-all duration-300 ease-in-out`}
+                                            />
+                                        </Link>
+                                    </div>
+
+
+                                    <Link href='/view/Search' className="inline-flex items-center text-gray-900 focus:outline-none">
+                                        <svg
+                                            className="w-6 h-6"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth="2"
+                                                d="M21 21l-4.35-4.35m0 0a7 7 0 111.415-1.414L21 21z"
+                                            ></path>
+                                        </svg>
+                                    </Link>
+                                </div>
+
+                                {/* Brand Logo */}
+                                {/* <div className="text-center py-6">
+                                    <Link href='/'>
+                                        <h1 className="text-2xl tracking-wider font-light">BAGAHOLICBOY</h1>
+                                    </Link>
+                                </div> */}
+
+                                {/* Navigation Links */}
+                                <div className="flex flex-col items-center space-y-4 mt-8">
+                                    <Link href='/view/bags'>
+                                        <p className={`${styles.navmenu} text-xl`}>BAGS</p>
+                                    </Link>
+                                    <Link href='/view/beauty'>
+                                        <p className={`${styles.navmenu} text-xl`}>BEAUTY</p>
+                                    </Link>
+                                    <Link href='/view/Fashion'>
+                                        <p className={`${styles.navmenu} text-xl`}>FASHION</p>
+                                    </Link>
+                                    <Link href='/view/Jewellery'>
+                                        <p className={`${styles.navmenu} text-xl`}>JEWELLERY</p>
+                                    </Link>
+                                    <Link href='/view/Watches'>
+                                        <p className={`${styles.navmenu} text-xl`}>WATCHES</p>
+                                    </Link>
+                                    <Link href='/view/Lifestyle'>
+                                        <p className={`${styles.navmenu} text-xl`}>LIFESTYLE</p>
+                                    </Link>
+                                </div>
+
+                                {/* Social Links */}
+                                <div className="flex flex-col items-center mt-12 mb-16 ">
+                                    <p className={`${styles.follow} text-sm tracking-wide`}>FOLLOW</p>
+                                    <Link
+                                        href='https://www.instagram.com/bagaholicboy/'
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <p className={`${styles.navmenu2} text-xl`}>INSTAGRAM</p>
+                                    </Link>
+                                    <Link
+                                        href='https://www.tiktok.com/about'
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <p className={`${styles.navmenu2} text-xl`}>TIKTOK</p>
+                                    </Link>
+                                </div>
+                            </div>
                         </div>
                     )}
 
